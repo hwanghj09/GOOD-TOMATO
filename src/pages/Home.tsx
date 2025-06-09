@@ -6,6 +6,8 @@ const Home = ()=> {
   return (
     <div className="Home">
       <h1>THis is Home Page 데쓰쓰</h1>
+      <button onClick={() => navigate("/Menu")}>시작하기</button>
+      
     </div>
   );
 }
