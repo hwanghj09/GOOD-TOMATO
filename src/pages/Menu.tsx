@@ -6,8 +6,8 @@ const Menu = ()=> {
   return (
     <div className="Menu">
       <h1>THis is start_menu Page 데쓰쓰</h1>
-      <button onClick={() => navigate("/python/preparation")}>Python</button>
-      <button onClick={() => navigate("/js/preparation")}>Js</button>
+      <button onClick={() => navigate("/python/intro")}>Python</button>
+      <button onClick={() => navigate("/js/intro")}>Js</button>
     </div>
   );
 }
