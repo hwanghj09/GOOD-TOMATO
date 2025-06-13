@@ -1,7 +1,8 @@
-// MarkdownPage.tsx
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import './markdown.css';
+
 
 function MarkdownPage() {
   const { lang, docName } = useParams();

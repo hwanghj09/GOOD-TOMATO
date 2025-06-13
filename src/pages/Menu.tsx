@@ -5,8 +5,9 @@ const Menu = ()=> {
     const navigate = useNavigate();
   return (
     <div className="Menu">
-      <h1>THis is start_menu Page 데쓰쓰</h1>
+      <h1>let's go</h1>
       <button onClick={() => navigate("/python/intro")}>Python</button>
+      <button onClick={() => navigate("/python/io")}>시험</button>
       <button onClick={() => navigate("/js/intro")}>Js</button>
     </div>
   );
