@@ -1,19 +1,56 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
-import './markdown.css';
+import './css/markdown.css';
 
+interface DocItem {
+  name: string;
+  title: string;
+  category: string;
+}
+
+type DocMenus = {
+  [key: string]: DocItem[];
+};
+
+type GroupedDocs = {
+  [category: string]: DocItem[];
+};
 
 function MarkdownPage() {
-  const { lang, docName } = useParams();
-  const [content, setContent] = useState("");
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const { lang, docName } = useParams<{ lang: string; docName: string }>();
+  const location = useLocation();
+  const [content, setContent] = useState<string>("");
+  const [error, setError] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
+
+  // 언어별 문서 목록 (실제로는 API에서 가져올 수 있음)
+  const docMenus: DocMenus = {
+    python: [
+      { name: "intro", title: "Python 소개", category: "기초" },
+      { name: "install", title: "Python 설치", category: "기초" },
+      { name: "io", title: "입출력", category: "기초" },
+      { name: "variable", title: "변수와 데이터 타입", category: "기초" }
+    ]
+  };
+
+  const currentDocs = (lang && docMenus[lang]) ? docMenus[lang] : [];
+  
+  // 카테고리별로 문서 그룹핑
+  const groupedDocs: GroupedDocs = currentDocs.reduce((acc: GroupedDocs, doc: DocItem) => {
+    if (!acc[doc.category]) {
+      acc[doc.category] = [];
+    }
+    acc[doc.category].push(doc);
+    return acc;
+  }, {});
 
   useEffect(() => {
     if (!lang || !docName) return;
 
-    fetch(`/md/${lang}/${docName}.md`)
+    setLoading(true);
+    fetch(`/md/${lang}/${docName}.md?t=${Date.now()}`)
       .then((res) => {
         if (!res.ok) throw new Error("파일 없음");
         return res.text();
@@ -29,22 +66,77 @@ function MarkdownPage() {
       });
   }, [lang, docName]);
 
-  if (loading) return <div>⏳ 문서를 불러오는 중...</div>;
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
 
-  if (error) {
-    return (
-      <div style={{ textAlign: "center", marginTop: "4rem" }}>
-        <h1>🚫 404 - 페이지를 찾을 수 없습니다</h1>
-        <p>
-          문서 <code>{`/md/${lang}/${docName}.md`}</code>가 존재하지 않습니다.
-        </p>
-      </div>
-    );
-  }
+  const getLanguageTitle = (lang: string | undefined): string => {
+    const titles: { [key: string]: string } = {
+      python: "Python",
+      javascript: "JavaScript", 
+      java: "Java",
+      cpp: "C++",
+      csharp: "C#"
+    };
+    return (lang && titles[lang]) ? titles[lang] : (lang?.toUpperCase() || "문서");
+  };
 
   return (
-    <div className="prose mx-auto p-4">
-      <ReactMarkdown>{content}</ReactMarkdown>
+    <div className="markdown-container">
+      <button className="sidebar-toggle" onClick={toggleSidebar}>
+        ☰
+      </button>
+      
+      <nav className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+        <div className="sidebar-header">
+          <h2 className="sidebar-title">{getLanguageTitle(lang)} 문서</h2>
+        </div>
+        
+        <div className="sidebar-nav">
+          {Object.entries(groupedDocs).map(([category, docs]) => (
+            <div key={category} className="nav-section">
+              <h3 className="nav-section-title">{category}</h3>
+              <hr></hr>
+              <ul className="nav-list">
+                {docs.map((doc: DocItem) => (
+                  <li key={doc.name} className="nav-item">
+                    <Link 
+                      to={`/${lang}/${doc.name}`}
+                      className={`nav-link ${docName === doc.name ? 'active' : ''}`}
+                      onClick={() => setSidebarOpen(false)}
+                    >
+                      {doc.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </nav>
+
+      <main className="content-area">
+        {loading && (
+          <div className="loading">
+            ⏳ 문서를 불러오는 중...
+          </div>
+        )}
+
+        {error && (
+          <div className="error">
+            <h1>🚫 404 - 페이지를 찾을 수 없습니다</h1>
+            <p>
+              문서 <code>{`/md/${lang}/${docName}.md`}</code>가 존재하지 않습니다.
+            </p>
+          </div>
+        )}
+
+        {!loading && !error && (
+          <div className="prose">
+            <ReactMarkdown>{content}</ReactMarkdown>
+          </div>
+        )}
+      </main>
     </div>
   );
 }
