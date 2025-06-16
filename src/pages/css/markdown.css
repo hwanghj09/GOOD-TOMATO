@@ -281,7 +281,7 @@
 .sidebar-toggle {
   display: none;
   position: fixed;
-  top: 1rem;
+  bottom: 1rem;
   left: 1rem;
   z-index: 1000;
   background: #3b82f6;
