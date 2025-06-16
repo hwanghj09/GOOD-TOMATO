@@ -28,10 +28,15 @@ function MarkdownPage() {
   // 언어별 문서 목록 (실제로는 API에서 가져올 수 있음)
   const docMenus: DocMenus = {
     python: [
-      { name: "intro", title: "Python 소개", category: "기초" },
-      { name: "install", title: "Python 설치", category: "기초" },
+      { name: "intro", title: "Python 소개", category: "준비" },
+      { name: "feature", title: "Python 특징", category: "준비" },
+      { name: "install", title: "Python 설치", category: "준비" },
       { name: "io", title: "입출력", category: "기초" },
-      { name: "variable", title: "변수와 데이터 타입", category: "기초" }
+      { name: "variable", title: "변수와 데이터 타입", category: "기초" },
+      { name: "if", title: "조건문", category: "기초" },
+      { name: "for", title: "반복문 - for", category: "기초" },
+      { name: "while", title: "반복문 - while", category: "기초" },
+      { name: "list", title: "리스트", category: "기초" }
     ]
   };
 
@@ -90,6 +95,10 @@ function MarkdownPage() {
       <nav className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-header">
           <h2 className="sidebar-title">{getLanguageTitle(lang)} 문서</h2>
+          <Link to="/Menu" className="back-to-menu">
+            ← 메뉴로 돌아가기
+          </Link>
+          
         </div>
         
         <div className="sidebar-nav">

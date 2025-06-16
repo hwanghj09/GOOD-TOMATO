@@ -291,6 +291,19 @@
   border-radius: 0.375rem;
   cursor: pointer;
 }
+.back-to-menu {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.9rem;
+  color: #007acc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.back-to-menu:hover {
+  color: #005a9e;
+  text-decoration: underline;
+}
 
 @media (max-width: 768px) {
   .sidebar-toggle {
