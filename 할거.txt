@@ -108,3 +108,281 @@ print("줄바꿈\n탭\t따옴표\"")
 # 탭	따옴표"
 
 
+
+문제
+
+1. 다음 중 파이썬에 관한 설명을 옳은 것을 고르시오.
+1. 파이썬은 컴파일러로 실행되는 언어이다
+2. 파이썬은 순차적으로 실행되는 순차 구조이다
+3. 파이썬에서 주석은 "//"로 사용된다
+4. 파이썬은 다른 언어에 비해 배우기 어렵다
+5. 파이썬은 라이브러리가 적어 사용하기 어렵다
+
+2. 다음 중 파이썬의 특징으로 옳지 않은 것을 고르시오.
+1. 들여쓰기를 통해 코드 블록을 구분한다
+2. 변수 선언 시 자료형을 명시하지 않아도 된다
+3. 인터프리터 방식으로 실행된다
+4. 파이썬에서는 세미콜론(;)이 반드시 필요하다
+5. 파이썬은 다양한 오픈소스 라이브러리를 지원한다
+
+3. 다음 중 파이썬에서 올바른 변수 이름으로 사용할 수 있는 것은?
+1. 1variable
+2. my-variable
+3. _value123
+4. class
+5. print()
+
+4. 다음 중 파이썬의 출력 함수로 옳은 것은?
+1. echo()
+2. output()
+3. println()
+4. print()
+5. show()
+
+5. 다음 중 파이썬에서 리스트(List)에 해당하는 자료형을 모두 고르시오.
+1. [1, 2, 3]
+2. (1, 2, 3)
+3. {"a": 1, "b": 2}
+4.{ 1, 2, 3}
+5. list("abc")
+
+6. 다음 중 파이썬에서 조건문 if의 올바른 사용 예는?
+1. if x == 10 then:
+2. if (x == 10) { }
+3. if x = 10:
+4. if x == 10:
+5. if x == 10
+
+7. 다음 중 파이썬의 반복문 for 사용법으로 옳은 것은?
+1. for (i = 0; i < 5; i++)
+2. for i in range(5):
+3. for i to 5 do
+4. loop i from 1 to 5
+5. foreach i in 5
+
+8. 다음 중 while 문이 무한 루프를 발생시키는 예는?
+1. while False:
+2. while x > 10:
+3. while True:
+4. while x == 5:
+5. while x != x:
+
+9. 다음 중 파이썬의 range() 함수 설명으로 옳지 않은 것은?
+1. range(5)는 0부터 4까지의 숫자를 생성한다
+2. range(2, 6)은 2부터 5까지의 숫자를 생성한다
+3. range(1, 10, 2)는 홀수만 생성할 수 있다
+4. range()는 리스트를 직접 반환한다
+5. range()는 반복문에서 자주 사용된다
+
+10. 다음 중 type() 함수의 출력 결과로 옳은 것을 고르시오.
+-----보기-----
+x = 3.14  
+-------------
+print(type(x))
+1. <class 'int'>
+2. <class 'float'>
+3. <class 'str'>
+4. <class 'bool'>
+5. <class 'list'>
+
+11. 다음 중 if-else 구문의 올바른 예시는?
+1.
+if x > 10:
+  print("크다")
+else:
+  print("작다")
+2.
+if x > 10
+  then print("크다")
+else
+  print("작다")
+3.
+if x > 10:
+  print("크다")
+elif x < 5:
+print("작다")
+4.
+if x > 10:
+  print("크다")
+else
+  print("작다")
+5. 
+if (x > 10) {
+print("크다") 
+} else { 
+print("작다") 
+}
+
+12. 다음 중 for문과 range를 이용하여 1부터 5까지 출력하는 코드로 옳은 것은?
+1. 
+for i in range(1, 6):
+  print(i)
+2. 
+for i in range(5):
+  print(i + 1)
+3.
+for i in range(0, 5):
+  print(i + 1)
+4. 위의 모든 보기
+5. 위의 어느 것도 아님
+
+13. 다음 중 while 문 사용 예로 옳지 않은 것은?
+1. 
+while x < 10:
+  x += 1
+2. 
+while True: 
+  break
+3.
+while x != 0:
+  print(x);
+  x -= 1
+4. 
+while x = 5:
+  print(x)
+5.
+while not done: 
+  continue
+
+14. 다음 중 두 개의 값을 입력받아 정수로 변환하고 더한 결과를 출력하는 코드로 올바른 것은?
+1. 
+a = input(); 
+b = input(); 
+print(a + b)
+2. 
+a = int(input());
+b = int(input());
+print(a + b)
+3.
+a = input();
+b = input();
+print(int(a + b))
+4. 
+a = int(input());
+b = input();
+print(a + b)
+5.
+a = int(input());
+b = int(input());
+print(str(a + b))
+
+15. 다음 중 print() 함수에서 출력 결과가 "Hello10"이 되는 코드는?
+1. print("Hello" + 10)
+2. print("Hello", 10)
+3. print("Hello" + str(10))
+4. print("Hello" + "10.0")
+5. print("Hello" + float(10))
+
+16. 다음 중 input() 함수로 입력받은 값을 실수(float)로 저장하는 코드로 옳은 것은?
+1.x = input(float())
+2. x = float(input())
+3. x = str(input())
+4. x = int(input())
+5. x = float(input)
+
+17. 다음 중 리스트 슬라이싱 결과가 [2, 3, 4]가 되는 코드는?
+a = [1, 2, 3, 4, 5]
+
+1. a[1:4]
+2. a[2:5]
+3. a[1:5]
+4. a[2:4]
+5. a[1:3]
+
+18. 다음 중 while 문을 사용하여 1부터 5까지 출력하는 코드로 옳은 것은?
+1.
+i = 1  
+while i <= 5:  
+    print(i)  
+    i += 1  
+2.
+i = 1  
+while i < 5:  
+    print(i)  
+3.
+i = 1  
+while i <= 5  
+    print(i)  
+    i += 1  
+3.
+i = 0  
+while i < 5:  
+    print(i)  
+    i += 1  
+4.
+while i <= 5:  
+    print(i)  
+    i += 1
+5.
+while i < 5
+  print(i)
+  i+=1
+
+19. 다음 중 사용자 정의 함수의 올바른 선언과 호출 예는?
+1.
+function sayHi(): 
+  print("Hi")
+2.
+def sayHi:
+  print("Hi")
+3.
+def sayHi():
+  print("Hi") — sayHi()
+4. 
+def sayHi():
+  print("Hi") — call sayHi()
+5. 
+sayHi() = def():
+  print("Hi")
+
+20. 다음 중 type() 함수의 출력으로 맞는 것은?
+-------보기------
+x = "123"
+print(type(x))
+----------------
+1. <class 'int'>
+2. <class 'float'>
+3. <class 'str'>
+4. <class 'bool'>
+5. <class 'list'>
+
+2
+
+4
+
+3
+
+4
+
+1, 5
+
+4
+
+2
+
+3
+
+4
+
+2
+
+1
+
+4
+
+4
+
+2
+
+3
+
+2
+
+1
+
+1
+
+3
+
+3
+
