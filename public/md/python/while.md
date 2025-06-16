@@ -46,7 +46,7 @@ while i <= 5:
 ```python
 count = 5
 while count > 0:
-    print(f"{count}초 남았습니다!")
+    print(count,"초 남았습니다!")
     count -= 1
 print("시간 종료!")
 ```
@@ -68,7 +68,7 @@ total = 0
 while i <= 10:
     total += i
     i += 1
-print(f"1부터 10까지의 합: {total}")
+print("1부터 10까지의 합: ",total)
 ```
 
 **실행 결과:**
@@ -81,7 +81,7 @@ print(f"1부터 10까지의 합: {total}")
 dan = 3
 i = 1
 while i <= 9:
-    print(f"{dan} × {i} = {dan * i}")
+    print(dan,"×",i," = ",dan * i)
     i += 1
 ```
 
@@ -166,7 +166,7 @@ while True:
         print("프로그램을 종료합니다.")
         break
     else:
-        print(f"입력하신 명령어: {user_input}")
+        print("입력하신 명령어: ",user_input)
 ```
 
 ---
@@ -207,7 +207,7 @@ while True:
     attempts += 1
     
     if guess == answer:
-        print(f"정답! {attempts}번 만에 맞췄습니다!")
+        print("정답! ",attempts,"번 만에 맞췄습니다!")
         break
     elif guess < answer:
         print("더 큰 숫자입니다!")
@@ -256,7 +256,7 @@ while i < 5:
     
     total += num
 
-print(f"양수들의 합계: {total}")
+print("양수들의 합계: ",{total})
 ```
 ---
 
