@@ -39,6 +39,7 @@ function MarkdownPage() {
       { name: "list", title: "리스트", category: "기초" },
       { name: "function", title: "함수", category: "기초" },
       { name: "array", title: "정렬", category: "기초" },
+      { name: "search", title: "탐색", category: "기초" },
       { name: "basic-io-test", title: "입출력 기초 문제", category: "기초 문제" },
       { name: "basic-variable-test", title: "변수와 데이터타입 기초 문제", category: "기초 문제" },
       { name: "basic-all-test", title: "기초 전체 문제", category: "기초 문제" }

@@ -126,5 +126,5 @@ def insertion_sort(arr):
 
 #
 
-- [다음 - 입출력 기초 문제](./basic-io-test)
+- [다음 - 탐색](./search)
 - [이전 - 함수](./function)
