@@ -386,11 +386,11 @@ for row in matrix:
 
 ## 1. 인덱스 오류
 ```python
-# ❌ 잘못된 예시
+# 잘못된 예시
 fruits = ['사과', '바나나']
 print(fruits[2])  # IndexError!
 
-# ✅ 올바른 예시
+# 올바른 예시
 if len(fruits) > 2:
     print(fruits[2])
 else:
