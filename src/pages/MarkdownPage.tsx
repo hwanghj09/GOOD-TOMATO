@@ -31,19 +31,49 @@ function MarkdownPage() {
       { name: "intro", title: "Python 소개", category: "준비" },
       { name: "feature", title: "Python 특징", category: "준비" },
       { name: "install", title: "Python 설치", category: "준비" },
-      { name: "io", title: "입출력", category: "기초" },
-      { name: "variable", title: "변수와 데이터 타입", category: "기초" },
-      { name: "file_io", title: "파일 입출력", category: "기초" },
-      { name: "if", title: "조건문", category: "기초" },
-      { name: "for", title: "반복문 - for", category: "기초" },
-      { name: "while", title: "반복문 - while", category: "기초" },
-      { name: "list", title: "리스트", category: "기초" },
-      { name: "function", title: "함수", category: "기초" },
-      { name: "array", title: "정렬", category: "기초 활용" },
-      { name: "search", title: "탐색", category: "기초 활용" },
-      { name: "basic-io-test", title: "입출력 기초 문제", category: "기초 문제" },
-      { name: "basic-variable-test", title: "변수와 데이터타입 기초 문제", category: "기초 문제" },
-      { name: "basic-all-test", title: "기초 전체 문제", category: "기초 문제" }
+      { name: "io", title: "입출력", category: "초급" },
+      { name: "variable", title: "변수와 데이터 타입", category: "초급" },
+      { name: "if", title: "조건문", category: "초급" },
+      { name: "for", title: "반복문 - for", category: "초급" },
+      { name: "while", title: "반복문 - while", category: "초급" },
+      { name: "list", title: "리스트", category: "초급" },
+      { name: "tuple", title: "튜플", category: "초급" },
+      { name: "set", title: "세트", category: "초급" },
+      { name: "dictionary", title: "딕셔너리", category: "초급" },
+      { name: "function", title: "함수", category: "초급" },
+      { name: "import", title: "모듈과 import", category: "초급" },
+      { name: "file_io", title: "파일 입출력", category: "중급" },
+      { name: "lambda_map_filter", title: "람다, map, filter", category: "중급" },
+      { name: "regex", title: "정규 표현식", category: "중급" },
+      { name: "class", title: "클래스", category: "중급" },
+      { name: "exception", title: "예외 처리", category: "중급" },
+      { name: "decorator", title: "데코레이터", category: "중급" },
+      { name: "module", title: "모듈과 패키지", category: "중급" },
+      { name: "generator", title: "제너레이터", category: "고급" },
+      { name: "asyncio", title: "비동기 프로그래밍", category: "고급" },
+      { name: "metaclass", title: "메타클래스", category: "고급" },
+      
+    ],
+    algorithm: [
+      { name: "stack_queue", title: "스택과 큐", category: "자료구조" },
+      { name: "bubble_sort", title: "버블 정렬", category: "정렬" },
+      { name: "selection_sort", title: "선택 정렬", category: "정렬" },
+      { name: "insertion_sort", title: "삽입 정렬", category: "정렬" },
+      { name: "merge_sort", title: "병합 정렬", category: "정렬" },
+      { name: "quick_sort", title: "퀵 정렬", category: "정렬" },
+      { name: "linear_search", title: "순차 탐색", category: "탐색" },
+      { name: "binary_search", title: "이진 탐색", category: "탐색" },
+      { name: "bfs_dfs", title: "BFS와 DFS", category: "그래프" },
+      { name: "dynamic_programming", title: "동적 프로그래밍", category: "DP" },
+      { name: "greedy", title: "그리디 알고리즘", category: "그리디" }
+    ],
+    machine_learning: [
+      { name: "intro", title: "머신러닝 소개", category: "소개" },
+      { name: "examples", title: "머신러닝 예시", category: "예시" }
+    ],
+    deep_learning: [
+      { name: "intro", title: "딥러닝 소개", category: "소개" },
+      { name: "examples", title: "딥러닝 예시", category: "예시" }
     ]
   };
 

@@ -100,6 +100,18 @@
   background: linear-gradient(135deg, #3776ab, #ffd43b);
 }
 
+.Menu .algorithm-icon {
+  background: linear-gradient(135deg, #4f46e5, #ec4899);
+}
+
+.Menu .ml-icon {
+  background: linear-gradient(135deg, #007bff, #28a745);
+}
+
+.Menu .dl-icon {
+  background: linear-gradient(135deg, #6f42c1, #fd7e14);
+}
+
 .Menu .js-icon {
   background: linear-gradient(135deg, #f7df1e, #323330);
 }
@@ -162,6 +174,24 @@
 }
 
 .Menu .duration {
+  font-weight: 500;
+}
+
+/* 카테고리 태그 */
+.Menu .categories {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.Menu .category-tag {
+  background-color: #f1f5f9;
+  color: #64748b;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
   font-weight: 500;
 }
 
