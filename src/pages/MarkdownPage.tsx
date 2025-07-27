@@ -53,27 +53,6 @@ function MarkdownPage() {
       { name: "asyncio", title: "비동기 프로그래밍", category: "고급" },
       { name: "metaclass", title: "메타클래스", category: "고급" },
       
-    ],
-    algorithm: [
-      { name: "stack_queue", title: "스택과 큐", category: "자료구조" },
-      { name: "bubble_sort", title: "버블 정렬", category: "정렬" },
-      { name: "selection_sort", title: "선택 정렬", category: "정렬" },
-      { name: "insertion_sort", title: "삽입 정렬", category: "정렬" },
-      { name: "merge_sort", title: "병합 정렬", category: "정렬" },
-      { name: "quick_sort", title: "퀵 정렬", category: "정렬" },
-      { name: "linear_search", title: "순차 탐색", category: "탐색" },
-      { name: "binary_search", title: "이진 탐색", category: "탐색" },
-      { name: "bfs_dfs", title: "BFS와 DFS", category: "그래프" },
-      { name: "dynamic_programming", title: "동적 프로그래밍", category: "DP" },
-      { name: "greedy", title: "그리디 알고리즘", category: "그리디" }
-    ],
-    machine_learning: [
-      { name: "intro", title: "머신러닝 소개", category: "소개" },
-      { name: "examples", title: "머신러닝 예시", category: "예시" }
-    ],
-    deep_learning: [
-      { name: "intro", title: "딥러닝 소개", category: "소개" },
-      { name: "examples", title: "딥러닝 예시", category: "예시" }
     ]
   };
 
@@ -119,11 +98,7 @@ useEffect(() => {
 
   const getLanguageTitle = (lang: string | undefined): string => {
     const titles: { [key: string]: string } = {
-      python: "Python",
-      javascript: "JavaScript", 
-      java: "Java",
-      cpp: "C++",
-      csharp: "C#"
+      python: "Python"
     };
     return (lang && titles[lang]) ? titles[lang] : (lang?.toUpperCase() || "문서");
   };
