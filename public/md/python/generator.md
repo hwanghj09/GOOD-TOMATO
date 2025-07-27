@@ -1,67 +1,81 @@
-# 제너레이터 (Generator)
+# Python - 제너레이터 (Generator)
 
-제너레이터는 모든 값을 메모리에 올리지 않고, 필요할 때마다 값을 하나씩 생성하여 반환하는 특별한 종류의 이터레이터(iterator)입니다. `yield` 키워드를 사용하여 만듭니다.
+## 제너레이터란?
 
-## 왜 제너레이터를 사용할까?
+제너레이터는 이터레이터(iterator)를 생성하는 특별한 종류의 함수입니다. 일반 함수와 달리 `return` 대신 `yield` 키워드를 사용하여 값을 반환하며, 함수가 호출될 때마다 값을 한 번에 모두 반환하는 것이 아니라, 필요할 때마다 하나씩 값을 생성(yield)합니다.
 
--   **메모리 효율성:** 대용량의 데이터 시퀀스를 처리할 때, 모든 데이터를 메모리에 저장하지 않고 필요할 때마다 하나씩 처리하므로 메모리 사용량을 크게 줄일 수 있습니다.
--   **지연 평가 (Lazy Evaluation):** 값이 실제로 필요한 시점까지 계산을 미룹니다. 이는 불필요한 계산을 피하게 해줍니다.
+이러한 특성 때문에 제너레이터는 메모리 효율적이며, 대량의 데이터를 처리하거나 무한한 시퀀스를 다룰 때 유용합니다.
 
 ## `yield` 키워드
 
-`yield`는 제너레이터 함수의 실행을 일시 중지하고 값을 호출자에게 반환합니다. 함수는 다음 번에 `next()`가 호출될 때까지 마지막 실행 상태를 기억하고 있다가, 중지된 지점부터 실행을 재개합니다.
-
-### 코드 예시: 무한 수열 생성
+`yield`는 함수의 실행을 일시 중지하고 값을 호출자에게 반환합니다. 다음 번에 함수가 호출되면 `yield`가 있었던 지점부터 실행을 재개합니다.
 
 ```python
-def infinite_sequence():
-    num = 0
-    while True:
-        yield num
-        num += 1
+def my_generator():
+    print("첫 번째 yield")
+    yield 1
+    print("두 번째 yield")
+    yield 2
+    print("세 번째 yield")
+    yield 3
 
 # 제너레이터 객체 생성
-gen = infinite_sequence()
+gen = my_generator()
 
-# 필요할 때마다 값을 하나씩 가져옴
-print(next(gen)) # 0
-print(next(gen)) # 1
-print(next(gen)) # 2
+# next() 함수로 값 하나씩 가져오기
+print(next(gen)) # 첫 번째 yield, 1
+print(next(gen)) # 두 번째 yield, 2
+print(next(gen)) # 세 번째 yield, 3
+# print(next(gen)) # StopIteration 에러 발생
 ```
 
-## 제너레이터 표현식
+## 제너레이터의 장점
 
-리스트 컴프리헨션과 유사한 문법으로, `[]` 대신 `()`를 사용하여 제너레이터를 간결하게 만들 수 있습니다.
+1.  **메모리 효율성 (Lazy Evaluation)**: 모든 값을 한꺼번에 메모리에 로드하지 않고, 필요할 때마다 값을 생성하므로 메모리 사용량이 적습니다. 대용량 파일 처리나 무한 시퀀스 생성에 적합합니다.
+2.  **코드 간결성**: 이터레이터를 직접 구현하는 것보다 훨씬 간결하게 코드를 작성할 수 있습니다.
 
 ```python
-# 리스트 컴프리헨션 (모든 값을 메모리에 저장)
-list_comp = [x*x for x in range(1000)]
+# 1부터 n까지의 제곱수를 생성하는 제너레이터
+def squares_generator(n):
+    for i in range(1, n + 1):
+        yield i * i
 
-# 제너레이터 표현식 (필요할 때 값을 생성)
-gen_exp = (x*x for x in range(1000))
+# 리스트로 모든 값을 생성하는 경우 (메모리 사용)
+def squares_list(n):
+    return [i * i for i in range(1, n + 1)]
 
-print(next(gen_exp)) # 0
+# 제너레이터 사용
+for sq in squares_generator(5):
+    print(sq) # 1, 4, 9, 16, 25
+
+# 리스트 사용
+print(squares_list(5)) # [1, 4, 9, 16, 25]
+```
+
+[AD]
+
+## 제너레이터 표현식 (Generator Expression)
+
+리스트 컴프리헨션과 유사하게, 제너레이터도 한 줄로 간결하게 표현할 수 있습니다. 대괄호(`[]`) 대신 소괄호(`()`)를 사용합니다.
+
+```python
+# 제너레이터 표현식
+gen_exp = (i * i for i in range(1, 6))
+
 print(next(gen_exp)) # 1
+print(next(gen_exp)) # 4
+
+# for 문으로 순회 가능
+for sq in gen_exp:
+    print(sq)
 ```
 
-## `send()` 메서드
+## 제너레이터의 활용 예시
 
-제너레이터의 `send()` 메서드를 사용하면 제너레이터 함수 내부로 값을 보낼 수 있습니다. `yield` 표현식은 값을 반환하는 동시에 외부로부터 값을 받을 수도 있습니다.
+*   **대용량 파일 읽기**: 파일을 한 줄씩 읽어 처리할 때.
+*   **무한 시퀀스 생성**: 피보나치 수열처럼 끝없이 이어지는 시퀀스를 생성할 때.
+*   **데이터 파이프라인**: 데이터를 단계별로 처리할 때.
 
-```python
-def simple_generator():
-    value = yield 1
-    print(f"Received: {value}")
-    value = yield 2
-    print(f"Received: {value}")
+제너레이터는 파이썬에서 효율적인 코드 작성을 위한 강력한 도구입니다. 다음으로는 비동기 프로그래밍에 대해 알아보겠습니다.
 
-gen = simple_generator()
-print(next(gen)) # 1
-print(gen.send("Hello")) # Received: Hello, 2
-print(next(gen)) # Received: None, StopIteration
-```
-
----
-
-- [다음 - 비동기 프로그래밍](./asyncio)
-- [이전 - 모듈과 패키지](./module)
+[이전 - 모듈과 패키지](./module) | [다음 - 비동기 프로그래밍](./asyncio)

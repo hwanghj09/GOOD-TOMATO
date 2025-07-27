@@ -1,454 +1,114 @@
-# Python - 리스트(List)
+# Python - 리스트 (List)
 
 ## 리스트란?
-리스트는 **여러 개의 값을 순서대로 저장**하는 자료형입니다. 하나의 변수에 많은 데이터를 담을 수 있어요.
 
-### 리스트의 특징
+리스트는 여러 개의 값을 순서대로 저장하는 자료구조입니다. 파이썬에서 가장 많이 사용되는 자료구조 중 하나로, 대괄호(`[]`) 안에 값들을 쉼표(`,`)로 구분하여 생성합니다. 리스트 안에는 숫자, 문자열, 불리언 등 다양한 데이터 타입을 함께 저장할 수 있습니다.
 
-- **순서가 있음** (인덱스로 접근 가능)
-- **중복 허용** (같은 값 여러 개 저장 가능)
-- **변경 가능** (값 추가, 삭제, 수정 가능)
-- **다양한 타입** (숫자, 문자, 불린 등 섞어서 저장 가능)
-
-### 인덱스(index)와 요소(element)란?
-
-- 리스트에 들어 있는 각각의 값을 **요소(element)** 라고 합니다.
-- 각 요소는 **인덱스(index)** 라는 번호를 가지며, **0부터 시작**합니다.
-- 이 인덱스를 이용해 원하는 값을 꺼내 쓸 수 있어요.
-
-예시:
 ```python
-fruits = ['사과', '바나나', '체리']
-# 인덱스:    0       1        2
-
-print(fruits[0])  # '사과'
-print(fruits[2])  # '체리'
-```
-
-## 리스트 만들기
-
-### 빈 리스트 만들기
-```python
+# 빈 리스트 생성
 empty_list = []
-print(empty_list)  # []
+
+# 다양한 타입을 가진 리스트
+my_list = [1, "Hello", 3.14, True]
+
+# 숫자 리스트
+numbers = [10, 20, 30, 40, 50]
 ```
 
-### 값이 있는 리스트 만들기
-```python
-numbers = [1, 2, 3, 4, 5]
-fruits = ['사과', '바나나', '오렌지']
-mixed = [1, '안녕', True, 3.14]
+## 리스트 인덱싱과 슬라이싱
 
-print(numbers)  # [1, 2, 3, 4, 5]
-print(fruits)   # ['사과', '바나나', '오렌지']
-print(mixed)    # [1, '안녕', True, 3.14]
-```
+리스트에 저장된 각 값(요소)에는 순서대로 번호(인덱스)가 붙어있습니다. 인덱스는 0부터 시작합니다.
 
-### list() 함수로 만들기
-```python
-text = "hello"
-char_list = list(text)
-print(char_list)  # ['h', 'e', 'l', 'l', 'o']
-
-range_list = list(range(1, 6))
-print(range_list)  # [1, 2, 3, 4, 5]
-```
-
----
-
-# 인덱싱 (Indexing)
-
-## 인덱스란?
-인덱스는 리스트에서 **각 요소의 위치를 나타내는 번호**입니다.
-
-### 인덱스 (앞에서부터)
-```python
-fruits = ['사과', '바나나', '오렌지', '포도', '딸기']
-#         [0]    [1]     [2]      [3]   [4]
-```
-
-**인덱스는 0부터 시작합니다!**
-
-### 인덱스 (뒤에서부터) - 음수 인덱스
-파이썬 리스트는 **음수 인덱스**도 지원합니다. 뒤에서부터 세며, **-1이 마지막 요소**를 가리킵니다.
+*   **인덱싱 (Indexing)**: 특정 위치의 요소를 하나만 선택합니다.
+*   **슬라이싱 (Slicing)**: 특정 범위의 요소들을 잘라내어 새로운 리스트를 만듭니다.
 
 ```python
-fruits = ['사과', '바나나', '오렌지', '포도', '딸기']
-#         [-5]   [-4]    [-3]     [-2]  [-1]
+numbers = [10, 20, 30, 40, 50]
 
-print(fruits[-1])  # '딸기' (마지막 요소)
-print(fruits[-2])  # '포도' (뒤에서 두 번째 요소)
+# 인덱싱
+print(numbers[0])   # 10 (첫 번째 요소)
+print(numbers[2])   # 30 (세 번째 요소)
+print(numbers[-1])  # 50 (마지막 요소)
+
+# 슬라이싱 [start:stop:step]
+print(numbers[1:4]) # [20, 30, 40] (인덱스 1부터 3까지)
+print(numbers[:3])  # [10, 20, 30] (처음부터 인덱스 2까지)
+print(numbers[2:])  # [30, 40, 50] (인덱스 2부터 끝까지)
+print(numbers[::2]) # [10, 30, 50] (처음부터 끝까지 2칸 간격으로)
 ```
 
-## 인덱싱 예시
+## 리스트 수정 및 추가
 
-### 기본 인덱싱
+리스트는 **변경 가능한(mutable)** 객체이므로, 생성된 후에도 요소를 수정, 추가, 삭제할 수 있습니다.
+
 ```python
-fruits = ['사과', '바나나', '오렌지', '포도', '딸기']
+my_list = [1, 2, 3]
 
-print(fruits[0])   # 사과 (첫 번째)
-print(fruits[1])   # 바나나 (두 번째)
-print(fruits[2])   # 오렌지 (세 번째)
+# 요소 변경
+my_list[1] = 200
+print(my_list)  # [1, 200, 3]
+
+# 요소 추가 (append: 맨 뒤에 추가)
+my_list.append(4)
+print(my_list)  # [1, 200, 3, 4]
+
+# 요소 삽입 (insert: 특정 위치에 추가)
+my_list.insert(1, 100)
+print(my_list)  # [1, 100, 200, 3, 4]
+
+# 리스트 확장 (extend: 다른 리스트를 이어붙임)
+extra_list = [5, 6]
+my_list.extend(extra_list)
+print(my_list)  # [1, 100, 200, 3, 4, 5, 6]
 ```
 
-### 인덱스 오류 주의
+[AD]
+
+## 리스트 삭제
+
+*   `del`: 특정 인덱스의 요소를 삭제합니다.
+*   `pop()`: 특정 인덱스의 요소를 꺼내고(반환하고) 삭제합니다. 인덱스를 지정하지 않으면 마지막 요소를 꺼냅니다.
+*   `remove()`: 특정 값을 찾아 첫 번째로 일치하는 요소를 삭제합니다.
+
 ```python
-fruits = ['사과', '바나나', '오렌지']
+my_list = [10, 20, 30, 40, 20]
 
-print(fruits[2])   # 오렌지 (정상)
-print(fruits[3])   # ❌ IndexError: list index out of range
+# del로 삭제
+del my_list[1]
+print(my_list)  # [10, 30, 40, 20]
+
+# pop으로 삭제
+popped_item = my_list.pop(2)
+print(f"꺼낸 항목: {popped_item}, 남은 리스트: {my_list}") # 꺼낸 항목: 40, 남은 리스트: [10, 30, 20]
+
+# remove로 삭제
+my_list.remove(20)
+print(my_list)  # [10, 30] (첫 번째 20만 삭제됨)
 ```
 
-### 중첩 리스트 인덱싱
-```python
-matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+## 유용한 리스트 메서드
 
-print(matrix[0])     # [1, 2, 3]
-print(matrix[0][0])  # 1
-print(matrix[1][2])  # 6
-```
+*   `len()`: 리스트의 길이를 반환합니다.
+*   `sort()`: 리스트를 정렬합니다 (원본 리스트를 변경).
+*   `sorted()`: 정렬된 새로운 리스트를 반환합니다 (원본 리스트는 유지).
+*   `reverse()`: 리스트의 순서를 뒤집습니다 (원본 리스트를 변경).
+*   `index()`: 특정 값의 인덱스를 반환합니다.
+*   `count()`: 특정 값의 개수를 셉니다.
 
----
-
-# 슬라이싱 (Slicing)
-
-## 슬라이싱이란?
-슬라이싱은 리스트에서 **여러 개의 요소를 한 번에 가져오는** 방법입니다.
-
-### 기본 문법
-```python
-리스트[시작:끝]      # 시작부터 끝-1까지
-리스트[시작:끝:스텝]  # 시작부터 끝-1까지 스텝 간격으로
-```
-
-**중요**: 끝 인덱스는 **포함되지 않습니다**!
-
-## 기본 슬라이싱
-
-### 범위 지정
-```python
-numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-print(numbers[2:5])   # [2, 3, 4] (인덱스 2, 3, 4)
-print(numbers[1:4])   # [1, 2, 3] (인덱스 1, 2, 3)
-print(numbers[0:3])   # [0, 1, 2] (인덱스 0, 1, 2)
-```
-
-### 처음부터 또는 끝까지
-```python
-numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-print(numbers[:5])    # [0, 1, 2, 3, 4] (처음부터 인덱스 4까지)
-print(numbers[5:])    # [5, 6, 7, 8, 9] (인덱스 5부터 끝까지)
-print(numbers[:])     # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (전체 복사)
-```
-
-## 스텝(Step) 활용
-
-### 기본 스텝
-```python
-numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-print(numbers[::2])   # [0, 2, 4, 6, 8] (2칸씩 건너뛰기)
-print(numbers[1::2])  # [1, 3, 5, 7, 9] (1부터 2칸씩)
-print(numbers[::3])   # [0, 3, 6, 9] (3칸씩 건너뛰기)
-```
-
-### 역순으로 슬라이싱
-```python
-numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-print(numbers[::-1])  # [9, 8, 7, 6, 5, 4, 3, 2, 1, 0] (전체 역순)
-print(numbers[::-2])  # [9, 7, 5, 3, 1] (역순으로 2칸씩)
-print(numbers[8:2:-1]) # [8, 7, 6, 5, 4, 3] (8부터 3까지 역순)
-```
-
-## 문자열과 슬라이싱
-```python
-text = "Python Programming"
-
-print(text[0:6])     # "Python"
-print(text[7:])      # "Programming"
-print(text[::-1])    # "gnimmargorP nohtyP" (역순)
-print(text[::2])     # "Pto rgamn" (2칸씩)
-```
-
----
-
-# 리스트 조작하기
-
-## 값 변경하기
-
-### 단일 값 변경
-```python
-fruits = ['사과', '바나나', '오렌지']
-fruits[1] = '망고'
-print(fruits)  # ['사과', '망고', '오렌지']
-```
-
-### 슬라이싱으로 여러 값 변경
-```python
-numbers = [1, 2, 3, 4, 5]
-numbers[1:4] = [20, 30, 40]
-print(numbers)  # [1, 20, 30, 40, 5]
-
-# 길이가 다른 리스트로 교체
-numbers[1:4] = [100, 200]
-print(numbers)  # [1, 100, 200, 5]
-```
-
----
-
-# 리스트 메서드
-
-## 요소 추가하기
-
-### append() - 끝에 추가
-```python
-fruits = ['사과', '바나나']
-fruits.append('오렌지')
-print(fruits)  # ['사과', '바나나', '오렌지']
-
-fruits.append('포도')
-print(fruits)  # ['사과', '바나나', '오렌지', '포도']
-```
-
-### insert() - 특정 위치에 추가
-```python
-fruits = ['사과', '바나나', '오렌지']
-fruits.insert(1, '망고')  # 인덱스 1에 '망고' 삽입
-print(fruits)  # ['사과', '망고', '바나나', '오렌지']
-
-fruits.insert(0, '딸기')  # 맨 앞에 '딸기' 삽입
-print(fruits)  # ['딸기', '사과', '망고', '바나나', '오렌지']
-```
-
-### extend() - 여러 요소 추가
-```python
-fruits = ['사과', '바나나']
-more_fruits = ['오렌지', '포도']
-
-fruits.extend(more_fruits)
-print(fruits)  # ['사과', '바나나', '오렌지', '포도']
-
-# 문자열도 가능 (각 문자가 개별 요소로 추가)
-fruits.extend('12')
-print(fruits)  # ['사과', '바나나', '오렌지', '포도', '1', '2']
-```
-
-## 요소 제거하기
-
-### remove() - 값으로 제거 (첫 번째만)
-```python
-fruits = ['사과', '바나나', '사과', '오렌지']
-fruits.remove('사과')  # 첫 번째 '사과'만 제거
-print(fruits)  # ['바나나', '사과', '오렌지']
-```
-
-### pop() - 인덱스로 제거하고 반환
-```python
-fruits = ['사과', '바나나', '오렌지']
-
-removed = fruits.pop()    # 마지막 요소 제거
-print(removed)            # 오렌지
-print(fruits)            # ['사과', '바나나']
-
-removed = fruits.pop(0)   # 인덱스 0 요소 제거
-print(removed)            # 사과
-print(fruits)            # ['바나나']
-```
-
-### clear() - 모든 요소 제거
-```python
-fruits = ['사과', '바나나', '오렌지']
-fruits.clear()
-print(fruits)  # []
-```
-
-### del 키워드 - 인덱스/슬라이스로 제거
-```python
-fruits = ['사과', '바나나', '오렌지', '포도', '딸기']
-
-del fruits[1]      # 인덱스 1 제거
-print(fruits)      # ['사과', '오렌지', '포도', '딸기']
-
-del fruits[1:3]    # 인덱스 1~2 제거
-print(fruits)      # ['사과', '딸기']
-```
-
-## 검색과 정보
-
-### index() - 값의 인덱스 찾기
-```python
-fruits = ['사과', '바나나', '오렌지', '바나나']
-print(fruits.index('바나나'))    # 1 (첫 번째 '바나나'의 인덱스)
-print(fruits.index('오렌지'))    # 2
-
-# 범위 지정 검색
-print(fruits.index('바나나', 2))  # 3 (인덱스 2부터 검색)
-```
-
-### count() - 값의 개수 세기
-```python
-numbers = [1, 2, 2, 3, 2, 4, 2]
-print(numbers.count(2))  # 4 (2가 4개)
-print(numbers.count(5))  # 0 (5는 없음)
-```
-
-### in 연산자 - 값 존재 여부 확인
-```python
-fruits = ['사과', '바나나', '오렌지']
-print('사과' in fruits)      # True
-print('포도' in fruits)      # False
-print('망고' not in fruits)  # True
-```
-
-## 정렬과 순서
-
-### sort() - 리스트 자체를 정렬
 ```python
 numbers = [3, 1, 4, 1, 5, 9, 2]
-numbers.sort()  # 오름차순 정렬
-print(numbers)  # [1, 1, 2, 3, 4, 5, 9]
 
-numbers.sort(reverse=True)  # 내림차순 정렬
-print(numbers)  # [9, 5, 4, 3, 2, 1, 1]
+print(f"리스트 길이: {len(numbers)}")
 
-# 문자열 정렬
-fruits = ['포도', '사과', '바나나', '오렌지']
-fruits.sort()
-print(fruits)  # ['바나나', '사과', '오렌지', '포도']
+# 정렬
+numbers.sort() # 오름차순 정렬
+print(f"정렬된 리스트: {numbers}")
+numbers.sort(reverse=True) # 내림차순 정렬
+print(f"내림차순 정렬된 리스트: {numbers}")
+
+print(f"값 1의 개수: {numbers.count(1)}")
 ```
 
-### sorted() - 새로운 정렬된 리스트 반환
-```python
-numbers = [3, 1, 4, 1, 5, 9, 2]
-sorted_numbers = sorted(numbers)
-print(numbers)         # [3, 1, 4, 1, 5, 9, 2] (원본 유지)
-print(sorted_numbers)  # [1, 1, 2, 3, 4, 5, 9] (새로운 리스트)
-```
+리스트는 파이썬 프로그래밍의 핵심적인 부분이므로, 자유자재로 다룰 수 있도록 연습하는 것이 중요합니다.
 
-### reverse() - 순서 뒤집기
-```python
-numbers = [1, 2, 3, 4, 5]
-numbers.reverse()
-print(numbers)  # [5, 4, 3, 2, 1]
-```
-
----
-
-# 리스트 연산
-
-## 덧셈 (+) - 리스트 연결
-```python
-list1 = [1, 2, 3]
-list2 = [4, 5, 6]
-result = list1 + list2
-print(result)  # [1, 2, 3, 4, 5, 6]
-print(list1)   # [1, 2, 3] (원본 유지)
-```
-
-## 곱셈 (*) - 리스트 반복
-```python
-numbers = [1, 2, 3]
-repeated = numbers * 3
-print(repeated)  # [1, 2, 3, 1, 2, 3, 1, 2, 3]
-
-zeros = [0] * 5
-print(zeros)     # [0, 0, 0, 0, 0]
-```
-
-## 길이 확인 - len()
-```python
-fruits = ['사과', '바나나', '오렌지']
-print(len(fruits))  # 3
-
-empty_list = []
-print(len(empty_list))  # 0
-```
-
----
-
-# 다차원 리스트
-
-## 2차원 리스트 만들기
-```python
-matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-print(matrix)
-```
-
-## 2차원 리스트 접근
-```python
-matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-
-print(matrix[0])     # [1, 2, 3] (첫 번째 행)
-print(matrix[1][2])  # 6 (두 번째 행, 세 번째 열)
-
-# 전체 출력
-for row in matrix:
-    for col in row:
-        print(col, end=' ')
-    print()  # 줄바꿈
-```
-
----
-
-# 리스트 컴프리헨션 (List Comprehension)
-
-리스트 컴프리헨션은 **간결하고 효율적으로 리스트를 만드는** 방법입니다. `for` 루프와 `if` 문을 한 줄에 압축하여 사용할 수 있습니다.
-
-### 기본 문법
-```python
-new_list = [표현식 for 항목 in 반복가능한_객체]
-```
-
-### 예시: 1부터 10까지의 제곱 리스트 만들기
-
-**기존 방식:**
-```python
-squares = []
-for i in range(1, 11):
-    squares.append(i**2)
-print(squares)  # [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-```
-
-**리스트 컴프리헨션:**
-```python
-squares = [i**2 for i in range(1, 11)]
-print(squares)  # [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-```
-
-### 조건문과 함께 사용하기
-```python
-new_list = [표현식 for 항목 in 반복가능한_객체 if 조건]
-```
-
-**예시: 1부터 10까지의 짝수만 제곱하여 리스트 만들기**
-```python
-even_squares = [i**2 for i in range(1, 11) if i % 2 == 0]
-print(even_squares)  # [4, 16, 36, 64, 100]
-```
-
----
-
-# 자주 하는 실수와 주의사항
-
-## 1. 인덱스 오류
-```python
-# 잘못된 예시
-fruits = ['사과', '바나나']
-print(fruits[2])  # IndexError!
-
-# 올바른 예시
-if len(fruits) > 2:
-    print(fruits[2])
-else:
-    print("인덱스가 범위를 벗어났습니다.")
-```
-
-
----
-
-
-- [다음 - 함수](./function)
-- [이전 - while 반복문](./while)
+[이전 - 반복문 (while)](./while) | [다음 - 튜플](./tuple)

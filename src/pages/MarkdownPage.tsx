@@ -1,6 +1,7 @@
 import { useParams, Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import AdComponent from './AdComponent';
 import './css/markdown.css';
 
 interface DocItem {
@@ -52,7 +53,22 @@ function MarkdownPage() {
       { name: "generator", title: "제너레이터", category: "고급" },
       { name: "asyncio", title: "비동기 프로그래밍", category: "고급" },
       { name: "metaclass", title: "메타클래스", category: "고급" },
-      
+    ],
+    linux: [
+      { name: "intro", title: "Linux 소개", category: "준비" },
+      { name: "basic_commands", title: "기본 명령어", category: "기초" },
+      { name: "file_system", title: "파일 시스템", category: "기초" },
+      { name: "permissions", title: "권한 관리", category: "기초" },
+      { name: "package_management", title: "패키지 관리", category: "기초" },
+      { name: "text_editors", title: "텍스트 에디터", category: "기초" },
+      { name: "networking", title: "네트워킹", category: "중급" },
+      { name: "process_management", title: "프로세스 관리", category: "중급" },
+      { name: "shell_scripting", title: "쉘 스크립팅", category: "중급" },
+      { name: "user_management", title: "사용자 관리", category: "중급" },
+      { name: "system_monitoring", title: "시스템 모니터링", category: "고급" },
+      { name: "ssh", title: "SSH", category: "고급" },
+      { name: "cron", title: "Cron 작업", category: "고급" },
+      { name: "firewall", title: "방화벽", category: "고급" },
     ]
   };
 
@@ -159,7 +175,12 @@ useEffect(() => {
 
         {!loading && !error && (
           <div className="prose">
-            <ReactMarkdown>{content}</ReactMarkdown>
+            {content.split('[AD]').map((part, index) => (
+              <div key={index}>
+                <ReactMarkdown>{part}</ReactMarkdown>
+                {index < content.split('[AD]').length - 1 && <AdComponent />}
+              </div>
+            ))}
           </div>
         )}
       </main>

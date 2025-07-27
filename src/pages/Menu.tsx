@@ -38,6 +38,7 @@ const Menu = () => {
   }, []); // 빈 배열: 컴포넌트 마운트 시 한 번 실행
 
   const languages = [
+    
     {
       id: 'python',
       title: 'Python',
@@ -48,6 +49,17 @@ const Menu = () => {
       route: '/python/intro',
       recommended: true,
       categories: ['준비', '초급', '중급', '고급']
+    },
+    {
+      id: 'linux',
+      title: 'Linux',
+      icon: 'Linux',
+      description: '운영체제의 핵심인 리눅스를 배우고 시스템 관리, 서버 운영, 개발 환경 설정 등 다양한 기술을 습득합니다. 오픈소스의 세계로 들어오세요.',
+      difficulty: 0,
+      duration: '',
+      route: '/linux/intro',
+      recommended: false,
+      categories: []
     }
   ];
 

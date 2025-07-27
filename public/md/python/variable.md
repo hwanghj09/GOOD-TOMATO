@@ -1,414 +1,115 @@
 # Python - 변수와 데이터 타입
 
-## 변수란?
-변수는 데이터를 저장하는 **공간**입니다. 쉽게 말하면 **어떤 값을 담는 그릇**이라고 생각하면 돼요.
+## 변수 (Variables)
 
-### 변수 만들기
-
-```python
-a = 10
-```
-> 변수 `a`에 숫자 10을 저장
+변수는 데이터를 저장하기 위한 메모리 공간에 붙이는 이름입니다. 파이썬에서는 변수를 만들 때 별도의 선언 과정 없이 값을 할당하면 됩니다.
 
 ```python
-name = '토마토'
-```
-> 변수 `name`에 문자열 '토마토'를 저장
-
----
-
-## 변수명 짓는 규칙
-
-### 가능한 변수명
-- 영문자로 시작: `name`, `age`, `score`
-- 숫자 포함 가능 (첫 글자 제외): `name1`, `score2`
-- 언더바(_) 사용 가능: `user_name`, `_count`
-- 한글도 가능: `이름`, `나이` (권장하지 않음)
-
-### 불가능한 변수명
-- 숫자로 시작: `1name`, `2score`
-- 특수문자 사용: `name@`, `score!`
-- 공백 포함: `user name`
-- 예약어 사용: `if`, `for`, `while`
-
-### 주요 예약어 (사용 불가)
-```
-and, or, not, if, else, elif, for, while, def, class, 
-return, break, continue, pass, try, except, finally, 
-import, from, as, True, False, None
+# 변수명 = 값
+x = 10
+name = "Alice"
+pi = 3.14
+is_active = True
 ```
 
-### 변수명 권장 스타일
-- **스네이크 케이스**: `user_name`, `total_score`
-- **의미있는 이름**: `age` (좋음) vs `a` (나쁨)
-- **소문자 사용**: `name` (좋음) vs `NAME` (상수용)
+### 변수 이름 규칙
 
----
+*   영문자, 숫자, 밑줄(`_`)을 사용할 수 있습니다.
+*   숫자로 시작할 수 없습니다.
+*   대소문자를 구분합니다 (`myVar`와 `myvar`는 다른 변수입니다).
+*   파이썬의 예약어(키워드)는 변수 이름으로 사용할 수 없습니다.
 
-## 변수에 값 더하기 / 빼기
+## 데이터 타입 (Data Types)
 
-### 일반 방식
-```python
-a = 5
-a = a + 3  # a는 이제 8
-a = a - 2  # a는 이제 6
-```
-
-### 축약 방식 (더 간단!)
-```python
-a += 3   # → a = a + 3
-a -= 2   # → a = a - 2
-```
-
-**축약 연산자 정리:**
-- `a += 3` → `a = a + 3` (더하기)
-- `a -= 2` → `a = a - 2` (빼기)  
-- `a *= 4` → `a = a * 4` (곱하기)
-- `a /= 2` → `a = a / 2` (나누기)
-- `a //= 3` → `a = a // 3` (몫)
-- `a %= 4` → `a = a % 4` (나머지)
-- `a **= 2` → `a = a ** 2` (거듭제곱)
-
----
-
-## 변수에 입력값 저장하기
-
-### 기본 형식
-```python
-id = input()
-```
-> 사용자가 입력한 값을 변수 `id`에 저장
-
-### 안내 문구 포함
-```python
-id = input('아이디를 입력하세요: ')
-print('입력하신 id는', id, '입니다.')
-```
-
-**실행 결과:**
-```
-아이디를 입력하세요: tomato
-입력하신 id는 tomato 입니다.
-```
-
----
-
-# 데이터 타입 (자료형)
-
-## 파이썬의 기본 데이터 타입
+파이썬은 다양한 종류의 데이터를 다룰 수 있으며, 각 데이터 종류를 **데이터 타입**이라고 합니다. 파이썬의 주요 내장 데이터 타입은 다음과 같습니다.
 
 ### 1. 숫자형 (Numeric Types)
-- **`int`** : 정수 (예: `10`, `-5`, `0`)
-- **`float`** : 실수 (예: `3.14`, `-2.5`, `0.0`)
 
-### 2. 문자형 (String Type)
-- **`str`** : 문자열 (예: `'안녕'`, `"Python"`, `'''여러줄'''`)
-
-### 3. 불린형 (Boolean Type)
-- **`bool`** : 참/거짓 (예: `True`, `False`)
-
-> `bool`형의 `True/False`는 첫글자가 항상 대문자여야합니다
----
-
-## `type()` 함수로 데이터 타입 확인
+*   **정수 (Integer)**: `int` - 소수점이 없는 숫자 (예: `10`, `-5`, `0`)
+*   **실수 (Float)**: `float` - 소수점이 있는 숫자 (예: `3.14`, `-0.5`)
 
 ```python
-a = 3
-print(type(a))
+# 정수
+my_integer = 10
+
+# 실수
+my_float = 3.14
+
+# 사칙연산
+add = 10 + 5       # 15
+subtract = 10 - 5    # 5
+multiply = 10 * 5    # 50
+divide = 10 / 5      # 2.0 (나누기 결과는 항상 float)
+floor_divide = 10 // 3 # 3 (몫)
+remainder = 10 % 3   # 1 (나머지)
+exponent = 2 ** 3    # 8 (거듭제곱)
 ```
-**출력 결과:** `<class 'int'>`
+
+### 2. 문자열 (String)
+
+*   **문자열 (String)**: `str` - 텍스트 데이터를 나타냅니다. 작은따옴표(`'`)나 큰따옴표(`"`)로 묶어서 표현합니다.
 
 ```python
-b = 3.14
-print(type(b))
+# 문자열 생성
+hello = "Hello, World!"
+name = 'Alice'
+
+# 문자열 연결 (Concatenation)
+greeting = "Hello, " + name  # "Hello, Alice"
+
+# f-string (Formatted String Literals)
+message = f"안녕하세요, {name}님!"
+
+# 문자열 길이
+length = len(message)
+
+# 인덱싱과 슬라이싱
+first_char = message[0]  # '안'
+last_char = message[-1] # '!'
+substring = message[7:9] # 'Alice'
 ```
-**출력 결과:** `<class 'float'>`
+
+### 3. 불리언 (Boolean)
+
+*   **불리언 (Boolean)**: `bool` - `True` 또는 `False` 두 가지 값을 가집니다. 주로 조건문이나 반복문에서 논리적인 판단을 할 때 사용됩니다.
 
 ```python
-c = '파이썬'
-print(type(c))
+# 불리언 값
+is_true = True
+is_false = False
+
+# 비교 연산자
+print(5 > 3)    # True
+print(5 == 5)   # True
+print(5 != 5)   # False
+
+# 논리 연산자
+print(True and False) # False
+print(True or False)  # True
+print(not True)       # False
 ```
-**출력 결과:** `<class 'str'>`
+
+[AD]
+
+## 타입 확인 및 변환
+
+*   `type()`: 변수의 데이터 타입을 확인할 수 있습니다.
+*   `int()`, `float()`, `str()`: 다른 데이터 타입으로 변환할 수 있습니다.
 
 ```python
-d = True
-print(type(d))
-```
-**출력 결과:** `<class 'bool'>`
+# 타입 확인
+x = 10
+print(type(x))  # <class 'int'>
 
----
+# 타입 변환
+num_str = "123"
+number = int(num_str)
+print(number + 1) # 124
 
-# 연산자
-
-## 할당(대입) 연산자
-변수에서 어떤 값을 저장하기 위해 `=`를 사용한다 이건 수학에서 같다라는 뜻이 아니라 오른쪽 값 또는 계산된 결괏값을 왼쪽의 변수에 저장한다라는 뜻이다
-
-```python
-a=30 # a에 30 저장
-a=b # a에 b를 저장 ex) b가 3이면 a에 3이 저장됨
-a="b" #a에 문자열 b가 저장됨
-a=b+c #a에 b+c의 값을 저장함 ex) b가 3이고 c가 5면 a에 8이 저장됨
-a=a+1 #a에 1을 더함 ex) a가 4면 5가 됨
-```
-## 산술 연산자
-
-**산술 연산자:**
-- `+` (더하기): `5 + 3` → `8`
-- `-` (빼기): `5 - 3` → `2`
-- `*` (곱하기): `5 * 3` → `15`
-- `/` (나누기): `10 / 3` → `3.333...`
-- `//` (몫): `10 // 3` → `3`
-- `%` (나머지): `10 % 3` → `1`
-- `**` (거듭제곱): `2 ** 3` → `8`
-
-### 산술 연산자 우선순위
-
-1. `**` (제곱)
-2. `-` (음수로 만드는거, 빼기 아님)
-3. `*` (곱하기)
-4. `+, -`
-
-### 산술 연산자 예시
-```python
-a = 10
-b = 3
-
-print(a + b)    # 13
-print(a - b)    # 7
-print(a * b)    # 30
-print(a / b)    # 3.333...
-print(a // b)   # 3 (몫)
-print(a % b)    # 1 (나머지)
-print(a ** b)   # 1000 (10의 3제곱)
+pi_str = str(3.14)
+print(pi_str) # "3.14"
 ```
 
-### 문자열 연산, 여러 줄 문자열
-```python
-a='멋쟁이'
-b='토마토'
-print(a+b)
-```
+이제 변수와 기본 데이터 타입을 이해했으니, 다음 단계로 넘어가 조건문을 사용하여 프로그램의 흐름을 제어하는 방법을 알아보겠습니다.
 
-결과 : `멋쟁이토마토`
-
-띄어쓰기 없음
-
-```python
-a='멋쟁이'
-c='10'
-print(a+c)
-```
-
-결과 : `멋쟁이10`
-
-```python
-a='집가고싶다'
-print(a+'6')
-```
-결과 : `집가고싶다6`
-
-```python
-a='집'
-print(a*5)
-```
-결과 : `집집집집집`
-
-**주의**
-```python
-a='멋쟁이토마토'
-b=10
-c = a+b #오류남
-print(c)
-```
-문자와 숫자는 +로 결합할 수 없다
-
----
-
-## 비교 연산자
-
-**비교 연산자:**
-- `==` (같다): `5 == 5` → `True`
-- `!=` (다르다): `5 != 3` → `True`
-- `>` (크다): `5 > 3` → `True`
-- `<` (작다): `5 < 3` → `False`
-- `>=` (크거나 같다): `5 >= 5` → `True`
-- `<=` (작거나 같다): `3 <= 5` → `True`
-
-### 비교 연산자 예시
-```python
-a = 10
-b = 5
-
-print(a == b)   # False
-print(a != b)   # True
-print(a > b)    # True
-print(a < b)    # False
-print(a >= 10)  # True
-print(b <= 5)   # True
-```
-
----
-
-## 논리 연산자
-
-**논리 연산자:**
-- `and` (논리곱): 둘 다 참이면 참
-- `or` (논리합): 하나라도 참이면 참  
-- `not` (논리부정): 참이면 거짓, 거짓이면 참
-
-### 논리 연산자 진리표
-```
-A=True,  B=True   → A and B = True,  A or B = True
-A=True,  B=False  → A and B = False, A or B = True  
-A=False, B=True   → A and B = False, A or B = True
-A=False, B=False  → A and B = False, A or B = False
-
-not True = False
-not False = True
-```
-
-### 논리 연산자 예시
-```python
-a = True
-b = False
-
-print(a and b)  # False
-print(a or b)   # True
-print(not a)    # False
-print(not b)    # True
-
-# 실제 조건문에서 사용
-age = 20
-height = 175
-
-print(age >= 18 and height >= 170)  # True
-print(age < 18 or height < 160)     # False
-print(not (age >= 18))              # False
-```
-
----
-
-## 변수끼리 데이터 바꾸기
-
-```python
-a=10
-b=5
-temp=0
-#a와 b의 데이터를 서로 바꾸기
-
-temp=a     #temp는 a(10)
-a=b        #a는 b(5)
-b=temp     #b는 temp(0)
-```
-
-파이썬에서만 간단히 할 수 있음
-```python 
-a=10
-b=5
-a,b=b,a #이러면 서로 데이터가 바뀜
-```
-
-
-# 형변환 (데이터 타입 바꾸기)
-
-## 정수로 변환 – `int()`
-
-```python
-a = '5'
-print(int(a))
-```
-**출력 결과:** `5`
-
-```python
-b = 3.7
-print(int(b))
-```
-**출력 결과:** `3` (소수점 버림)
-
-> **주의:** `'hello'` 같은 문자는 `int()` 변환 불가능!
-
-## 실수로 변환 – `float()`
-
-```python
-a = '3.14'
-print(float(a))
-```
-**출력 결과:** `3.14`
-
-```python
-b = 5
-print(float(b))
-```
-**출력 결과:** `5.0`
-
-## 문자로 변환 – `str()`
-
-```python
-a = 123
-print(str(a))
-```
-**출력 결과:** `'123'`
-
-```python
-b = 3.14
-print(str(b))
-```
-**출력 결과:** `'3.14'`
-
-## 불린으로 변환 – `bool()`
-
-```python
-print(bool(1))      # True
-print(bool(0))      # False
-print(bool(''))     # False (빈 문자열)
-print(bool('hi'))   # True
-print(bool([]))     # False (빈 리스트)
-print(bool([1,2]))  # True
-```
-
----
-
-## 실전 예시: 입력 후 더하기
-
-### 잘못된 방법
-```python
-x = input('첫 번째 숫자: ')  # 문자열로 저장됨
-y = input('두 번째 숫자: ')  # 문자열로 저장됨
-print('두 수의 합:', x + y)  # 문자열 연결됨
-```
-**결과:** `1`, `2` 입력 시 → `'1' + '2' = '12'` (숫자 덧셈이 아님!)
-
-### 올바른 방법
-```python
-x = input('첫 번째 숫자: ')
-y = input('두 번째 숫자: ')
-
-x = int(x)  # 문자열 → 정수 변환
-y = int(y)  # 문자열 → 정수 변환
-
-print('두 수의 합:', x + y)
-```
-**결과:** `1`, `2` 입력 시 → `1 + 2 = 3` (올바른 덧셈!)
-
-### 더 간단한 방법
-```python
-x = int(input('첫 번째 숫자: '))
-y = int(input('두 번째 숫자: '))
-print('두 수의 합:', x + y)
-```
-
----
-
-## 형변환 에러 예시
-
-```python
-a = 'hello'
-print(int(a))
-```
-**오류 발생:** `ValueError: invalid literal for int()`
-**이유:** 문자열이 숫자가 아니기 때문에 `int()` 변환 불가능
-
----
-
-- [다음 - 파일 입출력](./file_io)
-- [이전 - 입출력](./io)
+[이전 - 입출력](./io) | [다음 - 조건문](./if)
