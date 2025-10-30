@@ -40,26 +40,15 @@ const Menu = () => {
   const languages = [
     
     {
-      id: 'python',
-      title: 'Python',
-      icon: 'PY',
-      description: '간단하고 읽기 쉬운 문법으로 프로그래밍을 시작하기에 완벽한 언어입니다. 데이터 분석, AI, 웹 개발까지 다양한 분야에서 활용됩니다.',
+      id: 'c',
+      title: 'c',
+      icon: 'C',
+      description: 'C 언어는 시스템 프로그래밍과 임베디드 시스템에서 널리 사용되는 강력한 저수준 언어입니다. 효율적인 메모리 관리와 빠른 실행 속도를 제공합니다.',
       difficulty: 1,
       duration: '4주',
-      route: '/python/intro',
+      route: '/c/variable',
       recommended: true,
       categories: ['준비', '초급', '중급', '고급']
-    },
-    {
-      id: 'linux',
-      title: 'Linux',
-      icon: 'Linux',
-      description: '운영체제의 핵심인 리눅스를 배우고 시스템 관리, 서버 운영, 개발 환경 설정 등 다양한 기술을 습득합니다. 오픈소스의 세계로 들어오세요.',
-      difficulty: 0,
-      duration: '',
-      route: '/linux/intro',
-      recommended: false,
-      categories: []
     }
   ];
 

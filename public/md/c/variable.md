@@ -43,3 +43,13 @@ int main()
     printf("%ld\n", l);
     printf("%d\n", flag); // true는 1, false는 0으로 출력됨
 }
+
+출력 결과
+
+10
+11.53
+1.24
+A
+2323
+53
+1
