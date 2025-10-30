@@ -28,47 +28,8 @@ function MarkdownPage() {
 
   // 언어별 문서 목록 (실제로는 API에서 가져올 수 있음)
   const docMenus: DocMenus = {
-    python: [
-      { name: "intro", title: "Python 소개", category: "준비" },
-      { name: "feature", title: "Python 특징", category: "준비" },
-      { name: "install", title: "Python 설치", category: "준비" },
-      { name: "io", title: "입출력", category: "초급" },
-      { name: "variable", title: "변수와 데이터 타입", category: "초급" },
-      { name: "if", title: "조건문", category: "초급" },
-      { name: "for", title: "반복문 - for", category: "초급" },
-      { name: "while", title: "반복문 - while", category: "초급" },
-      { name: "list", title: "리스트", category: "초급" },
-      { name: "tuple", title: "튜플", category: "초급" },
-      { name: "set", title: "세트", category: "초급" },
-      { name: "dictionary", title: "딕셔너리", category: "초급" },
-      { name: "function", title: "함수", category: "초급" },
-      { name: "import", title: "모듈과 import", category: "초급" },
-      { name: "file_io", title: "파일 입출력", category: "중급" },
-      { name: "lambda_map_filter", title: "람다, map, filter", category: "중급" },
-      { name: "regex", title: "정규 표현식", category: "중급" },
-      { name: "class", title: "클래스", category: "중급" },
-      { name: "exception", title: "예외 처리", category: "중급" },
-      { name: "decorator", title: "데코레이터", category: "중급" },
-      { name: "module", title: "모듈과 패키지", category: "중급" },
-      { name: "generator", title: "제너레이터", category: "고급" },
-      { name: "asyncio", title: "비동기 프로그래밍", category: "고급" },
-      { name: "metaclass", title: "메타클래스", category: "고급" },
-    ],
-    linux: [
-      { name: "intro", title: "Linux 소개", category: "준비" },
-      { name: "basic_commands", title: "기본 명령어", category: "기초" },
-      { name: "file_system", title: "파일 시스템", category: "기초" },
-      { name: "permissions", title: "권한 관리", category: "기초" },
-      { name: "package_management", title: "패키지 관리", category: "기초" },
-      { name: "text_editors", title: "텍스트 에디터", category: "기초" },
-      { name: "networking", title: "네트워킹", category: "중급" },
-      { name: "process_management", title: "프로세스 관리", category: "중급" },
-      { name: "shell_scripting", title: "쉘 스크립팅", category: "중급" },
-      { name: "user_management", title: "사용자 관리", category: "중급" },
-      { name: "system_monitoring", title: "시스템 모니터링", category: "고급" },
-      { name: "ssh", title: "SSH", category: "고급" },
-      { name: "cron", title: "Cron 작업", category: "고급" },
-      { name: "firewall", title: "방화벽", category: "고급" },
+    c: [
+      { name: "variable", title: "변수", category: "기본" },
     ]
   };
 

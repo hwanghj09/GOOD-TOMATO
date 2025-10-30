@@ -16,6 +16,9 @@ const Home = () => {
         <br />
         지금 바로 시작해보세요!
       </p>
+      <p className="description-text">
+        Good Tomato는 초보자를 위한 프로그래밍 학습 플랫폼입니다.
+      </p>
       
       <button 
         className="start-button animate-fadeInUp" 
