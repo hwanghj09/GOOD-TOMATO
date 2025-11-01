@@ -2,7 +2,6 @@ import { useParams, Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import AdComponent from './AdComponent';
-import './css/markdown.css';
 
 interface DocItem {
   name: string;
@@ -30,6 +29,10 @@ function MarkdownPage() {
   const docMenus: DocMenus = {
     c: [
       { name: "variable", title: "변수", category: "기본" },
+      {name : "list", title: "리스트", category: "기본"},
+      {name : "pointer", title: "포인터", category: "기본"},
+      {name : "for", title: "for", category: "기본"},
+
     ]
   };
 

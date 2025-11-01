@@ -1,51 +1,59 @@
 # C 언어 변수들
-
-C언어의 변수에는 여러 종류가 있습니다.  
-각 변수는 **저장하는 데이터의 종류와 크기**에 따라 다르게 선언됩니다.
-
 ---
 
 ## 주요 변수 종류
 
 int
 정수형 (소수점 없는 숫자)
-예시: int age = 25;
-
+예시: 
+```c
+int age = 25;
+```
 
 float
 
 실수형 (소수점 있는 숫자, 단정도)
 
-예시: float pi = 3.14;
-
+예시:
+```c
+float pi = 3.14;
+```
 
 double
 
 배정도 실수형 (더 정밀한 실수)
 
-예시: double weight = 65.432;
-
+예시:
+```c
+double weight = 65.432;
+```
 
 char
 
 문자형 (한 글자 저장)
 
-예시: char grade = 'A';
-
+예시:
+```c
+char grade = 'A';
+```
 
 short
 
 짧은 정수형 (작은 범위의 정수 저장)
 
-예시: short s = 1234;
-
+예시: 
+```c
+short s = 1234;
+```
 
 long
 
 긴 정수형 (큰 범위의 정수 저장)
 
-예시: long l = 123456789;
-
+예시:
+```c
+long l = 123456789;
+```
 
 bool
 
@@ -53,11 +61,11 @@ bool
 
 사용하려면 #include <stdbool.h> 필요
 
-예시: bool flag = true;
+```c
+bool flag = true;
+```
 ---
 [AD]
-## 예시 코드
-
 ```c
 #include <stdio.h>
 #include <stdbool.h>
@@ -83,7 +91,7 @@ int main()
 ```
 
 ```c
-출력 결과
+결과
 
 10
 11.53
@@ -92,4 +100,4 @@ A
 2323
 53
 1
-```c
+``` 
