@@ -1,35 +1,31 @@
 # C언어 포인터
 
-포인터란 **변수의 주소를 저장하는 변수**입니다. 값 자체가 아니라 값이 저장된 **메모리 위치**를 가리킵니다.
+포인터란 **변수의 주소를 저장하는 변수**이다. 값 자체가 아니라 값이 저장된 **메모리 위치**를 가리킨다
 
 ---
 
 ## 주소 연산자 `&`
 
-* **정의**: 변수 앞에 `&`를 붙이면 해당 변수의 **주소**를 가져옵니다.
+* **정의**: 변수 앞에 `&`를 붙이면 해당 변수의 **주소**를 가져옴
 * 포인터에 값을 할당할 때 사용
 * 예시 주소: `0x7ffee3b8a9ac`
 
 ```c
-#include <stdio.h>
+int num = 42;
+int *p;
 
-int main() {
-    int num = 42;
-    int *p;
+p = &num; // num의 주소를 포인터 p에 저장
 
-    p = &num; // num의 주소를 포인터 p에 저장
+printf("num 값: %d\n", num);       // 42
+printf("num 주소: %p\n", &num);    // 0x7ffee...
+printf("p 값 (num 주소): %p\n", p); // p가 가진 값 (num 주소)
 
-    printf("num 값: %d\n", num);       // 42
-    printf("num 주소: %p\n", &num);    // 0x7ffee...
-    printf("p 값 (num 주소): %p\n", p); // p가 가진 값 (num 주소)
-
-    return 0;
-}
+return 0;
 ```
 
 ### 결과 예시
 
-```
+```c
 num 값: 42
 num 주소: 0x7fff375c00ac
 p 값 (num 주소): 0x7fff375c00ac
@@ -37,7 +33,7 @@ p 값 (num 주소): 0x7fff375c00ac
 
 ### 메모리 구조
 
-```
+```c
 num
 주소 : 0x100
 값   : 42 
@@ -55,26 +51,22 @@ p
 * 값을 읽거나 수정할 수 있음
 
 ```c
-#include <stdio.h>
+int num = 42;
+int *p = &num;
 
-int main() {
-    int num = 42;
-    int *p = &num;
-
-    printf("*p 값: %d\n", *p);
-    return 0;
-}
+printf("*p 값: %d\n", *p);
+return 0;
 ```
 
 ### 결과
 
-```
+```c
 *p 값: 42
 ```
 
 ### 메모리 구조
 
-```
+```c
 num
 주소 : 0x100  
 값   : 42
@@ -92,15 +84,11 @@ p
 * 포인터를 이용해 배열 요소 접근 가능
 
 ```c
-#include <stdio.h>
+int arr[5] = {1,2,3,4,5};
+int *p = arr; // arr == &arr[0]
 
-int main() {
-    int arr[5] = {1,2,3,4,5};
-    int *p = arr; // arr == &arr[0]
-
-    printf("%d\n", *(p + 2)); // arr[2] 값 → 3
-    return 0;
-}
+printf("%d\n", *(p + 2)); // arr[2] 값 → 3
+return 0;
 ```
 
 * `p + 2` → 배열의 2번째 요소 주소

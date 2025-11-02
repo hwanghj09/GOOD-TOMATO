@@ -1,6 +1,8 @@
 import { useParams, Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
+import rehypeHighlight from "rehype-highlight";
+import "highlight.js/styles/github-dark.css";
 import AdComponent from './AdComponent';
 import './css/markdown.css';
 interface DocItem {
@@ -31,8 +33,8 @@ function MarkdownPage() {
       { name: "variable", title: "변수", category: "기본" },
       {name : "list", title: "리스트", category: "기본"},
       {name : "pointer", title: "포인터", category: "기본"},
+      {name : "scanf", title: "입력", category: "기본"},
       {name : "for", title: "for", category: "기본"},
-
     ]
   };
 
@@ -51,7 +53,7 @@ function MarkdownPage() {
     if (!lang || !docName) return;
 
     setLoading(true);
-    fetch(`/md/${lang}/${docName}.md?t=${Date.now()}`)
+    fetch(`/md/${lang}/${docName}.md?t=${Date.now()}`, { cache: "no-store" })
       .then((res) => {
         if (!res.ok) throw new Error("파일 없음");
         return res.text();
@@ -141,7 +143,10 @@ useEffect(() => {
           <div className="prose">
             {content.split('[AD]').map((part, index) => (
               <div key={index}>
-                <ReactMarkdown>{part}</ReactMarkdown>
+                <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
+                  {part}
+                </ReactMarkdown>
+
                 {index < content.split('[AD]').length - 1 && <AdComponent />}
               </div>
             ))}

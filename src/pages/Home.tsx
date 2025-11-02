@@ -27,7 +27,7 @@ const Home = () => {
         시작하기
       </button>  
       <div className="footer-info">
-        <p>&copy; 2025 Tomato Academy by Hwang Hyeon jun. All rights reserved.</p>
+        <p>&copy; 2025 Good Tomato by Hwang Hyeon jun. All rights reserved.</p>
       </div>
 
     </div>
