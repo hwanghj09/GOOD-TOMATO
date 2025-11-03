@@ -37,6 +37,7 @@ function MarkdownPage() {
         { name: "if", title: "조건문", category: "기본" },
         { name: "for", title: "반복문 for", category: "기본" },
         { name: "while", title: "반복문 while", category: "기본" },
+        { name: "function", title: "함수", category: "기본" },
       ]
 
   };
