@@ -30,15 +30,15 @@ function MarkdownPage() {
   // 언어별 문서 목록 (실제로는 API에서 가져올 수 있음)
   const docMenus: DocMenus = {
     c: [
-      { name: "variable", title: "변수", category: "기본" },
-      {name : "list", title: "리스트", category: "기본"},
-      {name : "pointer", title: "포인터", category: "기본"},
-      {name : "scanf", title: "입력", category: "기본"},
-      {name : "for", title: "반복문 for", category: "기본"},
-      {name : "while", title: "반복문 while", category: "기본"},
-      {name : "if", title: "조건문", category: "기본"},
+        { name: "variable", title: "변수", category: "기본" },
+        { name: "list", title: "리스트", category: "기본" },
+        { name: "pointer", title: "포인터", category: "기본" },
+        { name: "scanf", title: "입력", category: "기본" },
+        { name: "if", title: "조건문", category: "기본" },
+        { name: "for", title: "반복문 for", category: "기본" },
+        { name: "while", title: "반복문 while", category: "기본" },
+      ]
 
-    ]
   };
 
   const currentDocs = (lang && docMenus[lang]) ? docMenus[lang] : [];
