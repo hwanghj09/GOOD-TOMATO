@@ -34,7 +34,10 @@ function MarkdownPage() {
       {name : "list", title: "리스트", category: "기본"},
       {name : "pointer", title: "포인터", category: "기본"},
       {name : "scanf", title: "입력", category: "기본"},
-      {name : "for", title: "for", category: "기본"},
+      {name : "for", title: "반복문 for", category: "기본"},
+      {name : "while", title: "반복문 while", category: "기본"},
+      {name : "if", title: "조건문", category: "기본"},
+
     ]
   };
 

@@ -41,14 +41,14 @@ const Menu = () => {
     
     {
       id: 'c',
-      title: 'c',
+      title: 'C 언어',
       icon: 'C',
       description: 'C 언어는 시스템 프로그래밍과 임베디드 시스템에서 널리 사용되는 강력한 저수준 언어입니다. 효율적인 메모리 관리와 빠른 실행 속도를 제공합니다.',
-      difficulty: 1,
+      difficulty: 2,
       duration: '4주',
       route: '/c/variable',
       recommended: true,
-      categories: ['준비', '초급', '중급', '고급']
+      categories: ['초급', '중급', '고급']
     }
   ];
 
