@@ -69,7 +69,7 @@ i: 4, j: 2
 int main()
 {
     int a;
-    print("몇단까지 출력할까요? : ");
+    printf("몇단까지 출력할까요? : ");
     scanf("%d",&a);
 
     for(int i=1; i<=a; i++)
