@@ -7,7 +7,7 @@ C언어에서 입력은 `scanf`을 사용한다.
 ```c
 int a;
 printf("숫자를 입력하세요 : ");
-scanf("%d", a);
+scanf("%d", &a);
 printf(a);
 ```
 
@@ -24,7 +24,7 @@ printf(a);
 ```c
 char name[15];
 printf("이름을 입력하세요: ");
-scanf("%s", name);
+scanf("%s", &name);
 printf("당신의 이름은 %s\n", name);
 ```
 
@@ -66,7 +66,7 @@ return 0;
 ```c
 char name[15];
 printf("이름을 입력하세요: ");
-scanf(" %[^\n]", name);
+scanf(" %[^\n]", &name);
 printf("당신의 이름은 %s\n", name);
 ```
 
