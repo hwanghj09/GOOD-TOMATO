@@ -53,6 +53,10 @@ function MarkdownPage() {
       { name: "mv", title: "mv", category: "명령어" },
       { name: "cd", title: "cd", category: "명령어" },
       { name: "mkdir", title: "mkdir", category: "명령어" },
+      { name: "touch", title: "touch", category: "명령어" },
+      { name: "nano", title: "nano", category: "명령어" },
+      { name: "gcc-install", title: "GCC 설치", category: "C 언어" },
+      { name: "c-run", title: "C 언어 실행", category: "C 언어" },
     ]
 
   };
@@ -114,16 +118,16 @@ useEffect(() => {
   };
 
   return (
-    <div className="markdown-container">
-      <button
-        className="sidebar-toggle"
-        onClick={toggleSidebar}
-        aria-label="사이드바 토글"
-        aria-pressed={sidebarOpen}
-      >
-        <span className="toggle-icon">☰</span>
-        <span className="toggle-label">{sidebarOpen ? "닫기" : "메뉴"}</span>
-      </button>
+    <div className={`markdown-container ${sidebarOpen ? "sidebar-open" : "sidebar-closed"}`}>
+      {!sidebarOpen && (
+        <button
+          className="sidebar-open-toggle"
+          onClick={toggleSidebar}
+          aria-label="사이드바 열기"
+        >
+          ☰ 
+        </button>
+      )}
 
       <div
         className={`sidebar-backdrop ${sidebarOpen ? "show" : ""}`}
@@ -137,6 +141,15 @@ useEffect(() => {
           <Link to="/Menu" className="back-to-menu">
             ← 메뉴로 돌아가기
           </Link>
+          <button
+            className="sidebar-toggle"
+            onClick={toggleSidebar}
+            aria-label="사이드바 토글"
+            aria-pressed={sidebarOpen}
+          >
+            <span className="toggle-icon">☰</span>
+            <span className="toggle-label">{sidebarOpen ? "닫기" : "메뉴"}</span>
+          </button>
           
         </div>
         

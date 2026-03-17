@@ -8,6 +8,7 @@
   --accent-strong: #1d4ed8;
   --border-soft: #e5e7eb;
   --shadow-soft: 0 4px 12px rgba(15, 23, 42, 0.06);
+  --sidebar-width: 300px;
 }
 
 .markdown-container {
@@ -19,17 +20,16 @@
 }
 
 .sidebar {
-  width: 280px;
-  min-width: 280px;
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
   background: #f8fafc;
   border-right: 1px solid var(--border-soft);
   padding: 1.5rem 0;
   overflow-y: auto;
-  /* height: 100vh; */ /* 기존 제거 */
-  height: 100%;           /* 또는 아래처럼 calc로 대체 */
+  height: 100vh;
   position: sticky;
   top: 0;
-  -webkit-overflow-scrolling: touch; /* iOS 부드러운 스크롤 */
+  -webkit-overflow-scrolling: touch;
   box-shadow: none;
   transition: width 0.2s ease, min-width 0.2s ease, padding 0.2s ease, border 0.2s ease;
 }
@@ -46,6 +46,9 @@
   padding: 0 1.5rem 1rem;
   border-bottom: 1px solid var(--border-soft);
   margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .sidebar-title {
@@ -304,21 +307,20 @@
 /* 사이드바 토글 버튼 (모바일용) */
 .sidebar-toggle {
   display: block;
-  position: fixed;
-  top: 1.25rem;
-  left: 1.25rem;
-  z-index: 1000;
+  position: static;
   background: #ffffff;
   color: #1f2937;
   border: 1px solid var(--border-soft);
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
+  padding: 0.45rem 0.75rem;
+  border-radius: 10px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  width: 100%;
+  justify-content: center;
 }
 .sidebar-toggle:hover {
   transform: translateY(-1px);
@@ -354,6 +356,27 @@
   opacity: 1;
   pointer-events: auto;
 }
+
+.sidebar-open-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 950;
+  background: #ffffff;
+  color: #1f2937;
+  border: 1px solid var(--border-soft);
+  padding: 0.45rem 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.sidebar-open-toggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.1);
+}
 .back-to-menu {
   display: inline-block;
   margin-top: 4px;
@@ -378,13 +401,15 @@
     z-index: 999;
     background: white;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .sidebar.open {
     transform: translateX(0);
   }
   .sidebar.closed {
-    width: 280px;
-    min-width: 280px;
+    width: var(--sidebar-width);
+    min-width: var(--sidebar-width);
     padding: 1rem 0;
     border-right: 1px solid #e2e8f0;
   }
