@@ -19,18 +19,6 @@
   <body>
             
     <div id="root"></div>
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(registration => {
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        })
-        .catch(error => {
-          console.log('ServiceWorker registration failed: ', error);
-        });
-    });
-  }
-</script>
+<!-- 서비스워커 등록 제거: 캐시로 인한 구버전 표시 방지 -->
   </body>
 </html>
