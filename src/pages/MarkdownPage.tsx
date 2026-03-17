@@ -25,7 +25,10 @@ function MarkdownPage() {
   const [content, setContent] = useState<string>("");
   const [error, setError] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
-  const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
+  const [sidebarOpen, setSidebarOpen] = useState<boolean>(() => {
+    if (typeof window === "undefined") return true;
+    return window.innerWidth > 768;
+  });
 
   // 언어별 문서 목록 (실제로는 API에서 가져올 수 있음)
   const docMenus: DocMenus = {
@@ -79,6 +82,14 @@ useEffect(() => {
   window.scrollTo(0, 0);
 }, [docName]);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setSidebarOpen(window.innerWidth > 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
@@ -92,11 +103,23 @@ useEffect(() => {
 
   return (
     <div className="markdown-container">
-      <button className="sidebar-toggle" onClick={toggleSidebar}>
-        ☰
+      <button
+        className="sidebar-toggle"
+        onClick={toggleSidebar}
+        aria-label="사이드바 토글"
+        aria-pressed={sidebarOpen}
+      >
+        <span className="toggle-icon">☰</span>
+        <span className="toggle-label">{sidebarOpen ? "닫기" : "메뉴"}</span>
       </button>
+
+      <div
+        className={`sidebar-backdrop ${sidebarOpen ? "show" : ""}`}
+        onClick={() => setSidebarOpen(false)}
+        aria-hidden="true"
+      />
       
-      <nav className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+      <nav className={`sidebar ${sidebarOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-header">
           <h2 className="sidebar-title">{getLanguageTitle(lang)} 문서</h2>
           <Link to="/Menu" className="back-to-menu">

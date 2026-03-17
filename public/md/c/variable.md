@@ -73,6 +73,8 @@ int main()
     printf("%d\n", s);
     printf("%ld\n", l);
     printf("%d\n", flag); // true는 1, false는 0으로 출력됨
+
+    return 0;
 }
 ```
 
