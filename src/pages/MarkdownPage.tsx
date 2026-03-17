@@ -45,14 +45,14 @@ function MarkdownPage() {
       ],
     linux: [
       { name: "intro", title: "리눅스 소개", category: "기본" },
-      { name: "terminal", title: "터미널 기초", category: "기본" },
-      { name: "shell", title: "셸과 프롬프트", category: "기본" },
-      { name: "files", title: "파일/디렉터리", category: "파일" },
-      { name: "search", title: "검색과 필터", category: "파일" },
-      { name: "permissions", title: "권한과 소유권", category: "권한" },
-      { name: "process", title: "프로세스 관리", category: "프로세스" },
-      { name: "network", title: "네트워크 기본", category: "네트워크" },
-      { name: "package", title: "패키지 관리", category: "도구" },
+      { name: "windows-diff", title: "Windows와 차이점", category: "기본" },
+      { name: "dir-structure", title: "디렉토리의 구조", category: "기본" },
+      { name: "path-types", title: "상대/절대 경로", category: "기본" },
+      { name: "pwd", title: "pwd", category: "명령어" },
+      { name: "ls", title: "ls", category: "명령어" },
+      { name: "mv", title: "mv", category: "명령어" },
+      { name: "cd", title: "cd", category: "명령어" },
+      { name: "mkdir", title: "mkdir", category: "명령어" },
     ]
 
   };
