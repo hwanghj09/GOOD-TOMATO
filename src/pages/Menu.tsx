@@ -42,10 +42,9 @@ const Menu = () => {
     {
       id: 'c',
       title: 'C 언어',
-      icon: 'C',
+      icon: '/logos/c.png',
       description: 'C 언어는 시스템 프로그래밍과 임베디드 시스템에서 널리 사용되는 강력한 저수준 언어입니다. 효율적인 메모리 관리와 빠른 실행 속도를 제공합니다.',
       difficulty: 2,
-      duration: '4주',
       route: '/c/variable',
       recommended: true,
       categories: ['초급', '중급', '고급']
@@ -53,10 +52,9 @@ const Menu = () => {
     {
       id: 'linux',
       title: '리눅스',
-      icon: 'L',
+      icon: '/logos/linux.png',
       description: '터미널 기초부터 파일 관리, 권한, 프로세스까지 실습 중심으로 빠르게 익힙니다.',
       difficulty: 2,
-      duration: '3주',
       route: '/linux/intro',
       recommended: false,
       categories: ['초급', '기초', '실습']
@@ -95,7 +93,7 @@ const Menu = () => {
             )}
 
             <div className={`language-icon ${lang.id}-icon`}>
-              {lang.icon}
+              <img src={lang.icon} alt={`${lang.title} 로고`} className="language-logo" />
             </div>
 
             <h2 className="language-title">{lang.title}</h2>
@@ -110,9 +108,6 @@ const Menu = () => {
                 <div className="difficulty-dots">
                   {renderDifficultyDots(lang.difficulty)}
                 </div>
-              </div>
-              <div className="duration">
-                예상 학습기간: {lang.duration}
               </div>
             </div>
             <div className="categories">
