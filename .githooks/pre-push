@@ -1,8 +1,0 @@
-#!/bin/sh
-set -e
-
-echo "[pre-push] Running build..."
-npm run build
-
-echo "[pre-push] Deploying to Firebase..."
-firebase deploy
