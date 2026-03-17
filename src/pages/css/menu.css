@@ -124,6 +124,14 @@
   background: linear-gradient(135deg, #00599c, #004080);
 }
 
+.Menu .c-icon {
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+}
+
+.Menu .linux-icon {
+  background: linear-gradient(135deg, #15803d, #22c55e);
+}
+
 /* 언어 제목 */
 .Menu .language-title {
   font-size: 1.75rem;

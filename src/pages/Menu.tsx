@@ -49,6 +49,17 @@ const Menu = () => {
       route: '/c/variable',
       recommended: true,
       categories: ['초급', '중급', '고급']
+    },
+    {
+      id: 'linux',
+      title: '리눅스',
+      icon: 'L',
+      description: '터미널 기초부터 파일 관리, 권한, 프로세스까지 실습 중심으로 빠르게 익힙니다.',
+      difficulty: 2,
+      duration: '3주',
+      route: '/linux/intro',
+      recommended: false,
+      categories: ['초급', '기초', '실습']
     }
   ];
 

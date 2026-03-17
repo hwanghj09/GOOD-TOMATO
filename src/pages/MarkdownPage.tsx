@@ -42,7 +42,18 @@ function MarkdownPage() {
         { name: "while", title: "반복문 while", category: "기본" },
         { name: "function", title: "함수", category: "기본" },
         {name : "productmanager", title : "상품관리프로그램", category : "기본"},
-      ]
+      ],
+    linux: [
+      { name: "intro", title: "리눅스 소개", category: "기본" },
+      { name: "terminal", title: "터미널 기초", category: "기본" },
+      { name: "shell", title: "셸과 프롬프트", category: "기본" },
+      { name: "files", title: "파일/디렉터리", category: "파일" },
+      { name: "search", title: "검색과 필터", category: "파일" },
+      { name: "permissions", title: "권한과 소유권", category: "권한" },
+      { name: "process", title: "프로세스 관리", category: "프로세스" },
+      { name: "network", title: "네트워크 기본", category: "네트워크" },
+      { name: "package", title: "패키지 관리", category: "도구" },
+    ]
 
   };
 
@@ -96,7 +107,8 @@ useEffect(() => {
 
   const getLanguageTitle = (lang: string | undefined): string => {
     const titles: { [key: string]: string } = {
-      python: "Python"
+      python: "Python",
+      linux: "Linux"
     };
     return (lang && titles[lang]) ? titles[lang] : (lang?.toUpperCase() || "문서");
   };
@@ -139,7 +151,6 @@ useEffect(() => {
                     <Link 
                       to={`/${lang}/${doc.name}`}
                       className={`nav-link ${docName === doc.name ? 'active' : ''}`}
-                      onClick={() => setSidebarOpen(false)}
                     >
                       {doc.title}
                     </Link>
