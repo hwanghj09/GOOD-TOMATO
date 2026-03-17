@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './css/menu.css';
 
-const Menu = () => {
-  const navigate = useNavigate();
-
-  const headerMessages = [
+const headerMessages = [
   "Pretty Tomato",
   "Good Tomato",
   "ajtwoddl Tomato",
@@ -28,6 +25,8 @@ const Menu = () => {
   "Mystery Tomato"
 ];
 
+const Menu = () => {
+  const navigate = useNavigate();
 
   // 랜덤 메시지 상태, 처음 렌더링 시 한 번만 랜덤 선택
   const [headerText, setHeaderText] = useState(headerMessages[0]);

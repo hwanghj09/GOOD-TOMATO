@@ -1,4 +1,4 @@
-import { useParams, Link, useLocation } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
@@ -21,7 +21,6 @@ type GroupedDocs = {
 
 function MarkdownPage() {
   const { lang, docName } = useParams<{ lang: string; docName: string }>();
-  const location = useLocation();
   const [content, setContent] = useState<string>("");
   const [error, setError] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
