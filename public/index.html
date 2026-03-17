@@ -19,6 +19,19 @@
   <body>
             
     <div id="root"></div>
+    <script>
+      // 기존 서비스워커/캐시 제거해서 구버전 로딩 방지
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then((regs) => {
+          regs.forEach((reg) => reg.unregister());
+        });
+      }
+      if ('caches' in window) {
+        caches.keys().then((keys) => {
+          keys.forEach((key) => caches.delete(key));
+        });
+      }
+    </script>
 <!-- 서비스워커 등록 제거: 캐시로 인한 구버전 표시 방지 -->
   </body>
 </html>
