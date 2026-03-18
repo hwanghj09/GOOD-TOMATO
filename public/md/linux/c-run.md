@@ -46,3 +46,5 @@ gcc hello.c
 ```bash
 gcc hello.c -o hello && ./hello
 ```
+
+자세한 C 언어 구문은 C언어 강좌를 참고하세요.
