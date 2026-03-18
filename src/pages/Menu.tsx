@@ -61,7 +61,7 @@ const Menu = () => {
     {
       id: 'python',
       title: '파이썬',
-      icon: '/logos/python.svg',
+      icon: '/logos/python.png',
       description: '읽기 쉬운 문법으로 기본 문법부터 함수, 리스트까지 빠르게 익힙니다.',
       difficulty: 1,
       route: '/python/intro',
