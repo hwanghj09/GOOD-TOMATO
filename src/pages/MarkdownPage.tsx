@@ -56,6 +56,17 @@ function MarkdownPage() {
       { name: "nano", title: "nano", category: "명령어" },
       { name: "gcc-install", title: "GCC 설치", category: "C 언어" },
       { name: "c-run", title: "C 언어 실행", category: "C 언어" },
+    ],
+    python: [
+      { name: "intro", title: "파이썬 소개", category: "기본" },
+      { name: "run", title: "파이썬 실행", category: "기본" },
+      { name: "variable", title: "변수", category: "기본" },
+      { name: "input", title: "입력", category: "기본" },
+      { name: "if", title: "조건문", category: "기본" },
+      { name: "for", title: "for 반복문", category: "반복문" },
+      { name: "while", title: "while 반복문", category: "반복문" },
+      { name: "list", title: "리스트", category: "컬렉션" },
+      { name: "function", title: "함수", category: "함수" },
     ]
 
   };

@@ -11,6 +11,7 @@ pwd
 
 ## 예시 출력
 
-```
-/home/user/project
+```bash
+hwanghj09@hwang:~$ pwd
+/home/hwanghj09
 ```

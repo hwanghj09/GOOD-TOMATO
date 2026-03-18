@@ -57,6 +57,16 @@ const Menu = () => {
       route: '/linux/intro',
       recommended: false,
       categories: ['초급', '기초', '실습']
+    },
+    {
+      id: 'python',
+      title: '파이썬',
+      icon: '/logos/python.svg',
+      description: '읽기 쉬운 문법으로 기본 문법부터 함수, 리스트까지 빠르게 익힙니다.',
+      difficulty: 1,
+      route: '/python/intro',
+      recommended: false,
+      categories: ['초급', '기초']
     }
   ];
 
