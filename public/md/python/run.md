@@ -10,6 +10,8 @@
 python hello.py
 ```
 
+또는 VSCode에서 F5로 실행
+
 ## 한 줄 실행
 
 ```bash

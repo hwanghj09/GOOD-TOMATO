@@ -60,6 +60,7 @@ function MarkdownPage() {
     python: [
       { name: "intro", title: "파이썬 소개", category: "기본" },
       { name: "run", title: "파이썬 실행", category: "기본" },
+      { name: "import", title: "import 기본", category: "기본" },
       { name: "variable", title: "변수", category: "기본" },
       { name: "input", title: "입력", category: "기본" },
       { name: "if", title: "조건문", category: "기본" },
