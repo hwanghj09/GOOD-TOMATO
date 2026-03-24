@@ -9,6 +9,7 @@ interface DocItem {
   name: string;
   title: string;
   category: string;
+  route?: string;
 }
 
 type DocMenus = {
@@ -42,6 +43,11 @@ function MarkdownPage() {
         { name: "function", title: "함수", category: "기본" },
         {name : "productmanager", title : "상품관리프로그램", category : "기본"},
       ],
+    system: [
+      { name: "process", title: "프로세스", category: "시스템 프로그램" },
+      { name: "pointer", title: "포인터", category: "시스템 프로그램" },
+      { name: "fork", title: "fork()", category: "시스템 프로그램" },
+    ],
     linux: [
       { name: "intro", title: "리눅스 소개", category: "기본" },
       { name: "windows-diff", title: "Windows와 차이점", category: "기본" },
@@ -122,6 +128,8 @@ useEffect(() => {
 
   const getLanguageTitle = (lang: string | undefined): string => {
     const titles: { [key: string]: string } = {
+      c: "C",
+      system: "System Programming",
       python: "Python",
       linux: "Linux"
     };
@@ -173,7 +181,7 @@ useEffect(() => {
                 {docs.map((doc: DocItem) => (
                   <li key={doc.name} className="nav-item">
                     <Link 
-                      to={`/${lang}/${doc.name}`}
+                      to={doc.route ? doc.route : `/${lang}/${doc.name}`}
                       className={`nav-link ${docName === doc.name ? 'active' : ''}`}
                     >
                       {doc.title}
