@@ -35,12 +35,17 @@ function MarkdownPage() {
     c: [
         { name: "variable", title: "변수", category: "기본" },
         { name: "list", title: "리스트", category: "기본" },
+        { name: "array-string", title: "배열과 문자열", category: "기본" },
         { name: "pointer", title: "포인터", category: "기본" },
         { name: "scanf", title: "입력", category: "기본" },
         { name: "if", title: "조건문", category: "기본" },
         { name: "for", title: "반복문 for", category: "기본" },
         { name: "while", title: "반복문 while", category: "기본" },
         { name: "function", title: "함수", category: "기본" },
+        { name: "struct-typedef", title: "구조체와 typedef", category: "중급" },
+        { name: "file-io", title: "파일 입출력", category: "응용" },
+        { name: "time", title: "시간 측정", category: "응용" },
+        { name: "stack-queue", title: "스택/큐", category: "응용" },
         {name : "productmanager", title : "상품관리프로그램", category : "기본"},
       ],
     system: [
