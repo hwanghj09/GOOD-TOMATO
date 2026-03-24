@@ -51,7 +51,7 @@ const Menu = () => {
     {
       id: 'system',
       title: '시스템 프로그래밍',
-      icon: '/logos/c.png',
+      icon: '/logos/system.svg',
       description: '운영체제와 하드웨어 가까이에서 동작하는 프로그램을 이해합니다.',
       difficulty: 3,
       route: '/system/process',
