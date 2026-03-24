@@ -52,7 +52,7 @@ const Menu = () => {
       id: 'system',
       title: '시스템 프로그래밍',
       icon: '/logos/c.png',
-      description: '프로세스, 포인터, fork를 중심으로 운영체제와 하드웨어 가까이에서 동작하는 프로그램을 이해합니다.',
+      description: '운영체제와 하드웨어 가까이에서 동작하는 프로그램을 이해합니다.',
       difficulty: 3,
       route: '/system/process',
       recommended: false,
