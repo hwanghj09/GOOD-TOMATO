@@ -1,0 +1,36 @@
+[debug] [2026-05-12T13:35:56.533Z] ----------------------------------------------------------------------
+[debug] [2026-05-12T13:35:56.536Z] Command:       /home/hwanghj09/.nvm/versions/node/v20.20.0/bin/node /home/hwanghj09/.nvm/versions/node/v20.20.0/bin/firebase deploy
+[debug] [2026-05-12T13:35:56.536Z] CLI Version:   15.6.0
+[debug] [2026-05-12T13:35:56.537Z] Platform:      linux
+[debug] [2026-05-12T13:35:56.537Z] Node Version:  v20.20.0
+[debug] [2026-05-12T13:35:56.537Z] Time:          Tue May 12 2026 22:35:56 GMT+0900 (Korean Standard Time)
+[debug] [2026-05-12T13:35:56.537Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-12T13:35:59.223Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-12T13:35:59.223Z] > authorizing via signed-in user (hwanghj09@naver.com)
+[debug] [2026-05-12T13:35:59.224Z] [iam] checking project good-tomato for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-05-12T13:35:59.225Z] Checked if tokens are valid: false, expires at: 1778591670929
+[debug] [2026-05-12T13:35:59.226Z] Checked if tokens are valid: false, expires at: 1778591670929
+[debug] [2026-05-12T13:35:59.226Z] > refreshing access token with scopes: []
+[debug] [2026-05-12T13:35:59.229Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-05-12T13:35:59.230Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-05-12T13:35:59.550Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-05-12T13:35:59.551Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-05-12T13:35:59.560Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions [none]
+[debug] [2026-05-12T13:35:59.561Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions  x-goog-user-project=good-tomato
+[debug] [2026-05-12T13:35:59.561Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-12T13:35:59.849Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions 200
+[debug] [2026-05-12T13:35:59.849Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-12T13:35:59.853Z] Checked if tokens are valid: true, expires at: 1778596558552
+[debug] [2026-05-12T13:35:59.853Z] Checked if tokens are valid: true, expires at: 1778596558552
+[debug] [2026-05-12T13:35:59.856Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/good-tomato [none]
+[debug] [2026-05-12T13:36:00.433Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/good-tomato 200
+[debug] [2026-05-12T13:36:00.434Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/good-tomato {"projectId":"good-tomato","projectNumber":"168297089697","displayName":"good-tomato","name":"projects/good-tomato","resources":{"hostingSite":"good-tomato"},"state":"ACTIVE","etag":"1_b63e196d-9385-413f-915e-aae79ace2c66"}
+[info] 
+[info] === Deploying to 'good-tomato'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-05-12T13:36:00.449Z] Checked if tokens are valid: true, expires at: 1778596558552
+[debug] [2026-05-12T13:36:00.449Z] Checked if tokens are valid: true, expires at: 1778596558552
+[debug] [2026-05-12T13:36:00.449Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions [none]
+[debug] [2026-05-12T13:36:00.449Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
