@@ -34,3 +34,777 @@
 [debug] [2026-05-12T13:36:00.449Z] Checked if tokens are valid: true, expires at: 1778596558552
 [debug] [2026-05-12T13:36:00.449Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions [none]
 [debug] [2026-05-12T13:36:00.449Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-05-20T14:34:10.317Z] ----------------------------------------------------------------------
+[debug] [2026-05-20T14:34:10.319Z] Command:       /home/hwanghj09/.nvm/versions/node/v20.20.0/bin/node /home/hwanghj09/.nvm/versions/node/v20.20.0/bin/firebase deploy --only hosting
+[debug] [2026-05-20T14:34:10.319Z] CLI Version:   15.6.0
+[debug] [2026-05-20T14:34:10.319Z] Platform:      linux
+[debug] [2026-05-20T14:34:10.320Z] Node Version:  v20.20.0
+[debug] [2026-05-20T14:34:10.320Z] Time:          Wed May 20 2026 23:34:10 GMT+0900 (Korean Standard Time)
+[debug] [2026-05-20T14:34:10.320Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-20T14:34:10.321Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2026-05-20T14:34:12.252Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-20T14:34:12.253Z] > authorizing via signed-in user (hwanghj09@naver.com)
+[debug] [2026-05-20T14:34:12.253Z] [iam] checking project good-tomato for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-05-20T14:34:12.254Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:12.254Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:12.254Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions [none]
+[debug] [2026-05-20T14:34:12.255Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions  x-goog-user-project=good-tomato
+[debug] [2026-05-20T14:34:12.255Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-20T14:34:12.562Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions 200
+[debug] [2026-05-20T14:34:12.562Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-20T14:34:12.569Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:12.570Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:12.570Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/good-tomato [none]
+[debug] [2026-05-20T14:34:12.641Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2026-05-20T14:34:12.641Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2026-05-20T14:34:13.081Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/good-tomato 200
+[debug] [2026-05-20T14:34:13.081Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/good-tomato {"projectId":"good-tomato","projectNumber":"168297089697","displayName":"good-tomato","name":"projects/good-tomato","resources":{"hostingSite":"good-tomato"},"state":"ACTIVE","etag":"1_b63e196d-9385-413f-915e-aae79ace2c66"}
+[info] 
+[info] === Deploying to 'good-tomato'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-05-20T14:34:13.088Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:13.088Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:13.095Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions [none]
+[debug] [2026-05-20T14:34:13.095Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-05-20T14:34:14.539Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions 200
+[debug] [2026-05-20T14:34:14.540Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions {"name":"projects/168297089697/sites/good-tomato/versions/92c11ae41c688948","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[good-tomato]: beginning deploy... 
+[info] i  hosting[good-tomato]: found 82 files in build 
+[debug] [2026-05-20T14:34:14.570Z] [hosting] uploading with 200 concurrency
+[debug] [2026-05-20T14:34:14.871Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:14.871Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:14.874Z] [hosting] hash cache [YnVpbGQ] stored for 82 files
+[debug] [2026-05-20T14:34:14.874Z] [hosting][hash queue][FINAL] {"max":298,"min":17,"avg":56.21951219512195,"active":0,"complete":82,"success":82,"errored":0,"retried":0,"total":82,"elapsed":302}
+[debug] [2026-05-20T14:34:14.874Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/168297089697/sites/good-tomato/versions/92c11ae41c688948:populateFiles [none]
+[debug] [2026-05-20T14:34:14.874Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/168297089697/sites/good-tomato/versions/92c11ae41c688948:populateFiles {"files":{"/service-worker.js":"d3cf38f3851b02579cd741890ad6a1ea2b94ef8a68f3cb0a7ad266016f37ab89","/icon.png":"ad2fde17345165d4f41e002bef31666a2e235cddfad0d22ab68fa0801d69b5fd","/robots.txt":"2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec","/index.html":"8e85e1edc4b45330ca33d39ee111c81ba724200bca1885a8e794068987ba48a3","/manifest.json":"cce6b9f9929bb2d751df1ab8be9104c6ea0d4dd08dc02393b2aa0d40913fd0e6","/asset-manifest.json":"3dd108654ae8085878656a59e506b43339ef9b34c34d3cc690df709a9e1b6487","/static/js/main.36cba4b9.js.LICENSE.txt":"ecf68486f7d043f07599a39f7e9bfd9f4e4d3aefad459eed3ef00a170b2a58b8","/md/system/wait.md":"3da937b86c6071caeb9311f31d8851fdf4ca074d2cb93c67c23c52d1288e04ed","/static/css/main.6160a3c8.css":"34308a4659466745464b9093898f3b08a7cd327cb329619aa3a652c4b47e13d3","/md/system/signal.md":"c3a675453caf80b1f604692c4025441d310ecf34503af864059eb3204c33c457","/static/css/main.6160a3c8.css.map":"c6eed2b216bf7d8d46b79345498f795f2f5dd435e5c7804b9267a3dd64303d53","/md/system/process-observation.md":"543141435f97870088dc9e06a2d9f10a38240e535f936b80c6e29d861862a84b","/md/system/process.md":"282c4d971fc1c223500bc6b71bbb14ee7f9b7e33c1cc226c1ba23223431efd8a","/md/system/summary.md":"df5aa0dd59d3a57b13f234e1038828c5ea9fc3a9113d5efb11f0b483ce526372","/md/system/print-practice.md":"5eef25e209de5e7a2db0038a32f2b79022e2bbba2b72628ae466bf757b8f6976","/md/system/process-exit.md":"e282d3d20389bc423a4997130f0482692c298caf63849ca52146c6795c14945d","/md/system/process-control.md":"3ba0df206d6498568ed28f27afec0d2433a1082ef05104f1c6bb2678f5373dd2","/md/system/mini-shell.md":"bc09677f83573b620d81d6edccba2e8cf778fb12a4cf6dc633dc964a7b171155","/md/system/overview.md":"8bf6ce30703f182e3ac38c57da51478895a044a51f8ea5c62dc18069c87bb056","/md/system/pointer.md":"e0ca2d157bcf90d9898bd56b9b273e1426bc252491a0622a8ccec435d5cd5be0","/md/system/mini-pipe.md":"e3aa0a0f8910d9c3edd23b71adf86a14df9de013d48d73e76d5e673e9a278adc","/md/system/ipc.md":"3141c5b1c72140e461e16b694e76d1d555c1ea864592837fbeee34bdcb5579c3","/md/system/permissions.md":"93328d843de94bcdb4a8656022aced816fb1ea7d310df3b26f6f5751c94d1789","/md/system/linux-environment.md":"30039bca4f8f3a89acf25f2f038a4f3fbadfabcc3bf02e9c2e3bc63f936eed1b","/md/system/pipe-exec.md":"4fd289010f9178d0b7f136e3b6071bf7c601ae53d1ddd53df7cd3d34e86d985f","/md/system/fork.md":"d96670d6e0c00f61fa58f1a3600d2194b01cc5a34f74aa995807dc18333f525f","/md/system/file-descriptor.md":"9643ef36d6406ce33d484a60c93c4272ec21354f7b85d3146af31eb5b1fe7621","/md/system/debugging.md":"c61832bb8e1eb5d3b8803f1b3375969ca9a89c1c36954c2fb4a094046fba6f93","/md/system/exec.md":"621f77a8d717332e7e44af184038d483ae22276c19444058299e45ed3e25c215","/md/system/faq.md":"a82b684220930e4bd38cefa756aba75e865757edbf3601e7da088858bac0a72c","/md/system/c-functions.md":"6bd48512864c5e937e22e9760fb6ec70e26d334859786da2b4011e7b63abff42","/md/system/c-build.md":"74e418879c82244165bb00c8bc056e0916850b19d977689213e6176ddc280a8f","/md/python/while.md":"5f1ea3c0ff1b74b57bccfdee2a666829a6254055aed3fc87e4e04aa073870e4b","/md/system/commands.md":"48ca7fb76c052713f0077aaa3b12412c8a5977646ba1085896c72e240864b928","/md/python/variable.md":"2fc7aa109789c375a332b492952646707ce2c76d507102451a5cc33eefa81466","/md/python/run.md":"0a335eb0a812dca53b1ca94afa6bab5c1256c347fdcd5523f2e9bef6b41a2f0d","/md/system/complete.md":"d2b150fff2e0fabf196a7641a7c5793cb04066cc6697d49ce502c8c1ef24ed34","/md/system/exam.md":"c335dfb1c2ef04244c59aa2e3e038872b3b1816f568584f036d3dc19cdebc872","/md/python/if.md":"30644e094d9b2d4b004c3c6de4f5e3dfac898d9e4ca27f2fff8c710fc7340a2b","/md/python/function.md":"034f911cfccc0f4f1f7243c39c54902d068eeb0d48548b50272217a4db28c4ef","/md/python/list.md":"623c37c4221b1ff6dd194b994f78e55600c9feed0f6bf6aefdc00070cf957f71","/md/python/input.md":"1de66f8a4ead9e886544e54527d9a12975e1055b5e57518ea9ad56ac7a88af62","/md/python/for.md":"1d23aae1fb4673aba0532923342489352edff50c0e754796cf50f678cbebf729","/md/logic/digital-logic-circuit.md":"862806c6769743af7bfa73fd719373de098ea2cbe73a1f9437ee19ab1a1ae6ff","/md/python/intro.md":"f89ffdcdafff9b8075069d2132255540b2eef5fa2b8579b2de4259fa36208cbb","/md/python/import.md":"fdc528db52cfef88f9b419893f3dbb79a0e1120e0aa849084a75b77b70cadfc6","/md/linux/windows-diff.md":"c3b0cf86983d363c5defba599da7a221a7a02001f8abc34502a842429c2bfb42","/md/linux/touch.md":"481d02b3c3a785e16b9be917ee7e9f139ca09e277f358411b5c9de5bd8c57775","/md/linux/pwd.md":"eaecfed916a82066496f233f9e1b395dcb48f28451995b1a8d14da1595825e5b","/md/linux/path-types.md":"4bb9ee2bc377c4aa0e7408c5941acfb5a688b5ad6c1cfc8ffc6a19737758a5ac","/md/linux/nano.md":"6e63ed037b4cb8949712a4ba45912f13bfe147b72118673cbe12e316d689ad48","/md/linux/mv.md":"d53fd1486846c465a6a5bf36e867298165d9c84074ec5f1db519e478f9cbe225","/md/linux/mkdir.md":"40efae6ee5ea14c44f24271c409a93c42e1e206947773bc9072a6e626fed9ffd","/md/linux/ls.md":"0c21259245475087af8d5fffa3b055498b6fa61a39fef12dabd937306536c8f8","/md/linux/gcc-install.md":"fd66aed2ef75148e97558b38d1787f23be92702ac0213b450e8639981f86fb25","/md/linux/intro.md":"b8c8f6208a1d141eb0e4e02226783bc8518756a86cb047dea586d9d18eebb2df","/md/linux/dir-structure.md":"377c2aa810e88dc902083fb095db5dd6adf9b0dd6f08809e66b02dc5d04efad3","/md/linux/cd.md":"edc3e143cbbd68e39e46d02702170c2c28d8c9a3cee1f5486e42707f94b520b6","/md/common/process.md":"7eea31bc12d753f55ae609c96b0ce783d79a90a738f51b0af85ee26415fd3392","/md/linux/c-run.md":"b4aeda407b6437c620cd32e667bbd4daafd4a993f6a8656495e9b71cb368790b","/md/c/while.md":"0999c47a95beda9520fe028206b35e93692c9594cef47c323e9a2c278ded9614","/md/common/pointer.md":"f7546f7ce7fe9ab5e732102280f522a78016e3396a99acb20cc35cb762d97a31","/md/c/variable.md":"b814cbb8f4410329587e2bb40b880ce5b9296eb1c0dc55d60281d3f5af22971a","/md/c/time.md":"e3eec453b72dc2bc69e23744f7e5a112aaebe8aee43ce11f8312ed0393e48b53","/md/c/struct-typedef.md":"68b6a659e18fca6bd8d7693e9c188660f3f9048602b9c6ef18018cc0b571136b","/md/c/stack-queue.md":"51b7da00fa9f86d3eff55abd5226240e06797b90fd1651b5aa546f7734bdf5a1","/md/c/scanf.md":"299ba82be1e5a593f0b83ababa4902187c0b68a67dcbcb437cd2e62afe10b37c","/md/c/productmanager.md":"4e9316c4fcc01d8ae6260d3cf49e3806bd80b697c6bbbb201a7250bb52f11aae","/md/c/list.md":"386d4d146641e922629ece4759631c450f86a1c0ed8428722d88619757230bad","/md/c/pointer.md":"e5c3c5885745c424c7b536efdfef1cd6ad82d8883ecdcdb349652ff218c50d9c","/md/c/if.md":"de32358ae82ee56a148d3c6ddc2a617ec1fdfbf4453436e9b169c242f37fff4c","/md/c/function.md":"e1ffff4cf555e0451984e252df5ff62be954ccb909fa6a732521483de83c7577","/md/c/for.md":"6b5baa846ba068153a2e00f00e40758ae0714f93fe07e3bc109f722f1b557409","/md/c/file-io.md":"61c4be8a02ea1c73581423841803a7569b1d40fe9842ba01393ce38506162255","/logos/system.svg":"e0f50c42a0e2145cc3681de4623ca34c51e76e537dac6743bfead68697113fa4","/md/c/array-string.md":"24b60edd7092aa00d042990a8ad9577a68f3e448040307eb0d58d77215f711d8","/logos/logic.svg":"be8bb7a41f41b89114764d612609e5b3abef7cbf706668f1afed6e6bc5e467bd","/logos/c.png":"2c5fde7d77909830a73d2db2db7e80eed9534861ab5868869f5d76c4893389a8","/static/js/main.36cba4b9.js":"5723eea84c5db3e068da957ac477860244c94c9ea9f20cc4fd19953b7376fd84","/logos/python.png":"fff8625ae5205a8257330cb94c838c00cd1234c4a64e1a3ebe93899f7375669d","/logos/linux.png":"e4a14e75a40c27580c9d94662e29b5dc3c00e4660b4503974bb55a3f64b175ed","/static/js/main.36cba4b9.js.map":"bcf3e3a75e4792f86f8bedfc37a9f68ab11938ff3fd56a988f1dca9ffd0ea857"}}
+[debug] [2026-05-20T14:34:15.768Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/168297089697/sites/good-tomato/versions/92c11ae41c688948:populateFiles 200
+[debug] [2026-05-20T14:34:15.768Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/168297089697/sites/good-tomato/versions/92c11ae41c688948:populateFiles {"uploadRequiredHashes":["862806c6769743af7bfa73fd719373de098ea2cbe73a1f9437ee19ab1a1ae6ff","34308a4659466745464b9093898f3b08a7cd327cb329619aa3a652c4b47e13d3","8e85e1edc4b45330ca33d39ee111c81ba724200bca1885a8e794068987ba48a3","5723eea84c5db3e068da957ac477860244c94c9ea9f20cc4fd19953b7376fd84","c6eed2b216bf7d8d46b79345498f795f2f5dd435e5c7804b9267a3dd64303d53","bcf3e3a75e4792f86f8bedfc37a9f68ab11938ff3fd56a988f1dca9ffd0ea857","be8bb7a41f41b89114764d612609e5b3abef7cbf706668f1afed6e6bc5e467bd","3dd108654ae8085878656a59e506b43339ef9b34c34d3cc690df709a9e1b6487"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files"}
+[debug] [2026-05-20T14:34:15.769Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:15.769Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:15.770Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:15.770Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:15.771Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:15.771Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:15.771Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:15.771Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:15.771Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:15.771Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:15.771Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:15.771Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:15.772Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:15.772Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:15.772Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:15.772Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:15.772Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/862806c6769743af7bfa73fd719373de098ea2cbe73a1f9437ee19ab1a1ae6ff [none]
+[debug] [2026-05-20T14:34:15.772Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/862806c6769743af7bfa73fd719373de098ea2cbe73a1f9437ee19ab1a1ae6ff [stream]
+[debug] [2026-05-20T14:34:15.783Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/34308a4659466745464b9093898f3b08a7cd327cb329619aa3a652c4b47e13d3 [none]
+[debug] [2026-05-20T14:34:15.783Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/34308a4659466745464b9093898f3b08a7cd327cb329619aa3a652c4b47e13d3 [stream]
+[debug] [2026-05-20T14:34:15.784Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/8e85e1edc4b45330ca33d39ee111c81ba724200bca1885a8e794068987ba48a3 [none]
+[debug] [2026-05-20T14:34:15.784Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/8e85e1edc4b45330ca33d39ee111c81ba724200bca1885a8e794068987ba48a3 [stream]
+[debug] [2026-05-20T14:34:15.784Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/5723eea84c5db3e068da957ac477860244c94c9ea9f20cc4fd19953b7376fd84 [none]
+[debug] [2026-05-20T14:34:15.785Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/5723eea84c5db3e068da957ac477860244c94c9ea9f20cc4fd19953b7376fd84 [stream]
+[debug] [2026-05-20T14:34:15.785Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/c6eed2b216bf7d8d46b79345498f795f2f5dd435e5c7804b9267a3dd64303d53 [none]
+[debug] [2026-05-20T14:34:15.785Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/c6eed2b216bf7d8d46b79345498f795f2f5dd435e5c7804b9267a3dd64303d53 [stream]
+[debug] [2026-05-20T14:34:15.787Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/bcf3e3a75e4792f86f8bedfc37a9f68ab11938ff3fd56a988f1dca9ffd0ea857 [none]
+[debug] [2026-05-20T14:34:15.787Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/bcf3e3a75e4792f86f8bedfc37a9f68ab11938ff3fd56a988f1dca9ffd0ea857 [stream]
+[debug] [2026-05-20T14:34:15.793Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/be8bb7a41f41b89114764d612609e5b3abef7cbf706668f1afed6e6bc5e467bd [none]
+[debug] [2026-05-20T14:34:15.794Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/be8bb7a41f41b89114764d612609e5b3abef7cbf706668f1afed6e6bc5e467bd [stream]
+[debug] [2026-05-20T14:34:15.802Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/3dd108654ae8085878656a59e506b43339ef9b34c34d3cc690df709a9e1b6487 [none]
+[debug] [2026-05-20T14:34:15.802Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/3dd108654ae8085878656a59e506b43339ef9b34c34d3cc690df709a9e1b6487 [stream]
+[debug] [2026-05-20T14:34:15.804Z] [hosting][populate queue][FINAL] {"max":901,"min":901,"avg":901,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":933}
+[debug] [2026-05-20T14:34:15.804Z] [hosting] uploads queued: 8
+[info] i  hosting: uploading new files [0/8] (0%) 
+[debug] [2026-05-20T14:34:17.140Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/34308a4659466745464b9093898f3b08a7cd327cb329619aa3a652c4b47e13d3 200
+[debug] [2026-05-20T14:34:17.140Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/34308a4659466745464b9093898f3b08a7cd327cb329619aa3a652c4b47e13d3 [stream]
+[debug] [2026-05-20T14:34:17.196Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/862806c6769743af7bfa73fd719373de098ea2cbe73a1f9437ee19ab1a1ae6ff 200
+[debug] [2026-05-20T14:34:17.196Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/862806c6769743af7bfa73fd719373de098ea2cbe73a1f9437ee19ab1a1ae6ff [stream]
+[debug] [2026-05-20T14:34:17.226Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/be8bb7a41f41b89114764d612609e5b3abef7cbf706668f1afed6e6bc5e467bd 200
+[debug] [2026-05-20T14:34:17.226Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/be8bb7a41f41b89114764d612609e5b3abef7cbf706668f1afed6e6bc5e467bd [stream]
+[debug] [2026-05-20T14:34:17.228Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/8e85e1edc4b45330ca33d39ee111c81ba724200bca1885a8e794068987ba48a3 200
+[debug] [2026-05-20T14:34:17.229Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/8e85e1edc4b45330ca33d39ee111c81ba724200bca1885a8e794068987ba48a3 [stream]
+[debug] [2026-05-20T14:34:17.283Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/3dd108654ae8085878656a59e506b43339ef9b34c34d3cc690df709a9e1b6487 200
+[debug] [2026-05-20T14:34:17.283Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/3dd108654ae8085878656a59e506b43339ef9b34c34d3cc690df709a9e1b6487 [stream]
+[debug] [2026-05-20T14:34:17.404Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/c6eed2b216bf7d8d46b79345498f795f2f5dd435e5c7804b9267a3dd64303d53 200
+[debug] [2026-05-20T14:34:17.405Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/c6eed2b216bf7d8d46b79345498f795f2f5dd435e5c7804b9267a3dd64303d53 [stream]
+[debug] [2026-05-20T14:34:17.413Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/5723eea84c5db3e068da957ac477860244c94c9ea9f20cc4fd19953b7376fd84 200
+[debug] [2026-05-20T14:34:17.414Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/5723eea84c5db3e068da957ac477860244c94c9ea9f20cc4fd19953b7376fd84 [stream]
+[debug] [2026-05-20T14:34:17.668Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/bcf3e3a75e4792f86f8bedfc37a9f68ab11938ff3fd56a988f1dca9ffd0ea857 200
+[debug] [2026-05-20T14:34:17.669Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/92c11ae41c688948/files/bcf3e3a75e4792f86f8bedfc37a9f68ab11938ff3fd56a988f1dca9ffd0ea857 [stream]
+[debug] [2026-05-20T14:34:17.669Z] [hosting][upload queue][FINAL] {"max":1898,"min":1371,"avg":1550,"active":0,"complete":8,"success":8,"errored":0,"retried":0,"total":8,"elapsed":1901}
+[info] i  hosting: upload complete 
+[info] ✔  hosting[good-tomato]: file upload complete 
+[debug] [2026-05-20T14:34:17.670Z] [hosting] deploy completed after 3126ms
+[debug] [2026-05-20T14:34:17.670Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/md/**",
+          "destination": "/md/**"
+        },
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "/index.html",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/**/*.html",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/service-worker.js",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/asset-manifest.json",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/manifest.json",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/md/**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        }
+      ],
+      "site": "good-tomato"
+    },
+    "version": "projects/168297089697/sites/good-tomato/versions/92c11ae41c688948"
+  }
+]
+[info] i  hosting[good-tomato]: finalizing version... 
+[debug] [2026-05-20T14:34:17.685Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:17.686Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:17.686Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions/92c11ae41c688948 updateMask=status%2Cconfig
+[debug] [2026-05-20T14:34:17.687Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions/92c11ae41c688948 {"status":"FINALIZED","config":{"rewrites":[{"glob":"/md/**","path":"/md/**"},{"glob":"**","path":"/index.html"}],"headers":[{"glob":"/index.html","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/**/*.html","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/service-worker.js","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/asset-manifest.json","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/manifest.json","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/md/**","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}}]}}
+[debug] [2026-05-20T14:34:18.414Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions/92c11ae41c688948 200
+[debug] [2026-05-20T14:34:18.414Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions/92c11ae41c688948 {"name":"projects/168297089697/sites/good-tomato/versions/92c11ae41c688948","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/index.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/**/*.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/service-worker.js"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/asset-manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/md/**"}],"rewrites":[{"glob":"/md/**","path":"/md/**"},{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-05-20T14:34:13.725980Z","createUser":{"email":"hwanghj09@naver.com"},"finalizeTime":"2026-05-20T14:34:18.213549Z","finalizeUser":{"email":"hwanghj09@naver.com"}}
+[debug] [2026-05-20T14:34:18.414Z] [hosting] finalized version for good-tomato:[object Object]
+[info] ✔  hosting[good-tomato]: version finalized 
+[info] i  hosting[good-tomato]: releasing new version... 
+[debug] [2026-05-20T14:34:18.415Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:18.415Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:34:18.416Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/channels/live/releases versionName=projects%2F168297089697%2Fsites%2Fgood-tomato%2Fversions%2F92c11ae41c688948
+[debug] [2026-05-20T14:34:18.416Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/channels/live/releases {}
+[debug] [2026-05-20T14:34:19.220Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/channels/live/releases 200
+[debug] [2026-05-20T14:34:19.221Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/channels/live/releases {"name":"projects/168297089697/sites/good-tomato/channels/live/releases/1779287658340000","version":{"name":"projects/168297089697/sites/good-tomato/versions/92c11ae41c688948","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/index.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/**/*.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/service-worker.js"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/asset-manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/md/**"}],"rewrites":[{"glob":"/md/**","path":"/md/**"},{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-05-20T14:34:13.725980Z","createUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"},"finalizeTime":"2026-05-20T14:34:18.213549Z","finalizeUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"}},"type":"DEPLOY","releaseTime":"2026-05-20T14:34:18.340Z","releaseUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"}}
+[debug] [2026-05-20T14:34:19.221Z] [hosting] release: {"name":"projects/168297089697/sites/good-tomato/channels/live/releases/1779287658340000","version":{"name":"projects/168297089697/sites/good-tomato/versions/92c11ae41c688948","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/index.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/**/*.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/service-worker.js"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/asset-manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/md/**"}],"rewrites":[{"glob":"/md/**","path":"/md/**"},{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-05-20T14:34:13.725980Z","createUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"},"finalizeTime":"2026-05-20T14:34:18.213549Z","finalizeUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"}},"type":"DEPLOY","releaseTime":"2026-05-20T14:34:18.340Z","releaseUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"}}
+[info] ✔  hosting[good-tomato]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/good-tomato/overview
+[info] Hosting URL: https://good-tomato.web.app
+[debug] [2026-05-20T14:56:42.995Z] ----------------------------------------------------------------------
+[debug] [2026-05-20T14:56:42.998Z] Command:       /home/hwanghj09/.nvm/versions/node/v20.20.0/bin/node /home/hwanghj09/.nvm/versions/node/v20.20.0/bin/firebase deploy --only hosting
+[debug] [2026-05-20T14:56:42.998Z] CLI Version:   15.6.0
+[debug] [2026-05-20T14:56:42.999Z] Platform:      linux
+[debug] [2026-05-20T14:56:42.999Z] Node Version:  v20.20.0
+[debug] [2026-05-20T14:56:42.999Z] Time:          Wed May 20 2026 23:56:42 GMT+0900 (Korean Standard Time)
+[debug] [2026-05-20T14:56:42.999Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-20T14:56:45.529Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-20T14:56:45.531Z] > authorizing via signed-in user (hwanghj09@naver.com)
+[debug] [2026-05-20T14:56:45.531Z] [iam] checking project good-tomato for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-05-20T14:56:45.533Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:45.534Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:45.537Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions [none]
+[debug] [2026-05-20T14:56:45.537Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions  x-goog-user-project=good-tomato
+[debug] [2026-05-20T14:56:45.538Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-20T14:56:45.912Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions 200
+[debug] [2026-05-20T14:56:45.913Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-20T14:56:45.914Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:45.914Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:45.915Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/good-tomato [none]
+[debug] [2026-05-20T14:56:46.409Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/good-tomato 200
+[debug] [2026-05-20T14:56:46.410Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/good-tomato {"projectId":"good-tomato","projectNumber":"168297089697","displayName":"good-tomato","name":"projects/good-tomato","resources":{"hostingSite":"good-tomato"},"state":"ACTIVE","etag":"1_b63e196d-9385-413f-915e-aae79ace2c66"}
+[info] 
+[info] === Deploying to 'good-tomato'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-05-20T14:56:46.421Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:46.422Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:46.422Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions [none]
+[debug] [2026-05-20T14:56:46.422Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-05-20T14:56:47.748Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions 200
+[debug] [2026-05-20T14:56:47.749Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions {"name":"projects/168297089697/sites/good-tomato/versions/4a4e59ff5d93ec80","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[good-tomato]: beginning deploy... 
+[info] i  hosting[good-tomato]: found 83 files in build 
+[debug] [2026-05-20T14:56:47.786Z] [hosting] uploading with 200 concurrency
+[debug] [2026-05-20T14:56:48.259Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:48.259Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:48.261Z] [hosting] hash cache [YnVpbGQ] stored for 83 files
+[debug] [2026-05-20T14:56:48.261Z] [hosting][hash queue][FINAL] {"max":467,"min":28,"avg":74.27710843373494,"active":0,"complete":83,"success":83,"errored":0,"retried":0,"total":83,"elapsed":473}
+[debug] [2026-05-20T14:56:48.262Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/168297089697/sites/good-tomato/versions/4a4e59ff5d93ec80:populateFiles [none]
+[debug] [2026-05-20T14:56:48.263Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/168297089697/sites/good-tomato/versions/4a4e59ff5d93ec80:populateFiles {"files":{"/robots.txt":"2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec","/service-worker.js":"d3cf38f3851b02579cd741890ad6a1ea2b94ef8a68f3cb0a7ad266016f37ab89","/manifest.json":"cce6b9f9929bb2d751df1ab8be9104c6ea0d4dd08dc02393b2aa0d40913fd0e6","/index.html":"422b85e894fdf96926584cd969392a2c1e0602a71d9f7916a38e64cbc8ce3a42","/asset-manifest.json":"5f218626f7bf3c15202be48185d9c02c2552742f8c43a5f51d0a83b5fa5f09af","/static/js/main.433d0397.js.LICENSE.txt":"ecf68486f7d043f07599a39f7e9bfd9f4e4d3aefad459eed3ef00a170b2a58b8","/icon.png":"ad2fde17345165d4f41e002bef31666a2e235cddfad0d22ab68fa0801d69b5fd","/md/system/wait.md":"3da937b86c6071caeb9311f31d8851fdf4ca074d2cb93c67c23c52d1288e04ed","/md/system/summary.md":"df5aa0dd59d3a57b13f234e1038828c5ea9fc3a9113d5efb11f0b483ce526372","/static/css/main.6160a3c8.css.map":"c6eed2b216bf7d8d46b79345498f795f2f5dd435e5c7804b9267a3dd64303d53","/md/system/signal.md":"c3a675453caf80b1f604692c4025441d310ecf34503af864059eb3204c33c457","/md/system/process-observation.md":"543141435f97870088dc9e06a2d9f10a38240e535f936b80c6e29d861862a84b","/md/system/process.md":"282c4d971fc1c223500bc6b71bbb14ee7f9b7e33c1cc226c1ba23223431efd8a","/static/css/main.6160a3c8.css":"34308a4659466745464b9093898f3b08a7cd327cb329619aa3a652c4b47e13d3","/md/system/process-exit.md":"e282d3d20389bc423a4997130f0482692c298caf63849ca52146c6795c14945d","/md/system/print-practice.md":"5eef25e209de5e7a2db0038a32f2b79022e2bbba2b72628ae466bf757b8f6976","/md/system/process-control.md":"3ba0df206d6498568ed28f27afec0d2433a1082ef05104f1c6bb2678f5373dd2","/md/system/pointer.md":"e0ca2d157bcf90d9898bd56b9b273e1426bc252491a0622a8ccec435d5cd5be0","/md/system/permissions.md":"93328d843de94bcdb4a8656022aced816fb1ea7d310df3b26f6f5751c94d1789","/md/system/overview.md":"8bf6ce30703f182e3ac38c57da51478895a044a51f8ea5c62dc18069c87bb056","/md/system/pipe-exec.md":"4fd289010f9178d0b7f136e3b6071bf7c601ae53d1ddd53df7cd3d34e86d985f","/md/system/mini-shell.md":"bc09677f83573b620d81d6edccba2e8cf778fb12a4cf6dc633dc964a7b171155","/md/system/linux-environment.md":"30039bca4f8f3a89acf25f2f038a4f3fbadfabcc3bf02e9c2e3bc63f936eed1b","/md/system/mini-pipe.md":"e3aa0a0f8910d9c3edd23b71adf86a14df9de013d48d73e76d5e673e9a278adc","/md/system/ipc.md":"3141c5b1c72140e461e16b694e76d1d555c1ea864592837fbeee34bdcb5579c3","/md/system/fork.md":"d96670d6e0c00f61fa58f1a3600d2194b01cc5a34f74aa995807dc18333f525f","/md/system/file-descriptor.md":"9643ef36d6406ce33d484a60c93c4272ec21354f7b85d3146af31eb5b1fe7621","/md/system/faq.md":"a82b684220930e4bd38cefa756aba75e865757edbf3601e7da088858bac0a72c","/md/system/exec.md":"621f77a8d717332e7e44af184038d483ae22276c19444058299e45ed3e25c215","/md/system/exam.md":"c335dfb1c2ef04244c59aa2e3e038872b3b1816f568584f036d3dc19cdebc872","/md/system/debugging.md":"c61832bb8e1eb5d3b8803f1b3375969ca9a89c1c36954c2fb4a094046fba6f93","/md/system/commands.md":"48ca7fb76c052713f0077aaa3b12412c8a5977646ba1085896c72e240864b928","/md/system/c-functions.md":"6bd48512864c5e937e22e9760fb6ec70e26d334859786da2b4011e7b63abff42","/md/system/c-build.md":"74e418879c82244165bb00c8bc056e0916850b19d977689213e6176ddc280a8f","/md/system/complete.md":"d2b150fff2e0fabf196a7641a7c5793cb04066cc6697d49ce502c8c1ef24ed34","/md/python/while.md":"5f1ea3c0ff1b74b57bccfdee2a666829a6254055aed3fc87e4e04aa073870e4b","/md/python/run.md":"0a335eb0a812dca53b1ca94afa6bab5c1256c347fdcd5523f2e9bef6b41a2f0d","/md/python/variable.md":"2fc7aa109789c375a332b492952646707ce2c76d507102451a5cc33eefa81466","/md/python/input.md":"1de66f8a4ead9e886544e54527d9a12975e1055b5e57518ea9ad56ac7a88af62","/md/python/list.md":"623c37c4221b1ff6dd194b994f78e55600c9feed0f6bf6aefdc00070cf957f71","/md/python/import.md":"fdc528db52cfef88f9b419893f3dbb79a0e1120e0aa849084a75b77b70cadfc6","/md/python/function.md":"034f911cfccc0f4f1f7243c39c54902d068eeb0d48548b50272217a4db28c4ef","/md/python/for.md":"1d23aae1fb4673aba0532923342489352edff50c0e754796cf50f678cbebf729","/md/linux/windows-diff.md":"c3b0cf86983d363c5defba599da7a221a7a02001f8abc34502a842429c2bfb42","/md/python/intro.md":"f89ffdcdafff9b8075069d2132255540b2eef5fa2b8579b2de4259fa36208cbb","/md/logic/digital-logic-circuit.md":"1669a8eb7d63c3d4692881b22934adc09c8efaceca5219fdf7f385821c8d01a2","/md/logic/number-systems.md":"f5cfab7f871a72ef237b60bc527e392acc8dfa0ad91667f03725c27bffe15d33","/md/python/if.md":"30644e094d9b2d4b004c3c6de4f5e3dfac898d9e4ca27f2fff8c710fc7340a2b","/md/linux/touch.md":"481d02b3c3a785e16b9be917ee7e9f139ca09e277f358411b5c9de5bd8c57775","/md/linux/pwd.md":"eaecfed916a82066496f233f9e1b395dcb48f28451995b1a8d14da1595825e5b","/md/linux/path-types.md":"4bb9ee2bc377c4aa0e7408c5941acfb5a688b5ad6c1cfc8ffc6a19737758a5ac","/md/linux/nano.md":"6e63ed037b4cb8949712a4ba45912f13bfe147b72118673cbe12e316d689ad48","/md/linux/mv.md":"d53fd1486846c465a6a5bf36e867298165d9c84074ec5f1db519e478f9cbe225","/md/linux/mkdir.md":"40efae6ee5ea14c44f24271c409a93c42e1e206947773bc9072a6e626fed9ffd","/md/linux/ls.md":"0c21259245475087af8d5fffa3b055498b6fa61a39fef12dabd937306536c8f8","/md/linux/intro.md":"b8c8f6208a1d141eb0e4e02226783bc8518756a86cb047dea586d9d18eebb2df","/md/linux/dir-structure.md":"377c2aa810e88dc902083fb095db5dd6adf9b0dd6f08809e66b02dc5d04efad3","/md/linux/gcc-install.md":"fd66aed2ef75148e97558b38d1787f23be92702ac0213b450e8639981f86fb25","/md/linux/c-run.md":"b4aeda407b6437c620cd32e667bbd4daafd4a993f6a8656495e9b71cb368790b","/md/common/process.md":"7eea31bc12d753f55ae609c96b0ce783d79a90a738f51b0af85ee26415fd3392","/md/linux/cd.md":"edc3e143cbbd68e39e46d02702170c2c28d8c9a3cee1f5486e42707f94b520b6","/md/common/pointer.md":"f7546f7ce7fe9ab5e732102280f522a78016e3396a99acb20cc35cb762d97a31","/md/c/while.md":"0999c47a95beda9520fe028206b35e93692c9594cef47c323e9a2c278ded9614","/md/c/variable.md":"b814cbb8f4410329587e2bb40b880ce5b9296eb1c0dc55d60281d3f5af22971a","/md/c/time.md":"e3eec453b72dc2bc69e23744f7e5a112aaebe8aee43ce11f8312ed0393e48b53","/md/c/struct-typedef.md":"68b6a659e18fca6bd8d7693e9c188660f3f9048602b9c6ef18018cc0b571136b","/md/c/stack-queue.md":"51b7da00fa9f86d3eff55abd5226240e06797b90fd1651b5aa546f7734bdf5a1","/md/c/scanf.md":"299ba82be1e5a593f0b83ababa4902187c0b68a67dcbcb437cd2e62afe10b37c","/md/c/productmanager.md":"4e9316c4fcc01d8ae6260d3cf49e3806bd80b697c6bbbb201a7250bb52f11aae","/md/c/pointer.md":"e5c3c5885745c424c7b536efdfef1cd6ad82d8883ecdcdb349652ff218c50d9c","/md/c/list.md":"386d4d146641e922629ece4759631c450f86a1c0ed8428722d88619757230bad","/md/c/if.md":"de32358ae82ee56a148d3c6ddc2a617ec1fdfbf4453436e9b169c242f37fff4c","/md/c/function.md":"e1ffff4cf555e0451984e252df5ff62be954ccb909fa6a732521483de83c7577","/md/c/for.md":"6b5baa846ba068153a2e00f00e40758ae0714f93fe07e3bc109f722f1b557409","/md/c/file-io.md":"61c4be8a02ea1c73581423841803a7569b1d40fe9842ba01393ce38506162255","/md/c/array-string.md":"24b60edd7092aa00d042990a8ad9577a68f3e448040307eb0d58d77215f711d8","/logos/system.svg":"e0f50c42a0e2145cc3681de4623ca34c51e76e537dac6743bfead68697113fa4","/logos/logic.svg":"be8bb7a41f41b89114764d612609e5b3abef7cbf706668f1afed6e6bc5e467bd","/logos/c.png":"2c5fde7d77909830a73d2db2db7e80eed9534861ab5868869f5d76c4893389a8","/static/js/main.433d0397.js":"ed5dbac3282976ff4ee4add5a5ae34590f4865313319f57f9bf938c97901dd27","/logos/python.png":"fff8625ae5205a8257330cb94c838c00cd1234c4a64e1a3ebe93899f7375669d","/logos/linux.png":"e4a14e75a40c27580c9d94662e29b5dc3c00e4660b4503974bb55a3f64b175ed","/static/js/main.433d0397.js.map":"0db1668f42466b91e5ef3ab3755349cff2b9eec97483f930cc50e2b1e128f622"}}
+[debug] [2026-05-20T14:56:49.003Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/168297089697/sites/good-tomato/versions/4a4e59ff5d93ec80:populateFiles 200
+[debug] [2026-05-20T14:56:49.004Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/168297089697/sites/good-tomato/versions/4a4e59ff5d93ec80:populateFiles {"uploadRequiredHashes":["1669a8eb7d63c3d4692881b22934adc09c8efaceca5219fdf7f385821c8d01a2","ed5dbac3282976ff4ee4add5a5ae34590f4865313319f57f9bf938c97901dd27","5f218626f7bf3c15202be48185d9c02c2552742f8c43a5f51d0a83b5fa5f09af","0db1668f42466b91e5ef3ab3755349cff2b9eec97483f930cc50e2b1e128f622","f5cfab7f871a72ef237b60bc527e392acc8dfa0ad91667f03725c27bffe15d33","422b85e894fdf96926584cd969392a2c1e0602a71d9f7916a38e64cbc8ce3a42"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files"}
+[debug] [2026-05-20T14:56:49.005Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:49.006Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:49.007Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:49.007Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:49.008Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:49.008Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:49.009Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:49.009Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:49.010Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:49.010Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:49.011Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:49.011Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:49.012Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/1669a8eb7d63c3d4692881b22934adc09c8efaceca5219fdf7f385821c8d01a2 [none]
+[debug] [2026-05-20T14:56:49.012Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/1669a8eb7d63c3d4692881b22934adc09c8efaceca5219fdf7f385821c8d01a2 [stream]
+[debug] [2026-05-20T14:56:49.018Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/ed5dbac3282976ff4ee4add5a5ae34590f4865313319f57f9bf938c97901dd27 [none]
+[debug] [2026-05-20T14:56:49.018Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/ed5dbac3282976ff4ee4add5a5ae34590f4865313319f57f9bf938c97901dd27 [stream]
+[debug] [2026-05-20T14:56:49.019Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/5f218626f7bf3c15202be48185d9c02c2552742f8c43a5f51d0a83b5fa5f09af [none]
+[debug] [2026-05-20T14:56:49.020Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/5f218626f7bf3c15202be48185d9c02c2552742f8c43a5f51d0a83b5fa5f09af [stream]
+[debug] [2026-05-20T14:56:49.021Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/0db1668f42466b91e5ef3ab3755349cff2b9eec97483f930cc50e2b1e128f622 [none]
+[debug] [2026-05-20T14:56:49.021Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/0db1668f42466b91e5ef3ab3755349cff2b9eec97483f930cc50e2b1e128f622 [stream]
+[debug] [2026-05-20T14:56:49.022Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/f5cfab7f871a72ef237b60bc527e392acc8dfa0ad91667f03725c27bffe15d33 [none]
+[debug] [2026-05-20T14:56:49.022Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/f5cfab7f871a72ef237b60bc527e392acc8dfa0ad91667f03725c27bffe15d33 [stream]
+[debug] [2026-05-20T14:56:49.024Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/422b85e894fdf96926584cd969392a2c1e0602a71d9f7916a38e64cbc8ce3a42 [none]
+[debug] [2026-05-20T14:56:49.024Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/422b85e894fdf96926584cd969392a2c1e0602a71d9f7916a38e64cbc8ce3a42 [stream]
+[debug] [2026-05-20T14:56:49.026Z] [hosting][populate queue][FINAL] {"max":754,"min":754,"avg":754,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":768}
+[debug] [2026-05-20T14:56:49.026Z] [hosting] uploads queued: 6
+[info] i  hosting: uploading new files [0/6] (0%) 
+[debug] [2026-05-20T14:56:50.440Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/422b85e894fdf96926584cd969392a2c1e0602a71d9f7916a38e64cbc8ce3a42 200
+[debug] [2026-05-20T14:56:50.440Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/422b85e894fdf96926584cd969392a2c1e0602a71d9f7916a38e64cbc8ce3a42 [stream]
+[debug] [2026-05-20T14:56:50.446Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/5f218626f7bf3c15202be48185d9c02c2552742f8c43a5f51d0a83b5fa5f09af 200
+[debug] [2026-05-20T14:56:50.446Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/5f218626f7bf3c15202be48185d9c02c2552742f8c43a5f51d0a83b5fa5f09af [stream]
+[debug] [2026-05-20T14:56:50.447Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/ed5dbac3282976ff4ee4add5a5ae34590f4865313319f57f9bf938c97901dd27 200
+[debug] [2026-05-20T14:56:50.447Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/ed5dbac3282976ff4ee4add5a5ae34590f4865313319f57f9bf938c97901dd27 [stream]
+[debug] [2026-05-20T14:56:50.574Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/f5cfab7f871a72ef237b60bc527e392acc8dfa0ad91667f03725c27bffe15d33 200
+[debug] [2026-05-20T14:56:50.575Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/f5cfab7f871a72ef237b60bc527e392acc8dfa0ad91667f03725c27bffe15d33 [stream]
+[debug] [2026-05-20T14:56:50.804Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/0db1668f42466b91e5ef3ab3755349cff2b9eec97483f930cc50e2b1e128f622 200
+[debug] [2026-05-20T14:56:50.805Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/0db1668f42466b91e5ef3ab3755349cff2b9eec97483f930cc50e2b1e128f622 [stream]
+[debug] [2026-05-20T14:56:51.092Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/1669a8eb7d63c3d4692881b22934adc09c8efaceca5219fdf7f385821c8d01a2 200
+[debug] [2026-05-20T14:56:51.092Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/4a4e59ff5d93ec80/files/1669a8eb7d63c3d4692881b22934adc09c8efaceca5219fdf7f385821c8d01a2 [stream]
+[debug] [2026-05-20T14:56:51.093Z] [hosting][upload queue][FINAL] {"max":2088,"min":1430,"avg":1626.8333333333333,"active":0,"complete":6,"success":6,"errored":0,"retried":0,"total":6,"elapsed":2089}
+[info] i  hosting: upload complete 
+[info] ✔  hosting[good-tomato]: file upload complete 
+[debug] [2026-05-20T14:56:51.094Z] [hosting] deploy completed after 3341ms
+[debug] [2026-05-20T14:56:51.095Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/md/**",
+          "destination": "/md/**"
+        },
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "/index.html",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/**/*.html",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/service-worker.js",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/asset-manifest.json",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/manifest.json",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/md/**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        }
+      ],
+      "site": "good-tomato"
+    },
+    "version": "projects/168297089697/sites/good-tomato/versions/4a4e59ff5d93ec80"
+  }
+]
+[info] i  hosting[good-tomato]: finalizing version... 
+[debug] [2026-05-20T14:56:51.099Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:51.099Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:51.103Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions/4a4e59ff5d93ec80 updateMask=status%2Cconfig
+[debug] [2026-05-20T14:56:51.103Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions/4a4e59ff5d93ec80 {"status":"FINALIZED","config":{"rewrites":[{"glob":"/md/**","path":"/md/**"},{"glob":"**","path":"/index.html"}],"headers":[{"glob":"/index.html","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/**/*.html","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/service-worker.js","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/asset-manifest.json","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/manifest.json","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/md/**","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}}]}}
+[debug] [2026-05-20T14:56:51.843Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions/4a4e59ff5d93ec80 200
+[debug] [2026-05-20T14:56:51.844Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions/4a4e59ff5d93ec80 {"name":"projects/168297089697/sites/good-tomato/versions/4a4e59ff5d93ec80","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/index.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/**/*.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/service-worker.js"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/asset-manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/md/**"}],"rewrites":[{"glob":"/md/**","path":"/md/**"},{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-05-20T14:56:47.068440Z","createUser":{"email":"hwanghj09@naver.com"},"finalizeTime":"2026-05-20T14:56:51.588725Z","finalizeUser":{"email":"hwanghj09@naver.com"}}
+[debug] [2026-05-20T14:56:51.844Z] [hosting] finalized version for good-tomato:[object Object]
+[info] ✔  hosting[good-tomato]: version finalized 
+[info] i  hosting[good-tomato]: releasing new version... 
+[debug] [2026-05-20T14:56:51.845Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:51.845Z] Checked if tokens are valid: true, expires at: 1779290544915
+[debug] [2026-05-20T14:56:51.846Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/channels/live/releases versionName=projects%2F168297089697%2Fsites%2Fgood-tomato%2Fversions%2F4a4e59ff5d93ec80
+[debug] [2026-05-20T14:56:51.846Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/channels/live/releases {}
+[debug] [2026-05-20T14:56:52.869Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/channels/live/releases 200
+[debug] [2026-05-20T14:56:52.870Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/channels/live/releases {"name":"projects/168297089697/sites/good-tomato/channels/live/releases/1779289011950000","version":{"name":"projects/168297089697/sites/good-tomato/versions/4a4e59ff5d93ec80","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/index.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/**/*.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/service-worker.js"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/asset-manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/md/**"}],"rewrites":[{"glob":"/md/**","path":"/md/**"},{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-05-20T14:56:47.068440Z","createUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"},"finalizeTime":"2026-05-20T14:56:51.588725Z","finalizeUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"}},"type":"DEPLOY","releaseTime":"2026-05-20T14:56:51.950Z","releaseUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"}}
+[debug] [2026-05-20T14:56:52.870Z] [hosting] release: {"name":"projects/168297089697/sites/good-tomato/channels/live/releases/1779289011950000","version":{"name":"projects/168297089697/sites/good-tomato/versions/4a4e59ff5d93ec80","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/index.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/**/*.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/service-worker.js"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/asset-manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/md/**"}],"rewrites":[{"glob":"/md/**","path":"/md/**"},{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-05-20T14:56:47.068440Z","createUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"},"finalizeTime":"2026-05-20T14:56:51.588725Z","finalizeUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"}},"type":"DEPLOY","releaseTime":"2026-05-20T14:56:51.950Z","releaseUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"}}
+[info] ✔  hosting[good-tomato]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/good-tomato/overview
+[info] Hosting URL: https://good-tomato.web.app
+[debug] [2026-05-20T15:10:23.731Z] ----------------------------------------------------------------------
+[debug] [2026-05-20T15:10:23.734Z] Command:       /home/hwanghj09/.nvm/versions/node/v20.20.0/bin/node /home/hwanghj09/.nvm/versions/node/v20.20.0/bin/firebase deploy --only hosting
+[debug] [2026-05-20T15:10:23.735Z] CLI Version:   15.6.0
+[debug] [2026-05-20T15:10:23.735Z] Platform:      linux
+[debug] [2026-05-20T15:10:23.735Z] Node Version:  v20.20.0
+[debug] [2026-05-20T15:10:23.735Z] Time:          Thu May 21 2026 00:10:23 GMT+0900 (Korean Standard Time)
+[debug] [2026-05-20T15:10:23.736Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-20T15:10:25.092Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-20T15:10:25.093Z] > authorizing via signed-in user (hwanghj09@naver.com)
+[debug] [2026-05-20T15:10:25.094Z] [iam] checking project good-tomato for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-05-20T15:10:25.095Z] Checked if tokens are valid: false, expires at: 1779290544915
+[debug] [2026-05-20T15:10:25.095Z] Checked if tokens are valid: false, expires at: 1779290544915
+[debug] [2026-05-20T15:10:25.096Z] > refreshing access token with scopes: []
+[debug] [2026-05-20T15:10:25.099Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-05-20T15:10:25.099Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-05-20T15:10:25.386Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-05-20T15:10:25.386Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-05-20T15:10:25.405Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions [none]
+[debug] [2026-05-20T15:10:25.405Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions  x-goog-user-project=good-tomato
+[debug] [2026-05-20T15:10:25.406Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-20T15:10:25.731Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions 200
+[debug] [2026-05-20T15:10:25.732Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-20T15:10:25.733Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:25.733Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:25.734Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/good-tomato [none]
+[debug] [2026-05-20T15:10:26.350Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/good-tomato 200
+[debug] [2026-05-20T15:10:26.350Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/good-tomato {"projectId":"good-tomato","projectNumber":"168297089697","displayName":"good-tomato","name":"projects/good-tomato","resources":{"hostingSite":"good-tomato"},"state":"ACTIVE","etag":"1_b63e196d-9385-413f-915e-aae79ace2c66"}
+[info] 
+[info] === Deploying to 'good-tomato'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-05-20T15:10:26.363Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:26.363Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:26.363Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions [none]
+[debug] [2026-05-20T15:10:26.363Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-05-20T15:10:27.793Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions 200
+[debug] [2026-05-20T15:10:27.794Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions {"name":"projects/168297089697/sites/good-tomato/versions/195e8d3c40cc5e46","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[good-tomato]: beginning deploy... 
+[info] i  hosting[good-tomato]: found 84 files in build 
+[debug] [2026-05-20T15:10:27.828Z] [hosting] uploading with 200 concurrency
+[debug] [2026-05-20T15:10:28.315Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:28.316Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:28.317Z] [hosting] hash cache [YnVpbGQ] stored for 84 files
+[debug] [2026-05-20T15:10:28.317Z] [hosting][hash queue][FINAL] {"max":479,"min":21,"avg":82.47619047619047,"active":0,"complete":84,"success":84,"errored":0,"retried":0,"total":84,"elapsed":487}
+[debug] [2026-05-20T15:10:28.318Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/168297089697/sites/good-tomato/versions/195e8d3c40cc5e46:populateFiles [none]
+[debug] [2026-05-20T15:10:28.318Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/168297089697/sites/good-tomato/versions/195e8d3c40cc5e46:populateFiles {"files":{"/service-worker.js":"d3cf38f3851b02579cd741890ad6a1ea2b94ef8a68f3cb0a7ad266016f37ab89","/robots.txt":"2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec","/manifest.json":"cce6b9f9929bb2d751df1ab8be9104c6ea0d4dd08dc02393b2aa0d40913fd0e6","/index.html":"32557496b4810603a921d7fdfde4048872f8b776ad680dd51b39ea70a1f0990d","/static/js/main.72b1f850.js.LICENSE.txt":"ecf68486f7d043f07599a39f7e9bfd9f4e4d3aefad459eed3ef00a170b2a58b8","/asset-manifest.json":"f5bb15c91d4f1378d6e8255d71138b02af8d64330b77559ec52066cf523e6fea","/icon.png":"ad2fde17345165d4f41e002bef31666a2e235cddfad0d22ab68fa0801d69b5fd","/static/css/main.6160a3c8.css":"34308a4659466745464b9093898f3b08a7cd327cb329619aa3a652c4b47e13d3","/md/system/wait.md":"3da937b86c6071caeb9311f31d8851fdf4ca074d2cb93c67c23c52d1288e04ed","/md/system/signal.md":"c3a675453caf80b1f604692c4025441d310ecf34503af864059eb3204c33c457","/md/system/summary.md":"df5aa0dd59d3a57b13f234e1038828c5ea9fc3a9113d5efb11f0b483ce526372","/md/system/process-observation.md":"543141435f97870088dc9e06a2d9f10a38240e535f936b80c6e29d861862a84b","/md/system/process.md":"282c4d971fc1c223500bc6b71bbb14ee7f9b7e33c1cc226c1ba23223431efd8a","/md/system/process-exit.md":"e282d3d20389bc423a4997130f0482692c298caf63849ca52146c6795c14945d","/md/system/print-practice.md":"5eef25e209de5e7a2db0038a32f2b79022e2bbba2b72628ae466bf757b8f6976","/md/system/pointer.md":"e0ca2d157bcf90d9898bd56b9b273e1426bc252491a0622a8ccec435d5cd5be0","/md/system/permissions.md":"93328d843de94bcdb4a8656022aced816fb1ea7d310df3b26f6f5751c94d1789","/md/system/pipe-exec.md":"4fd289010f9178d0b7f136e3b6071bf7c601ae53d1ddd53df7cd3d34e86d985f","/md/system/process-control.md":"3ba0df206d6498568ed28f27afec0d2433a1082ef05104f1c6bb2678f5373dd2","/md/system/mini-shell.md":"bc09677f83573b620d81d6edccba2e8cf778fb12a4cf6dc633dc964a7b171155","/md/system/ipc.md":"3141c5b1c72140e461e16b694e76d1d555c1ea864592837fbeee34bdcb5579c3","/md/system/file-descriptor.md":"9643ef36d6406ce33d484a60c93c4272ec21354f7b85d3146af31eb5b1fe7621","/md/system/faq.md":"a82b684220930e4bd38cefa756aba75e865757edbf3601e7da088858bac0a72c","/md/system/linux-environment.md":"30039bca4f8f3a89acf25f2f038a4f3fbadfabcc3bf02e9c2e3bc63f936eed1b","/md/system/fork.md":"d96670d6e0c00f61fa58f1a3600d2194b01cc5a34f74aa995807dc18333f525f","/md/system/commands.md":"48ca7fb76c052713f0077aaa3b12412c8a5977646ba1085896c72e240864b928","/md/system/exam.md":"c335dfb1c2ef04244c59aa2e3e038872b3b1816f568584f036d3dc19cdebc872","/md/system/exec.md":"621f77a8d717332e7e44af184038d483ae22276c19444058299e45ed3e25c215","/md/system/debugging.md":"c61832bb8e1eb5d3b8803f1b3375969ca9a89c1c36954c2fb4a094046fba6f93","/md/system/overview.md":"8bf6ce30703f182e3ac38c57da51478895a044a51f8ea5c62dc18069c87bb056","/md/system/c-functions.md":"6bd48512864c5e937e22e9760fb6ec70e26d334859786da2b4011e7b63abff42","/md/python/variable.md":"2fc7aa109789c375a332b492952646707ce2c76d507102451a5cc33eefa81466","/md/python/run.md":"0a335eb0a812dca53b1ca94afa6bab5c1256c347fdcd5523f2e9bef6b41a2f0d","/md/system/complete.md":"d2b150fff2e0fabf196a7641a7c5793cb04066cc6697d49ce502c8c1ef24ed34","/md/python/while.md":"5f1ea3c0ff1b74b57bccfdee2a666829a6254055aed3fc87e4e04aa073870e4b","/md/system/c-build.md":"74e418879c82244165bb00c8bc056e0916850b19d977689213e6176ddc280a8f","/md/system/mini-pipe.md":"e3aa0a0f8910d9c3edd23b71adf86a14df9de013d48d73e76d5e673e9a278adc","/md/python/if.md":"30644e094d9b2d4b004c3c6de4f5e3dfac898d9e4ca27f2fff8c710fc7340a2b","/md/python/list.md":"623c37c4221b1ff6dd194b994f78e55600c9feed0f6bf6aefdc00070cf957f71","/md/python/function.md":"034f911cfccc0f4f1f7243c39c54902d068eeb0d48548b50272217a4db28c4ef","/md/logic/number-systems.md":"798d5aeb83b931f80f04036f9a36e6aa8c52fb9ca47f70b475d343f7a0afba32","/md/python/for.md":"1d23aae1fb4673aba0532923342489352edff50c0e754796cf50f678cbebf729","/md/logic/binary-arithmetic.md":"62b46b0ab57ea39e4d6b52795539597d3e21590eb16ed10898556b01792bb8b8","/static/css/main.6160a3c8.css.map":"c6eed2b216bf7d8d46b79345498f795f2f5dd435e5c7804b9267a3dd64303d53","/md/logic/digital-logic-circuit.md":"3c6b320d0761f465cd31366751680a76da87c13334a4e1a04d83d15311609d8b","/md/python/intro.md":"f89ffdcdafff9b8075069d2132255540b2eef5fa2b8579b2de4259fa36208cbb","/md/python/import.md":"fdc528db52cfef88f9b419893f3dbb79a0e1120e0aa849084a75b77b70cadfc6","/md/python/input.md":"1de66f8a4ead9e886544e54527d9a12975e1055b5e57518ea9ad56ac7a88af62","/md/linux/windows-diff.md":"c3b0cf86983d363c5defba599da7a221a7a02001f8abc34502a842429c2bfb42","/md/linux/touch.md":"481d02b3c3a785e16b9be917ee7e9f139ca09e277f358411b5c9de5bd8c57775","/md/linux/pwd.md":"eaecfed916a82066496f233f9e1b395dcb48f28451995b1a8d14da1595825e5b","/md/linux/path-types.md":"4bb9ee2bc377c4aa0e7408c5941acfb5a688b5ad6c1cfc8ffc6a19737758a5ac","/md/linux/nano.md":"6e63ed037b4cb8949712a4ba45912f13bfe147b72118673cbe12e316d689ad48","/md/linux/mv.md":"d53fd1486846c465a6a5bf36e867298165d9c84074ec5f1db519e478f9cbe225","/md/linux/mkdir.md":"40efae6ee5ea14c44f24271c409a93c42e1e206947773bc9072a6e626fed9ffd","/md/linux/ls.md":"0c21259245475087af8d5fffa3b055498b6fa61a39fef12dabd937306536c8f8","/md/linux/intro.md":"b8c8f6208a1d141eb0e4e02226783bc8518756a86cb047dea586d9d18eebb2df","/md/linux/gcc-install.md":"fd66aed2ef75148e97558b38d1787f23be92702ac0213b450e8639981f86fb25","/md/linux/cd.md":"edc3e143cbbd68e39e46d02702170c2c28d8c9a3cee1f5486e42707f94b520b6","/md/linux/dir-structure.md":"377c2aa810e88dc902083fb095db5dd6adf9b0dd6f08809e66b02dc5d04efad3","/md/linux/c-run.md":"b4aeda407b6437c620cd32e667bbd4daafd4a993f6a8656495e9b71cb368790b","/md/c/while.md":"0999c47a95beda9520fe028206b35e93692c9594cef47c323e9a2c278ded9614","/md/common/process.md":"7eea31bc12d753f55ae609c96b0ce783d79a90a738f51b0af85ee26415fd3392","/md/common/pointer.md":"f7546f7ce7fe9ab5e732102280f522a78016e3396a99acb20cc35cb762d97a31","/md/c/variable.md":"b814cbb8f4410329587e2bb40b880ce5b9296eb1c0dc55d60281d3f5af22971a","/md/c/struct-typedef.md":"68b6a659e18fca6bd8d7693e9c188660f3f9048602b9c6ef18018cc0b571136b","/md/c/time.md":"e3eec453b72dc2bc69e23744f7e5a112aaebe8aee43ce11f8312ed0393e48b53","/md/c/stack-queue.md":"51b7da00fa9f86d3eff55abd5226240e06797b90fd1651b5aa546f7734bdf5a1","/md/c/pointer.md":"e5c3c5885745c424c7b536efdfef1cd6ad82d8883ecdcdb349652ff218c50d9c","/md/c/list.md":"386d4d146641e922629ece4759631c450f86a1c0ed8428722d88619757230bad","/md/c/function.md":"e1ffff4cf555e0451984e252df5ff62be954ccb909fa6a732521483de83c7577","/md/c/for.md":"6b5baa846ba068153a2e00f00e40758ae0714f93fe07e3bc109f722f1b557409","/md/c/scanf.md":"299ba82be1e5a593f0b83ababa4902187c0b68a67dcbcb437cd2e62afe10b37c","/md/c/file-io.md":"61c4be8a02ea1c73581423841803a7569b1d40fe9842ba01393ce38506162255","/md/c/if.md":"de32358ae82ee56a148d3c6ddc2a617ec1fdfbf4453436e9b169c242f37fff4c","/logos/logic.svg":"be8bb7a41f41b89114764d612609e5b3abef7cbf706668f1afed6e6bc5e467bd","/md/c/productmanager.md":"4e9316c4fcc01d8ae6260d3cf49e3806bd80b697c6bbbb201a7250bb52f11aae","/logos/system.svg":"e0f50c42a0e2145cc3681de4623ca34c51e76e537dac6743bfead68697113fa4","/md/c/array-string.md":"24b60edd7092aa00d042990a8ad9577a68f3e448040307eb0d58d77215f711d8","/logos/c.png":"2c5fde7d77909830a73d2db2db7e80eed9534861ab5868869f5d76c4893389a8","/static/js/main.72b1f850.js":"90d3d24dac262e57d4efef56fd33d26a0254e364f10a6adf7a51a0606fe5d8a3","/logos/python.png":"fff8625ae5205a8257330cb94c838c00cd1234c4a64e1a3ebe93899f7375669d","/logos/linux.png":"e4a14e75a40c27580c9d94662e29b5dc3c00e4660b4503974bb55a3f64b175ed","/static/js/main.72b1f850.js.map":"41d428bc61c0c53d4b64ae1fa852809aa9ee4374a4dae2fa76db90a0c44897ee"}}
+[debug] [2026-05-20T15:10:29.214Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/168297089697/sites/good-tomato/versions/195e8d3c40cc5e46:populateFiles 200
+[debug] [2026-05-20T15:10:29.214Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/168297089697/sites/good-tomato/versions/195e8d3c40cc5e46:populateFiles {"uploadRequiredHashes":["41d428bc61c0c53d4b64ae1fa852809aa9ee4374a4dae2fa76db90a0c44897ee","62b46b0ab57ea39e4d6b52795539597d3e21590eb16ed10898556b01792bb8b8","3c6b320d0761f465cd31366751680a76da87c13334a4e1a04d83d15311609d8b","f5bb15c91d4f1378d6e8255d71138b02af8d64330b77559ec52066cf523e6fea","90d3d24dac262e57d4efef56fd33d26a0254e364f10a6adf7a51a0606fe5d8a3","32557496b4810603a921d7fdfde4048872f8b776ad680dd51b39ea70a1f0990d","798d5aeb83b931f80f04036f9a36e6aa8c52fb9ca47f70b475d343f7a0afba32"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files"}
+[debug] [2026-05-20T15:10:29.216Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:29.216Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:29.216Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:29.216Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:29.217Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:29.217Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:29.217Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:29.217Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:29.218Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:29.218Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:29.218Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:29.218Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:29.219Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:29.219Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:29.219Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/41d428bc61c0c53d4b64ae1fa852809aa9ee4374a4dae2fa76db90a0c44897ee [none]
+[debug] [2026-05-20T15:10:29.219Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/41d428bc61c0c53d4b64ae1fa852809aa9ee4374a4dae2fa76db90a0c44897ee [stream]
+[debug] [2026-05-20T15:10:29.224Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/62b46b0ab57ea39e4d6b52795539597d3e21590eb16ed10898556b01792bb8b8 [none]
+[debug] [2026-05-20T15:10:29.225Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/62b46b0ab57ea39e4d6b52795539597d3e21590eb16ed10898556b01792bb8b8 [stream]
+[debug] [2026-05-20T15:10:29.228Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/3c6b320d0761f465cd31366751680a76da87c13334a4e1a04d83d15311609d8b [none]
+[debug] [2026-05-20T15:10:29.228Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/3c6b320d0761f465cd31366751680a76da87c13334a4e1a04d83d15311609d8b [stream]
+[debug] [2026-05-20T15:10:29.231Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/f5bb15c91d4f1378d6e8255d71138b02af8d64330b77559ec52066cf523e6fea [none]
+[debug] [2026-05-20T15:10:29.231Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/f5bb15c91d4f1378d6e8255d71138b02af8d64330b77559ec52066cf523e6fea [stream]
+[debug] [2026-05-20T15:10:29.234Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/90d3d24dac262e57d4efef56fd33d26a0254e364f10a6adf7a51a0606fe5d8a3 [none]
+[debug] [2026-05-20T15:10:29.235Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/90d3d24dac262e57d4efef56fd33d26a0254e364f10a6adf7a51a0606fe5d8a3 [stream]
+[debug] [2026-05-20T15:10:29.238Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/32557496b4810603a921d7fdfde4048872f8b776ad680dd51b39ea70a1f0990d [none]
+[debug] [2026-05-20T15:10:29.238Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/32557496b4810603a921d7fdfde4048872f8b776ad680dd51b39ea70a1f0990d [stream]
+[debug] [2026-05-20T15:10:29.242Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/798d5aeb83b931f80f04036f9a36e6aa8c52fb9ca47f70b475d343f7a0afba32 [none]
+[debug] [2026-05-20T15:10:29.243Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/798d5aeb83b931f80f04036f9a36e6aa8c52fb9ca47f70b475d343f7a0afba32 [stream]
+[debug] [2026-05-20T15:10:29.247Z] [hosting][populate queue][FINAL] {"max":904,"min":904,"avg":904,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":932}
+[debug] [2026-05-20T15:10:29.247Z] [hosting] uploads queued: 7
+[info] i  hosting: uploading new files [0/7] (0%) 
+[debug] [2026-05-20T15:10:30.652Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/62b46b0ab57ea39e4d6b52795539597d3e21590eb16ed10898556b01792bb8b8 200
+[debug] [2026-05-20T15:10:30.652Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/62b46b0ab57ea39e4d6b52795539597d3e21590eb16ed10898556b01792bb8b8 [stream]
+[debug] [2026-05-20T15:10:30.686Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/f5bb15c91d4f1378d6e8255d71138b02af8d64330b77559ec52066cf523e6fea 200
+[debug] [2026-05-20T15:10:30.687Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/f5bb15c91d4f1378d6e8255d71138b02af8d64330b77559ec52066cf523e6fea [stream]
+[debug] [2026-05-20T15:10:30.721Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/32557496b4810603a921d7fdfde4048872f8b776ad680dd51b39ea70a1f0990d 200
+[debug] [2026-05-20T15:10:30.722Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/32557496b4810603a921d7fdfde4048872f8b776ad680dd51b39ea70a1f0990d [stream]
+[debug] [2026-05-20T15:10:30.754Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/798d5aeb83b931f80f04036f9a36e6aa8c52fb9ca47f70b475d343f7a0afba32 200
+[debug] [2026-05-20T15:10:30.754Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/798d5aeb83b931f80f04036f9a36e6aa8c52fb9ca47f70b475d343f7a0afba32 [stream]
+[debug] [2026-05-20T15:10:30.767Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/3c6b320d0761f465cd31366751680a76da87c13334a4e1a04d83d15311609d8b 200
+[debug] [2026-05-20T15:10:30.768Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/3c6b320d0761f465cd31366751680a76da87c13334a4e1a04d83d15311609d8b [stream]
+[debug] [2026-05-20T15:10:30.769Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/41d428bc61c0c53d4b64ae1fa852809aa9ee4374a4dae2fa76db90a0c44897ee 200
+[debug] [2026-05-20T15:10:30.770Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/41d428bc61c0c53d4b64ae1fa852809aa9ee4374a4dae2fa76db90a0c44897ee [stream]
+[debug] [2026-05-20T15:10:30.910Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/90d3d24dac262e57d4efef56fd33d26a0254e364f10a6adf7a51a0606fe5d8a3 200
+[debug] [2026-05-20T15:10:30.910Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/195e8d3c40cc5e46/files/90d3d24dac262e57d4efef56fd33d26a0254e364f10a6adf7a51a0606fe5d8a3 [stream]
+[debug] [2026-05-20T15:10:30.911Z] [hosting][upload queue][FINAL] {"max":1694,"min":1437,"avg":1535.2857142857142,"active":0,"complete":7,"success":7,"errored":0,"retried":0,"total":7,"elapsed":1696}
+[info] i  hosting: upload complete 
+[info] ✔  hosting[good-tomato]: file upload complete 
+[debug] [2026-05-20T15:10:30.914Z] [hosting] deploy completed after 3116ms
+[debug] [2026-05-20T15:10:30.914Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/md/**",
+          "destination": "/md/**"
+        },
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "/index.html",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/**/*.html",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/service-worker.js",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/asset-manifest.json",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/manifest.json",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/md/**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        }
+      ],
+      "site": "good-tomato"
+    },
+    "version": "projects/168297089697/sites/good-tomato/versions/195e8d3c40cc5e46"
+  }
+]
+[info] i  hosting[good-tomato]: finalizing version... 
+[debug] [2026-05-20T15:10:30.923Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:30.924Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:30.926Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions/195e8d3c40cc5e46 updateMask=status%2Cconfig
+[debug] [2026-05-20T15:10:30.926Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions/195e8d3c40cc5e46 {"status":"FINALIZED","config":{"rewrites":[{"glob":"/md/**","path":"/md/**"},{"glob":"**","path":"/index.html"}],"headers":[{"glob":"/index.html","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/**/*.html","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/service-worker.js","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/asset-manifest.json","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/manifest.json","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/md/**","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}}]}}
+[debug] [2026-05-20T15:10:31.657Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions/195e8d3c40cc5e46 200
+[debug] [2026-05-20T15:10:31.658Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions/195e8d3c40cc5e46 {"name":"projects/168297089697/sites/good-tomato/versions/195e8d3c40cc5e46","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/index.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/**/*.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/service-worker.js"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/asset-manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/md/**"}],"rewrites":[{"glob":"/md/**","path":"/md/**"},{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-05-20T15:10:26.865030Z","createUser":{"email":"hwanghj09@naver.com"},"finalizeTime":"2026-05-20T15:10:31.465809Z","finalizeUser":{"email":"hwanghj09@naver.com"}}
+[debug] [2026-05-20T15:10:31.658Z] [hosting] finalized version for good-tomato:[object Object]
+[info] ✔  hosting[good-tomato]: version finalized 
+[info] i  hosting[good-tomato]: releasing new version... 
+[debug] [2026-05-20T15:10:31.659Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:31.659Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:10:31.659Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/channels/live/releases versionName=projects%2F168297089697%2Fsites%2Fgood-tomato%2Fversions%2F195e8d3c40cc5e46
+[debug] [2026-05-20T15:10:31.659Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/channels/live/releases {}
+[debug] [2026-05-20T15:10:32.489Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/channels/live/releases 200
+[debug] [2026-05-20T15:10:32.490Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/channels/live/releases {"name":"projects/168297089697/sites/good-tomato/channels/live/releases/1779289831555000","version":{"name":"projects/168297089697/sites/good-tomato/versions/195e8d3c40cc5e46","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/index.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/**/*.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/service-worker.js"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/asset-manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/md/**"}],"rewrites":[{"glob":"/md/**","path":"/md/**"},{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-05-20T15:10:26.865030Z","createUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"},"finalizeTime":"2026-05-20T15:10:31.465809Z","finalizeUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"}},"type":"DEPLOY","releaseTime":"2026-05-20T15:10:31.555Z","releaseUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"}}
+[debug] [2026-05-20T15:10:32.490Z] [hosting] release: {"name":"projects/168297089697/sites/good-tomato/channels/live/releases/1779289831555000","version":{"name":"projects/168297089697/sites/good-tomato/versions/195e8d3c40cc5e46","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/index.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/**/*.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/service-worker.js"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/asset-manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/md/**"}],"rewrites":[{"glob":"/md/**","path":"/md/**"},{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-05-20T15:10:26.865030Z","createUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"},"finalizeTime":"2026-05-20T15:10:31.465809Z","finalizeUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"}},"type":"DEPLOY","releaseTime":"2026-05-20T15:10:31.555Z","releaseUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"}}
+[info] ✔  hosting[good-tomato]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/good-tomato/overview
+[info] Hosting URL: https://good-tomato.web.app
+[debug] [2026-05-20T15:24:35.613Z] ----------------------------------------------------------------------
+[debug] [2026-05-20T15:24:35.616Z] Command:       /home/hwanghj09/.nvm/versions/node/v20.20.0/bin/node /home/hwanghj09/.nvm/versions/node/v20.20.0/bin/firebase deploy --only hosting
+[debug] [2026-05-20T15:24:35.617Z] CLI Version:   15.6.0
+[debug] [2026-05-20T15:24:35.617Z] Platform:      linux
+[debug] [2026-05-20T15:24:35.617Z] Node Version:  v20.20.0
+[debug] [2026-05-20T15:24:35.617Z] Time:          Thu May 21 2026 00:24:35 GMT+0900 (Korean Standard Time)
+[debug] [2026-05-20T15:24:35.617Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-05-20T15:24:37.794Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-05-20T15:24:37.795Z] > authorizing via signed-in user (hwanghj09@naver.com)
+[debug] [2026-05-20T15:24:37.796Z] [iam] checking project good-tomato for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-05-20T15:24:37.797Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:37.797Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:37.798Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions [none]
+[debug] [2026-05-20T15:24:37.799Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions  x-goog-user-project=good-tomato
+[debug] [2026-05-20T15:24:37.800Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-20T15:24:38.136Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions 200
+[debug] [2026-05-20T15:24:38.136Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/good-tomato:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-05-20T15:24:38.138Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:38.138Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:38.139Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/good-tomato [none]
+[debug] [2026-05-20T15:24:38.635Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/good-tomato 200
+[debug] [2026-05-20T15:24:38.636Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/good-tomato {"projectId":"good-tomato","projectNumber":"168297089697","displayName":"good-tomato","name":"projects/good-tomato","resources":{"hostingSite":"good-tomato"},"state":"ACTIVE","etag":"1_b63e196d-9385-413f-915e-aae79ace2c66"}
+[info] 
+[info] === Deploying to 'good-tomato'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-05-20T15:24:38.650Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:38.651Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:38.651Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions [none]
+[debug] [2026-05-20T15:24:38.651Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-05-20T15:24:40.209Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions 200
+[debug] [2026-05-20T15:24:40.210Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions {"name":"projects/168297089697/sites/good-tomato/versions/ca8bfcfabbc4f271","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[good-tomato]: beginning deploy... 
+[info] i  hosting[good-tomato]: found 84 files in build 
+[debug] [2026-05-20T15:24:40.256Z] [hosting] uploading with 200 concurrency
+[debug] [2026-05-20T15:24:40.707Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:40.708Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:40.710Z] [hosting] hash cache [YnVpbGQ] stored for 84 files
+[debug] [2026-05-20T15:24:40.710Z] [hosting][hash queue][FINAL] {"max":445,"min":11,"avg":76.04761904761905,"active":0,"complete":84,"success":84,"errored":0,"retried":0,"total":84,"elapsed":450}
+[debug] [2026-05-20T15:24:40.710Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/168297089697/sites/good-tomato/versions/ca8bfcfabbc4f271:populateFiles [none]
+[debug] [2026-05-20T15:24:40.711Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/168297089697/sites/good-tomato/versions/ca8bfcfabbc4f271:populateFiles {"files":{"/robots.txt":"2544ca049f223a42bff01f72ad930a5edba75bbb7199d0f8430a02ff5aca16ec","/service-worker.js":"d3cf38f3851b02579cd741890ad6a1ea2b94ef8a68f3cb0a7ad266016f37ab89","/asset-manifest.json":"77c1dbf43e15e13c005f6980b7f4feef71e06dccca6f05196a16212b08ed8d6a","/static/js/main.ba914501.js.LICENSE.txt":"ecf68486f7d043f07599a39f7e9bfd9f4e4d3aefad459eed3ef00a170b2a58b8","/index.html":"24559d578a4c116e7a0e34607013886661ad62c1785f78aefea9cf0c5468d023","/manifest.json":"cce6b9f9929bb2d751df1ab8be9104c6ea0d4dd08dc02393b2aa0d40913fd0e6","/static/css/main.6160a3c8.css.map":"c6eed2b216bf7d8d46b79345498f795f2f5dd435e5c7804b9267a3dd64303d53","/static/css/main.6160a3c8.css":"34308a4659466745464b9093898f3b08a7cd327cb329619aa3a652c4b47e13d3","/md/system/wait.md":"3da937b86c6071caeb9311f31d8851fdf4ca074d2cb93c67c23c52d1288e04ed","/md/system/signal.md":"c3a675453caf80b1f604692c4025441d310ecf34503af864059eb3204c33c457","/md/system/summary.md":"df5aa0dd59d3a57b13f234e1038828c5ea9fc3a9113d5efb11f0b483ce526372","/md/system/process-exit.md":"e282d3d20389bc423a4997130f0482692c298caf63849ca52146c6795c14945d","/md/system/process-control.md":"3ba0df206d6498568ed28f27afec0d2433a1082ef05104f1c6bb2678f5373dd2","/md/system/print-practice.md":"5eef25e209de5e7a2db0038a32f2b79022e2bbba2b72628ae466bf757b8f6976","/md/system/process-observation.md":"543141435f97870088dc9e06a2d9f10a38240e535f936b80c6e29d861862a84b","/md/system/pipe-exec.md":"4fd289010f9178d0b7f136e3b6071bf7c601ae53d1ddd53df7cd3d34e86d985f","/md/system/mini-pipe.md":"e3aa0a0f8910d9c3edd23b71adf86a14df9de013d48d73e76d5e673e9a278adc","/md/system/process.md":"282c4d971fc1c223500bc6b71bbb14ee7f9b7e33c1cc226c1ba23223431efd8a","/md/system/mini-shell.md":"bc09677f83573b620d81d6edccba2e8cf778fb12a4cf6dc633dc964a7b171155","/md/system/overview.md":"8bf6ce30703f182e3ac38c57da51478895a044a51f8ea5c62dc18069c87bb056","/md/system/fork.md":"d96670d6e0c00f61fa58f1a3600d2194b01cc5a34f74aa995807dc18333f525f","/md/system/ipc.md":"3141c5b1c72140e461e16b694e76d1d555c1ea864592837fbeee34bdcb5579c3","/md/system/pointer.md":"e0ca2d157bcf90d9898bd56b9b273e1426bc252491a0622a8ccec435d5cd5be0","/md/system/linux-environment.md":"30039bca4f8f3a89acf25f2f038a4f3fbadfabcc3bf02e9c2e3bc63f936eed1b","/md/system/exec.md":"621f77a8d717332e7e44af184038d483ae22276c19444058299e45ed3e25c215","/md/system/file-descriptor.md":"9643ef36d6406ce33d484a60c93c4272ec21354f7b85d3146af31eb5b1fe7621","/md/system/permissions.md":"93328d843de94bcdb4a8656022aced816fb1ea7d310df3b26f6f5751c94d1789","/md/system/exam.md":"c335dfb1c2ef04244c59aa2e3e038872b3b1816f568584f036d3dc19cdebc872","/md/system/complete.md":"d2b150fff2e0fabf196a7641a7c5793cb04066cc6697d49ce502c8c1ef24ed34","/md/python/run.md":"0a335eb0a812dca53b1ca94afa6bab5c1256c347fdcd5523f2e9bef6b41a2f0d","/md/system/faq.md":"a82b684220930e4bd38cefa756aba75e865757edbf3601e7da088858bac0a72c","/md/python/list.md":"623c37c4221b1ff6dd194b994f78e55600c9feed0f6bf6aefdc00070cf957f71","/md/python/variable.md":"2fc7aa109789c375a332b492952646707ce2c76d507102451a5cc33eefa81466","/md/python/while.md":"5f1ea3c0ff1b74b57bccfdee2a666829a6254055aed3fc87e4e04aa073870e4b","/md/system/commands.md":"48ca7fb76c052713f0077aaa3b12412c8a5977646ba1085896c72e240864b928","/md/system/debugging.md":"c61832bb8e1eb5d3b8803f1b3375969ca9a89c1c36954c2fb4a094046fba6f93","/md/system/c-build.md":"74e418879c82244165bb00c8bc056e0916850b19d977689213e6176ddc280a8f","/icon.png":"ad2fde17345165d4f41e002bef31666a2e235cddfad0d22ab68fa0801d69b5fd","/md/system/c-functions.md":"6bd48512864c5e937e22e9760fb6ec70e26d334859786da2b4011e7b63abff42","/md/python/input.md":"1de66f8a4ead9e886544e54527d9a12975e1055b5e57518ea9ad56ac7a88af62","/md/python/intro.md":"f89ffdcdafff9b8075069d2132255540b2eef5fa2b8579b2de4259fa36208cbb","/md/python/for.md":"1d23aae1fb4673aba0532923342489352edff50c0e754796cf50f678cbebf729","/md/python/function.md":"034f911cfccc0f4f1f7243c39c54902d068eeb0d48548b50272217a4db28c4ef","/md/python/import.md":"fdc528db52cfef88f9b419893f3dbb79a0e1120e0aa849084a75b77b70cadfc6","/md/logic/binary-arithmetic.md":"62b46b0ab57ea39e4d6b52795539597d3e21590eb16ed10898556b01792bb8b8","/md/logic/digital-logic-circuit.md":"3c6b320d0761f465cd31366751680a76da87c13334a4e1a04d83d15311609d8b","/md/logic/number-systems.md":"798d5aeb83b931f80f04036f9a36e6aa8c52fb9ca47f70b475d343f7a0afba32","/md/python/if.md":"30644e094d9b2d4b004c3c6de4f5e3dfac898d9e4ca27f2fff8c710fc7340a2b","/md/linux/windows-diff.md":"c3b0cf86983d363c5defba599da7a221a7a02001f8abc34502a842429c2bfb42","/md/linux/touch.md":"481d02b3c3a785e16b9be917ee7e9f139ca09e277f358411b5c9de5bd8c57775","/md/linux/pwd.md":"eaecfed916a82066496f233f9e1b395dcb48f28451995b1a8d14da1595825e5b","/md/linux/path-types.md":"4bb9ee2bc377c4aa0e7408c5941acfb5a688b5ad6c1cfc8ffc6a19737758a5ac","/md/linux/nano.md":"6e63ed037b4cb8949712a4ba45912f13bfe147b72118673cbe12e316d689ad48","/md/linux/mv.md":"d53fd1486846c465a6a5bf36e867298165d9c84074ec5f1db519e478f9cbe225","/md/linux/mkdir.md":"40efae6ee5ea14c44f24271c409a93c42e1e206947773bc9072a6e626fed9ffd","/md/linux/intro.md":"b8c8f6208a1d141eb0e4e02226783bc8518756a86cb047dea586d9d18eebb2df","/md/linux/dir-structure.md":"377c2aa810e88dc902083fb095db5dd6adf9b0dd6f08809e66b02dc5d04efad3","/md/linux/ls.md":"0c21259245475087af8d5fffa3b055498b6fa61a39fef12dabd937306536c8f8","/md/linux/cd.md":"edc3e143cbbd68e39e46d02702170c2c28d8c9a3cee1f5486e42707f94b520b6","/md/linux/c-run.md":"b4aeda407b6437c620cd32e667bbd4daafd4a993f6a8656495e9b71cb368790b","/md/common/process.md":"7eea31bc12d753f55ae609c96b0ce783d79a90a738f51b0af85ee26415fd3392","/md/common/pointer.md":"f7546f7ce7fe9ab5e732102280f522a78016e3396a99acb20cc35cb762d97a31","/md/c/while.md":"0999c47a95beda9520fe028206b35e93692c9594cef47c323e9a2c278ded9614","/md/linux/gcc-install.md":"fd66aed2ef75148e97558b38d1787f23be92702ac0213b450e8639981f86fb25","/md/c/variable.md":"b814cbb8f4410329587e2bb40b880ce5b9296eb1c0dc55d60281d3f5af22971a","/md/c/struct-typedef.md":"68b6a659e18fca6bd8d7693e9c188660f3f9048602b9c6ef18018cc0b571136b","/md/c/scanf.md":"299ba82be1e5a593f0b83ababa4902187c0b68a67dcbcb437cd2e62afe10b37c","/md/c/stack-queue.md":"51b7da00fa9f86d3eff55abd5226240e06797b90fd1651b5aa546f7734bdf5a1","/md/c/pointer.md":"e5c3c5885745c424c7b536efdfef1cd6ad82d8883ecdcdb349652ff218c50d9c","/md/c/productmanager.md":"4e9316c4fcc01d8ae6260d3cf49e3806bd80b697c6bbbb201a7250bb52f11aae","/md/c/if.md":"de32358ae82ee56a148d3c6ddc2a617ec1fdfbf4453436e9b169c242f37fff4c","/md/c/list.md":"386d4d146641e922629ece4759631c450f86a1c0ed8428722d88619757230bad","/md/c/for.md":"6b5baa846ba068153a2e00f00e40758ae0714f93fe07e3bc109f722f1b557409","/md/c/file-io.md":"61c4be8a02ea1c73581423841803a7569b1d40fe9842ba01393ce38506162255","/md/c/array-string.md":"24b60edd7092aa00d042990a8ad9577a68f3e448040307eb0d58d77215f711d8","/logos/system.svg":"e0f50c42a0e2145cc3681de4623ca34c51e76e537dac6743bfead68697113fa4","/logos/logic.svg":"be8bb7a41f41b89114764d612609e5b3abef7cbf706668f1afed6e6bc5e467bd","/md/c/time.md":"e3eec453b72dc2bc69e23744f7e5a112aaebe8aee43ce11f8312ed0393e48b53","/md/c/function.md":"e1ffff4cf555e0451984e252df5ff62be954ccb909fa6a732521483de83c7577","/logos/c.png":"2c5fde7d77909830a73d2db2db7e80eed9534861ab5868869f5d76c4893389a8","/static/js/main.ba914501.js":"c19b9607a00d9518a589c629b548ab0afe6303dc57eebcfa9c15c7797ca189f8","/logos/python.png":"fff8625ae5205a8257330cb94c838c00cd1234c4a64e1a3ebe93899f7375669d","/logos/linux.png":"e4a14e75a40c27580c9d94662e29b5dc3c00e4660b4503974bb55a3f64b175ed","/static/js/main.ba914501.js.map":"362889b0a6ae007ec6b447d58376b7339cd4bb6f81f92df98c352bd524c3517d"}}
+[debug] [2026-05-20T15:24:41.712Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/168297089697/sites/good-tomato/versions/ca8bfcfabbc4f271:populateFiles 200
+[debug] [2026-05-20T15:24:41.712Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/168297089697/sites/good-tomato/versions/ca8bfcfabbc4f271:populateFiles {"uploadRequiredHashes":["24559d578a4c116e7a0e34607013886661ad62c1785f78aefea9cf0c5468d023","c19b9607a00d9518a589c629b548ab0afe6303dc57eebcfa9c15c7797ca189f8","362889b0a6ae007ec6b447d58376b7339cd4bb6f81f92df98c352bd524c3517d","77c1dbf43e15e13c005f6980b7f4feef71e06dccca6f05196a16212b08ed8d6a"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/ca8bfcfabbc4f271/files"}
+[debug] [2026-05-20T15:24:41.713Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:41.713Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:41.714Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:41.714Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:41.714Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:41.714Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:41.714Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:41.715Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:41.715Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/ca8bfcfabbc4f271/files/24559d578a4c116e7a0e34607013886661ad62c1785f78aefea9cf0c5468d023 [none]
+[debug] [2026-05-20T15:24:41.715Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/ca8bfcfabbc4f271/files/24559d578a4c116e7a0e34607013886661ad62c1785f78aefea9cf0c5468d023 [stream]
+[debug] [2026-05-20T15:24:41.723Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/ca8bfcfabbc4f271/files/c19b9607a00d9518a589c629b548ab0afe6303dc57eebcfa9c15c7797ca189f8 [none]
+[debug] [2026-05-20T15:24:41.725Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/ca8bfcfabbc4f271/files/c19b9607a00d9518a589c629b548ab0afe6303dc57eebcfa9c15c7797ca189f8 [stream]
+[debug] [2026-05-20T15:24:41.728Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/ca8bfcfabbc4f271/files/362889b0a6ae007ec6b447d58376b7339cd4bb6f81f92df98c352bd524c3517d [none]
+[debug] [2026-05-20T15:24:41.728Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/ca8bfcfabbc4f271/files/362889b0a6ae007ec6b447d58376b7339cd4bb6f81f92df98c352bd524c3517d [stream]
+[debug] [2026-05-20T15:24:41.731Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/ca8bfcfabbc4f271/files/77c1dbf43e15e13c005f6980b7f4feef71e06dccca6f05196a16212b08ed8d6a [none]
+[debug] [2026-05-20T15:24:41.731Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/ca8bfcfabbc4f271/files/77c1dbf43e15e13c005f6980b7f4feef71e06dccca6f05196a16212b08ed8d6a [stream]
+[debug] [2026-05-20T15:24:41.734Z] [hosting][populate queue][FINAL] {"max":1008,"min":1008,"avg":1008,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1027}
+[debug] [2026-05-20T15:24:41.735Z] [hosting] uploads queued: 4
+[info] i  hosting: uploading new files [0/4] (0%) 
+[debug] [2026-05-20T15:24:43.124Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/ca8bfcfabbc4f271/files/77c1dbf43e15e13c005f6980b7f4feef71e06dccca6f05196a16212b08ed8d6a 200
+[debug] [2026-05-20T15:24:43.125Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/ca8bfcfabbc4f271/files/77c1dbf43e15e13c005f6980b7f4feef71e06dccca6f05196a16212b08ed8d6a [stream]
+[debug] [2026-05-20T15:24:43.194Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/ca8bfcfabbc4f271/files/24559d578a4c116e7a0e34607013886661ad62c1785f78aefea9cf0c5468d023 200
+[debug] [2026-05-20T15:24:43.194Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/ca8bfcfabbc4f271/files/24559d578a4c116e7a0e34607013886661ad62c1785f78aefea9cf0c5468d023 [stream]
+[debug] [2026-05-20T15:24:43.248Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/ca8bfcfabbc4f271/files/c19b9607a00d9518a589c629b548ab0afe6303dc57eebcfa9c15c7797ca189f8 200
+[debug] [2026-05-20T15:24:43.248Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/ca8bfcfabbc4f271/files/c19b9607a00d9518a589c629b548ab0afe6303dc57eebcfa9c15c7797ca189f8 [stream]
+[debug] [2026-05-20T15:24:43.546Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/ca8bfcfabbc4f271/files/362889b0a6ae007ec6b447d58376b7339cd4bb6f81f92df98c352bd524c3517d 200
+[debug] [2026-05-20T15:24:43.547Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/good-tomato/versions/ca8bfcfabbc4f271/files/362889b0a6ae007ec6b447d58376b7339cd4bb6f81f92df98c352bd524c3517d [stream]
+[debug] [2026-05-20T15:24:43.547Z] [hosting][upload queue][FINAL] {"max":1833,"min":1411,"avg":1565.75,"active":0,"complete":4,"success":4,"errored":0,"retried":0,"total":4,"elapsed":1835}
+[info] i  hosting: upload complete 
+[info] ✔  hosting[good-tomato]: file upload complete 
+[debug] [2026-05-20T15:24:43.548Z] [hosting] deploy completed after 3334ms
+[debug] [2026-05-20T15:24:43.549Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/md/**",
+          "destination": "/md/**"
+        },
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "/index.html",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/**/*.html",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/service-worker.js",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/asset-manifest.json",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/manifest.json",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "/md/**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        }
+      ],
+      "site": "good-tomato"
+    },
+    "version": "projects/168297089697/sites/good-tomato/versions/ca8bfcfabbc4f271"
+  }
+]
+[info] i  hosting[good-tomato]: finalizing version... 
+[debug] [2026-05-20T15:24:43.551Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:43.552Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:43.552Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions/ca8bfcfabbc4f271 updateMask=status%2Cconfig
+[debug] [2026-05-20T15:24:43.553Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions/ca8bfcfabbc4f271 {"status":"FINALIZED","config":{"rewrites":[{"glob":"/md/**","path":"/md/**"},{"glob":"**","path":"/index.html"}],"headers":[{"glob":"/index.html","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/**/*.html","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/service-worker.js","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/asset-manifest.json","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/manifest.json","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"/md/**","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}}]}}
+[debug] [2026-05-20T15:24:44.296Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions/ca8bfcfabbc4f271 200
+[debug] [2026-05-20T15:24:44.297Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/versions/ca8bfcfabbc4f271 {"name":"projects/168297089697/sites/good-tomato/versions/ca8bfcfabbc4f271","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/index.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/**/*.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/service-worker.js"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/asset-manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/md/**"}],"rewrites":[{"glob":"/md/**","path":"/md/**"},{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-05-20T15:24:39.432832Z","createUser":{"email":"hwanghj09@naver.com"},"finalizeTime":"2026-05-20T15:24:44.114192Z","finalizeUser":{"email":"hwanghj09@naver.com"}}
+[debug] [2026-05-20T15:24:44.297Z] [hosting] finalized version for good-tomato:[object Object]
+[info] ✔  hosting[good-tomato]: version finalized 
+[info] i  hosting[good-tomato]: releasing new version... 
+[debug] [2026-05-20T15:24:44.298Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:44.298Z] Checked if tokens are valid: true, expires at: 1779293424386
+[debug] [2026-05-20T15:24:44.299Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/channels/live/releases versionName=projects%2F168297089697%2Fsites%2Fgood-tomato%2Fversions%2Fca8bfcfabbc4f271
+[debug] [2026-05-20T15:24:44.299Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/channels/live/releases {}
+[debug] [2026-05-20T15:24:45.191Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/channels/live/releases 200
+[debug] [2026-05-20T15:24:45.192Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/good-tomato/channels/live/releases {"name":"projects/168297089697/sites/good-tomato/channels/live/releases/1779290684217000","version":{"name":"projects/168297089697/sites/good-tomato/versions/ca8bfcfabbc4f271","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/index.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/**/*.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/service-worker.js"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/asset-manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/md/**"}],"rewrites":[{"glob":"/md/**","path":"/md/**"},{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-05-20T15:24:39.432832Z","createUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"},"finalizeTime":"2026-05-20T15:24:44.114192Z","finalizeUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"}},"type":"DEPLOY","releaseTime":"2026-05-20T15:24:44.217Z","releaseUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"}}
+[debug] [2026-05-20T15:24:45.192Z] [hosting] release: {"name":"projects/168297089697/sites/good-tomato/channels/live/releases/1779290684217000","version":{"name":"projects/168297089697/sites/good-tomato/versions/ca8bfcfabbc4f271","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/index.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/**/*.html"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/service-worker.js"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/asset-manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/manifest.json"},{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/md/**"}],"rewrites":[{"glob":"/md/**","path":"/md/**"},{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-05-20T15:24:39.432832Z","createUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"},"finalizeTime":"2026-05-20T15:24:44.114192Z","finalizeUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"}},"type":"DEPLOY","releaseTime":"2026-05-20T15:24:44.217Z","releaseUser":{"email":"hwanghj09@naver.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocJeHgzZ4PHuqcj9zDAgrsaQ-bE0hkO1lGQae8Ujp1TXG8xyUtU"}}
+[info] ✔  hosting[good-tomato]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/good-tomato/overview
+[info] Hosting URL: https://good-tomato.web.app

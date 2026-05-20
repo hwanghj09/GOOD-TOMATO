@@ -78,7 +78,9 @@ function MarkdownPage() {
       { name: "mini-pipe", title: "메시지 전달", category: "미니 프로젝트" },
     ],
     logic: [
-      { name: "digital-logic-circuit", title: "디지털 논리회로", category: "기본" },
+      { name: "number-systems", title: "진수 설명", category: "수 체계와 표현" },
+      { name: "binary-arithmetic", title: "2진수 연산", category: "수 체계와 표현" },
+      { name: "digital-logic-circuit", title: "디지털 논리회로", category: "논리 게이트와 회로" },
     ],
     linux: [
       { name: "intro", title: "리눅스 소개", category: "기본" },
