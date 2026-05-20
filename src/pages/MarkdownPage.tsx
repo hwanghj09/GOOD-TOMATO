@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
+import remarkGfm from "remark-gfm";
 import "highlight.js/styles/github-dark.css";
 import AdComponent from './AdComponent';
 import './css/markdown.css';
@@ -75,6 +76,9 @@ function MarkdownPage() {
       { name: "summary", title: "마지막 압축 정리", category: "복습 자료" },
       { name: "mini-shell", title: "명령 실행기", category: "미니 프로젝트" },
       { name: "mini-pipe", title: "메시지 전달", category: "미니 프로젝트" },
+    ],
+    logic: [
+      { name: "digital-logic-circuit", title: "디지털 논리회로", category: "기본" },
     ],
     linux: [
       { name: "intro", title: "리눅스 소개", category: "기본" },
@@ -159,7 +163,8 @@ useEffect(() => {
       c: "C",
       system: "System Programming",
       python: "Python",
-      linux: "Linux"
+      linux: "Linux",
+      logic: "Digital Logic"
     };
     return (lang && titles[lang]) ? titles[lang] : (lang?.toUpperCase() || "문서");
   };
@@ -242,7 +247,17 @@ useEffect(() => {
           <div className="prose">
             {content.split('[AD]').map((part, index) => (
               <div key={index}>
-                <ReactMarkdown rehypePlugins={[rehypeHighlight]}>
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[rehypeHighlight]}
+                  components={{
+                    table: ({ node, ...props }) => (
+                      <div className="table-scroll">
+                        <table {...props} />
+                      </div>
+                    ),
+                  }}
+                >
                   {part}
                 </ReactMarkdown>
 

@@ -206,10 +206,16 @@
   font-size: inherit;
 }
 
+.prose .table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
 .prose table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.5rem 0;
+  margin: 0;
 }
 
 .prose th,
@@ -217,6 +223,7 @@
   border: 1px solid #d1d5db;
   padding: 0.75rem;
   text-align: left;
+  white-space: nowrap;
 }
 
 .prose th {

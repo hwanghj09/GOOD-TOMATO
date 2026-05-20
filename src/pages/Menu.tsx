@@ -59,6 +59,16 @@ const Menu = () => {
       categories: ['중급', '실습', 'OS']
     },
     {
+      id: 'logic',
+      title: '디지털 논리회로',
+      icon: '/logos/logic.svg',
+      description: '0과 1, 논리 게이트, 진리표, 조합 회로와 순차 회로의 기본 원리를 차근차근 이해합니다.',
+      difficulty: 2,
+      route: '/logic/digital-logic-circuit',
+      recommended: false,
+      categories: ['기초', '회로', '컴퓨터 구조']
+    },
+    {
       id: 'linux',
       title: '리눅스',
       icon: '/logos/linux.png',
